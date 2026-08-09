@@ -199,9 +199,9 @@
     }
     .app-visual.misiva { background: linear-gradient(145deg, #0f6b5c 0%, #0c4f45 55%, #163a4a 100%); }
     .app-visual.mypass { background: linear-gradient(145deg, #1a6b9a 0%, #124868 55%, #0c1f33 100%); }
-    .app-visual.screenmirror { background: linear-gradient(145deg, #1e4d6b 0%, #124868 55%, #0a1622 100%); }
-    .cta.screenmirror { background: #124868; }
-    .app-card.screenmirror-card .benefits li::before { background: #124868; }
+    .app-visual.miravista { background: linear-gradient(145deg, #1e4d6b 0%, #124868 55%, #0a1622 100%); }
+    .cta.miravista { background: #124868; }
+    .app-card.miravista-card .benefits li::before { background: #124868; }
     .app-visual::after {
       content: ""; position: absolute; inset: auto -20% -40% 20%; height: 70%;
       background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 65%);
@@ -357,7 +357,7 @@
       <div class="section-head">
         <span class="section-kicker" data-i18n="catalogKicker">Catálogo</span>
         <h2 id="apps-title" data-i18n="appsTitle">Apps</h2>
-        <p data-i18n="appsIntro">Descargas de prueba firmadas. Misiva, MyPass y Screen Mirror, listas para instalar en Android.</p>
+        <p data-i18n="appsIntro">Descargas de prueba firmadas. Misiva, MyPass y Miravista, listas para instalar en Android.</p>
       </div>
 
       <div class="apps">
@@ -427,15 +427,15 @@
           </div>
         </article>
 
-        <article class="app-card screenmirror-card reveal" style="--d:300ms" aria-labelledby="screenmirror-title">
-          <div class="app-visual screenmirror" aria-hidden="true">
+        <article class="app-card miravista-card reveal" style="--d:300ms" aria-labelledby="miravista-title">
+          <div class="app-visual miravista" aria-hidden="true">
             <div class="visual-stack">
-              <img class="app-mark" src="./assets/screenmirror-icon.svg" width="112" height="112" alt="" decoding="async" />
-              <p class="wordmark">Screen Mirror</p>
+              <img class="app-mark" src="./assets/miravista-icon.svg" width="112" height="112" alt="" decoding="async" />
+              <p class="wordmark">Miravista</p>
             </div>
           </div>
           <div class="app-body">
-            <h3 id="screenmirror-title" class="app-title">Screen Mirror</h3>
+            <h3 id="miravista-title" class="app-title">Miravista</h3>
             <p class="app-eyebrow" data-i18n="smEyebrow">Espejo Wi‑Fi (navegador)</p>
             <p class="lead" data-i18n="smLead">
               Transmite la pantalla del móvil a cualquier Smart TV por Wi‑Fi local.
@@ -444,7 +444,7 @@
             <div class="badge-row" data-i18n-aria="smStatus">
               <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
               <span class="badge">Android</span>
-              <span class="badge">v1.0.1</span>
+              <span class="badge">v1.1.0</span>
             </div>
             <ul class="benefits">
               <li data-i18n="smB1">MJPEG local con PIN de sesión</li>
@@ -453,8 +453,8 @@
               <li data-i18n="smB4">Sin cuenta ni servidores cloud</li>
             </ul>
             <div class="cta-stack">
-              <a class="cta screenmirror" href="./descargar-screenmirror.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
-              <a class="cta secondary" id="privacy-screenmirror" href="/policies/screenmirror-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
+              <a class="cta miravista" href="./descargar-miravista.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
+              <a class="cta secondary" id="privacy-miravista" href="/policies/miravista-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
               <p class="cta-note" data-i18n="smNote">Misma Wi‑Fi en móvil y TV. Activa orígenes desconocidos solo para esta app.</p>
             </div>
           </div>
@@ -466,7 +466,7 @@
       <span class="section-kicker" data-i18n="trustKicker">Confianza</span>
       <h2 id="transparencia-title" data-i18n="trustTitle">Transparencia</h2>
       <p data-i18n-html="trustP1"><strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.</p>
-      <p data-i18n-html="trustP2"><strong>Misiva</strong> y <strong>Screen Mirror</strong> aún no están en Play. <strong>MyPass</strong> sí irá a Google Play; aquí tienes las versiones de prueba.</p>
+      <p data-i18n-html="trustP2"><strong>Misiva</strong> y <strong>Miravista</strong> aún no están en Play. <strong>MyPass</strong> sí irá a Google Play; aquí tienes las versiones de prueba.</p>
       <p data-i18n-html="trustP3">Sin tienda falsa ni publicidad oculta. Contacto: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>.</p>
       <p style="margin-top:0.85rem;font-size:0.92rem;" data-i18n="trustP4">
         Las políticas de privacidad de cada app están en el botón de cada tarjeta (y en el pie de página).
@@ -495,7 +495,7 @@
     <div class="links">
       <a id="footer-privacy-misiva" href="/policies/mensajetexto.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMisiva">Privacidad Misiva</a>
       <a id="footer-privacy-mypass" href="/policies/mypass-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMypass">Privacidad MyPass</a>
-      <a id="footer-privacy-screenmirror" href="/policies/screenmirror-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerScreenmirror">Privacidad Screen Mirror</a>
+      <a id="footer-privacy-miravista" href="/policies/miravista-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMiravista">Privacidad Miravista</a>
       <a href="mailto:soporte.flowhomeapps@gmail.com" data-i18n="footerSupport">Soporte</a>
       <a href="https://ko-fi.com/cristianodeveloper" rel="noopener noreferrer" target="_blank">Ko-fi</a>
     </div>
@@ -508,9 +508,9 @@
     (function () {
       var year = new Date().getFullYear();
       var privacy = {
-        es: { misiva: "/policies/mensajetexto.html", mypass: "/policies/mypass-es.html", screenmirror: "/policies/screenmirror-es.html" },
-        en: { misiva: "/policies/misiva.html", mypass: "/policies/mypass.html", screenmirror: "/policies/screenmirror.html" },
-        pt: { misiva: "/policies/misiva-pt.html", mypass: "/policies/mypass-pt.html", screenmirror: "/policies/screenmirror-pt.html" }
+        es: { misiva: "/policies/mensajetexto.html", mypass: "/policies/mypass-es.html", miravista: "/policies/miravista-es.html" },
+        en: { misiva: "/policies/misiva.html", mypass: "/policies/mypass.html", miravista: "/policies/miravista.html" },
+        pt: { misiva: "/policies/misiva-pt.html", mypass: "/policies/mypass-pt.html", miravista: "/policies/miravista-pt.html" }
       };
       var I18N = {
         es: {
@@ -524,7 +524,7 @@
           heroBody: "Apps Android hechas en casa: útiles, sin anuncios invasivos y con tus datos donde deben estar — en tu dispositivo. Mientras Google Play termina de abrir la puerta, puedes probarlas aquí.",
           catalogKicker: "Catálogo",
           appsTitle: "Apps",
-          appsIntro: "Descargas de prueba firmadas. Misiva, MyPass y Screen Mirror, listas para instalar en Android.",
+          appsIntro: "Descargas de prueba firmadas. Misiva, MyPass y Miravista, listas para instalar en Android.",
           misivaLead: "Programa mensajes a WhatsApp y genera el texto con IA (tu propia API key de Gemini). Todo corre en tu móvil.",
           misivaStatus: "Estado Misiva",
           badgeApk: "APK de prueba",
@@ -547,7 +547,7 @@
           trustKicker: "Confianza",
           trustTitle: "Transparencia",
           trustP1: "<strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.",
-          trustP2: "<strong>Misiva</strong> y <strong>Screen Mirror</strong> aún no están en Play. <strong>MyPass</strong> sí irá a Google Play; aquí tienes las versiones de prueba.",
+          trustP2: "<strong>Misiva</strong> y <strong>Miravista</strong> aún no están en Play. <strong>MyPass</strong> sí irá a Google Play; aquí tienes las versiones de prueba.",
           trustP3: "Sin tienda falsa ni publicidad oculta. Contacto: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
           trustP4: "Las políticas de privacidad de cada app están en el botón de cada tarjeta (y en el pie de página).",
           supportKicker: "Apoyar",
@@ -556,13 +556,13 @@
           ctaKofi: "Ko-fi · Invítame un helado",
                     smEyebrow: "Espejo Wi‑Fi (navegador)",
           smLead: "Transmite la pantalla del móvil a cualquier Smart TV por Wi‑Fi local. QR + PIN. Sin nube y sin anuncios.",
-          smStatus: "Estado Screen Mirror",
+          smStatus: "Estado Miravista",
           smB1: "MJPEG local con PIN de sesión",
           smB2: "QR para abrir en el navegador de la TV",
           smB3: "Calidad 480p / 720p / 1080p",
           smB4: "Sin cuenta ni servidores cloud",
           smNote: "Misma Wi‑Fi en móvil y TV. Activa orígenes desconocidos solo para esta app.",
-          footerScreenmirror: "Privacidad Screen Mirror",
+          footerMiravista: "Privacidad Miravista",
 footerMisiva: "Privacidad Misiva",
           footerMypass: "Privacidad MyPass",
           footerSupport: "Soporte",
@@ -579,7 +579,7 @@ footerMisiva: "Privacidad Misiva",
           heroBody: "Homemade Android apps: useful, no invasive ads, and your data stays on your device. While Google Play finishes opening the door, you can try them here.",
           catalogKicker: "Catalog",
           appsTitle: "Apps",
-          appsIntro: "Signed test downloads. Misiva, MyPass and Screen Mirror, ready to install on Android.",
+          appsIntro: "Signed test downloads. Misiva, MyPass and Miravista, ready to install on Android.",
           misivaLead: "Schedule WhatsApp messages and generate text with AI (your own Gemini API key). Everything runs on your phone.",
           misivaStatus: "Misiva status",
           badgeApk: "Test APK",
@@ -602,7 +602,7 @@ footerMisiva: "Privacidad Misiva",
           trustKicker: "Trust",
           trustTitle: "Transparency",
           trustP1: "<strong>Why direct downloads?</strong> I’m an indie developer. Publishing on Google Play takes review time. Meanwhile I offer signed APKs from this page, no middlemen.",
-          trustP2: "<strong>Misiva</strong> and <strong>Screen Mirror</strong> are not on Play yet. <strong>MyPass</strong> will go to Google Play; test builds are here.",
+          trustP2: "<strong>Misiva</strong> and <strong>Miravista</strong> are not on Play yet. <strong>MyPass</strong> will go to Google Play; test builds are here.",
           trustP3: "No fake store, no hidden ads. Contact: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
           trustP4: "Each app’s privacy policy is on the card button (and in the footer).",
           supportKicker: "Support",
@@ -611,13 +611,13 @@ footerMisiva: "Privacidad Misiva",
           ctaKofi: "Ko-fi · Buy me an ice cream",
                     smEyebrow: "Wi‑Fi mirror (browser)",
           smLead: "Mirror your phone screen to any Smart TV on local Wi‑Fi. QR + PIN. No cloud, no ads.",
-          smStatus: "Screen Mirror status",
+          smStatus: "Miravista status",
           smB1: "Local MJPEG with session PIN",
           smB2: "QR to open in the TV browser",
           smB3: "Quality 480p / 720p / 1080p",
           smB4: "No account, no cloud servers",
           smNote: "Same Wi‑Fi on phone and TV. Enable unknown sources only for this app.",
-          footerScreenmirror: "Screen Mirror privacy",
+          footerMiravista: "Miravista privacy",
 footerMisiva: "Misiva privacy",
           footerMypass: "MyPass privacy",
           footerSupport: "Support",
@@ -634,7 +634,7 @@ footerMisiva: "Misiva privacy",
           heroBody: "Apps Android feitos em casa: úteis, sem anúncios invasivos e com os seus dados no dispositivo. Enquanto a Google Play termina de abrir a porta, você pode testá-los aqui.",
           catalogKicker: "Catálogo",
           appsTitle: "Apps",
-          appsIntro: "Downloads de teste assinados. Misiva, MyPass e Screen Mirror, prontos para instalar no Android.",
+          appsIntro: "Downloads de teste assinados. Misiva, MyPass e Miravista, prontos para instalar no Android.",
           misivaLead: "Agende mensagens no WhatsApp e gere texto com IA (sua própria API key do Gemini). Tudo roda no seu celular.",
           misivaStatus: "Status Misiva",
           badgeApk: "APK de teste",
@@ -666,13 +666,13 @@ footerMisiva: "Misiva privacy",
           ctaKofi: "Ko-fi · Me pague um sorvete",
                     smEyebrow: "Espelho Wi‑Fi (navegador)",
           smLead: "Espelhe a tela do telemóvel em qualquer Smart TV na Wi‑Fi local. QR + PIN. Sem nuvem e sem anúncios.",
-          smStatus: "Estado Screen Mirror",
+          smStatus: "Estado Miravista",
           smB1: "MJPEG local com PIN de sessão",
           smB2: "QR para abrir no navegador da TV",
           smB3: "Qualidade 480p / 720p / 1080p",
           smB4: "Sem conta nem servidores cloud",
           smNote: "Mesma Wi‑Fi no telemóvel e na TV. Ative origens desconhecidas só para este app.",
-          footerScreenmirror: "Privacidade Screen Mirror",
+          footerMiravista: "Privacidade Miravista",
 footerMisiva: "Privacidade Misiva",
           footerMypass: "Privacidade MyPass",
           footerSupport: "Suporte",
@@ -716,14 +716,14 @@ footerMisiva: "Privacidade Misiva",
         var mypass = document.getElementById("privacy-mypass");
         var fMisiva = document.getElementById("footer-privacy-misiva");
         var fMypass = document.getElementById("footer-privacy-mypass");
-        var sm = document.getElementById("privacy-screenmirror");
-        var fSm = document.getElementById("footer-privacy-screenmirror");
+        var sm = document.getElementById("privacy-miravista");
+        var fSm = document.getElementById("footer-privacy-miravista");
         if (misiva) misiva.href = p.misiva;
         if (mypass) mypass.href = p.mypass;
-        if (sm) sm.href = p.screenmirror;
+        if (sm) sm.href = p.miravista;
         if (fMisiva) fMisiva.href = p.misiva;
         if (fMypass) fMypass.href = p.mypass;
-        if (fSm) fSm.href = p.screenmirror;
+        if (fSm) fSm.href = p.miravista;
 
         document.querySelectorAll(".lang-switch button").forEach(function (btn) {
           btn.setAttribute("aria-pressed", btn.getAttribute("data-lang") === lang ? "true" : "false");
