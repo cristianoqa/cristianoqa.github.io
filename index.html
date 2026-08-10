@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="es" data-deploy-stamp="2026-08-08-sm">
+<html lang="es" data-deploy-stamp="2026-08-10-monexa">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flow Home Apps — Herramientas para tu día a día</title>
-  <meta name="description" content="Misiva y MyPass: apps Android locales de Flow Home Apps. Descarga de prueba mientras llegan a Google Play." />
+  <meta name="description" content="Misiva, MyPass, Miravista y Monexa: apps Android de Flow Home Apps. Descarga de prueba mientras llegan a Google Play." />
   <meta name="theme-color" content="#0c1f33" />
   <link rel="canonical" href="https://cristianoqa.github.io/" />
   <link rel="icon" href="./assets/flow-home-mark.png" type="image/png" sizes="32x32" />
@@ -36,6 +36,7 @@
       --accent-2: #1a6b9a;
       --misiva: #0e7a6b;
       --mypass: #156089;
+      --monexa: #c41e3a;
       --radius: 18px;
       --shadow: 0 18px 40px rgba(12, 31, 51, 0.08);
       --focus: #1a6b9a;
@@ -200,8 +201,11 @@
     .app-visual.misiva { background: linear-gradient(145deg, #0f6b5c 0%, #0c4f45 55%, #163a4a 100%); }
     .app-visual.mypass { background: linear-gradient(145deg, #1a6b9a 0%, #124868 55%, #0c1f33 100%); }
     .app-visual.miravista { background: linear-gradient(145deg, #1e4d6b 0%, #124868 55%, #0a1622 100%); }
+    .app-visual.monexa { background: linear-gradient(145deg, #c41e3a 0%, #8b1528 55%, #1a0f10 100%); }
     .cta.miravista { background: #124868; }
+    .cta.monexa { background: #c41e3a; }
     .app-card.miravista-card .benefits li::before { background: #124868; }
+    .app-card.monexa-card .benefits li::before { background: #c41e3a; }
     .app-visual::after {
       content: ""; position: absolute; inset: auto -20% -40% 20%; height: 70%;
       background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 65%);
@@ -357,7 +361,7 @@
       <div class="section-head">
         <span class="section-kicker" data-i18n="catalogKicker">Catálogo</span>
         <h2 id="apps-title" data-i18n="appsTitle">Apps</h2>
-        <p data-i18n="appsIntro">Descargas de prueba firmadas. Misiva, MyPass y Miravista, listas para instalar en Android.</p>
+        <p data-i18n="appsIntro">Descargas de prueba firmadas. Misiva, MyPass, Miravista y Monexa, listas para instalar en Android.</p>
       </div>
 
       <div class="apps">
@@ -459,6 +463,39 @@
             </div>
           </div>
         </article>
+
+        <article class="app-card monexa-card reveal" style="--d:380ms" aria-labelledby="monexa-title">
+          <div class="app-visual monexa" aria-hidden="true">
+            <div class="visual-stack">
+              <img class="app-mark" src="./assets/monexa-icon.png?v=d1" width="112" height="112" alt="" decoding="async" />
+              <p class="wordmark">Monexa</p>
+            </div>
+          </div>
+          <div class="app-body">
+            <h3 id="monexa-title" class="app-title">Monexa</h3>
+            <p class="app-eyebrow" data-i18n="monexaEyebrow">Gastos e ingresos compartidos</p>
+            <p class="lead" data-i18n="monexaLead">
+              Controla gastos e ingresos en grupo: categorías, presupuestos, suscripciones y metas.
+              Sincronización en la nube con tu cuenta.
+            </p>
+            <div class="badge-row" data-i18n-aria="monexaStatus">
+              <span class="badge play" data-i18n="badgePlay">Próximamente en Google Play</span>
+              <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
+              <span class="badge">v1.0.0</span>
+            </div>
+            <ul class="benefits">
+              <li data-i18n="monexaB1">Movimientos y categorías en grupo</li>
+              <li data-i18n="monexaB2">Presupuestos, suscripciones y metas</li>
+              <li data-i18n="monexaB3">Gasto rápido y análisis mensual</li>
+              <li data-i18n="monexaB4">Sin anuncios invasivos</li>
+            </ul>
+            <div class="cta-stack">
+              <a class="cta monexa" href="./descargar-monexa.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
+              <a class="cta secondary" id="privacy-monexa" href="/policies/monexa-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
+              <p class="cta-note" data-i18n="monexaNote">También llegará a Google Play. Activa orígenes desconocidos solo para esta app.</p>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -466,7 +503,7 @@
       <span class="section-kicker" data-i18n="trustKicker">Confianza</span>
       <h2 id="transparencia-title" data-i18n="trustTitle">Transparencia</h2>
       <p data-i18n-html="trustP1"><strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.</p>
-      <p data-i18n-html="trustP2"><strong>Misiva</strong> y <strong>Miravista</strong> aún no están en Play. <strong>MyPass</strong> sí irá a Google Play; aquí tienes las versiones de prueba.</p>
+      <p data-i18n-html="trustP2"><strong>Misiva</strong>, <strong>Miravista</strong> y <strong>Monexa</strong> aún no están en Play. <strong>MyPass</strong> sí irá a Google Play; aquí tienes las versiones de prueba.</p>
       <p data-i18n-html="trustP3">Sin tienda falsa ni publicidad oculta. Contacto: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>.</p>
       <p style="margin-top:0.85rem;font-size:0.92rem;" data-i18n="trustP4">
         Las políticas de privacidad de cada app están en el botón de cada tarjeta (y en el pie de página).
@@ -496,6 +533,7 @@
       <a id="footer-privacy-misiva" href="/policies/mensajetexto.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMisiva">Privacidad Misiva</a>
       <a id="footer-privacy-mypass" href="/policies/mypass-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMypass">Privacidad MyPass</a>
       <a id="footer-privacy-miravista" href="/policies/miravista-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMiravista">Privacidad Miravista</a>
+      <a id="footer-privacy-monexa" href="/policies/monexa-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMonexa">Privacidad Monexa</a>
       <a href="mailto:soporte.flowhomeapps@gmail.com" data-i18n="footerSupport">Soporte</a>
       <a href="https://ko-fi.com/cristianodeveloper" rel="noopener noreferrer" target="_blank">Ko-fi</a>
     </div>
@@ -508,9 +546,9 @@
     (function () {
       var year = new Date().getFullYear();
       var privacy = {
-        es: { misiva: "/policies/mensajetexto.html", mypass: "/policies/mypass-es.html", miravista: "/policies/miravista-es.html" },
-        en: { misiva: "/policies/misiva.html", mypass: "/policies/mypass.html", miravista: "/policies/miravista.html" },
-        pt: { misiva: "/policies/misiva-pt.html", mypass: "/policies/mypass-pt.html", miravista: "/policies/miravista-pt.html" }
+        es: { misiva: "/policies/mensajetexto.html", mypass: "/policies/mypass-es.html", miravista: "/policies/miravista-es.html", monexa: "/policies/monexa-es.html" },
+        en: { misiva: "/policies/misiva.html", mypass: "/policies/mypass.html", miravista: "/policies/miravista.html", monexa: "/policies/monexa.html" },
+        pt: { misiva: "/policies/misiva-pt.html", mypass: "/policies/mypass-pt.html", miravista: "/policies/miravista-pt.html", monexa: "/policies/monexa-pt.html" }
       };
       var I18N = {
         es: {
@@ -524,7 +562,7 @@
           heroBody: "Apps Android hechas en casa: útiles, sin anuncios invasivos y con tus datos donde deben estar — en tu dispositivo. Mientras Google Play termina de abrir la puerta, puedes probarlas aquí.",
           catalogKicker: "Catálogo",
           appsTitle: "Apps",
-          appsIntro: "Descargas de prueba firmadas. Misiva, MyPass y Miravista, listas para instalar en Android.",
+          appsIntro: "Descargas de prueba firmadas. Misiva, MyPass, Miravista y Monexa, listas para instalar en Android.",
           misivaLead: "Programa mensajes a WhatsApp y genera el texto con IA (tu propia API key de Gemini). Todo corre en tu móvil.",
           misivaStatus: "Estado Misiva",
           badgeApk: "APK de prueba",
@@ -547,7 +585,7 @@
           trustKicker: "Confianza",
           trustTitle: "Transparencia",
           trustP1: "<strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.",
-          trustP2: "<strong>Misiva</strong> y <strong>Miravista</strong> aún no están en Play. <strong>MyPass</strong> sí irá a Google Play; aquí tienes las versiones de prueba.",
+          trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong> y <strong>Monexa</strong> aún no están en Play. <strong>MyPass</strong> sí irá a Google Play; aquí tienes las versiones de prueba.",
           trustP3: "Sin tienda falsa ni publicidad oculta. Contacto: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
           trustP4: "Las políticas de privacidad de cada app están en el botón de cada tarjeta (y en el pie de página).",
           supportKicker: "Apoyar",
@@ -562,7 +600,16 @@
           smB3: "Calidad 480p / 720p / 1080p",
           smB4: "Sin cuenta ni servidores cloud",
           smNote: "Misma Wi‑Fi en móvil y TV. Activa orígenes desconocidos solo para esta app.",
+          monexaEyebrow: "Gastos e ingresos compartidos",
+          monexaLead: "Controla gastos e ingresos en grupo: categorías, presupuestos, suscripciones y metas. Sincronización en la nube con tu cuenta.",
+          monexaStatus: "Estado Monexa",
+          monexaB1: "Movimientos y categorías en grupo",
+          monexaB2: "Presupuestos, suscripciones y metas",
+          monexaB3: "Gasto rápido y análisis mensual",
+          monexaB4: "Sin anuncios invasivos",
+          monexaNote: "También llegará a Google Play. Activa orígenes desconocidos solo para esta app.",
           footerMiravista: "Privacidad Miravista",
+          footerMonexa: "Privacidad Monexa",
 footerMisiva: "Privacidad Misiva",
           footerMypass: "Privacidad MyPass",
           footerSupport: "Soporte",
@@ -579,7 +626,7 @@ footerMisiva: "Privacidad Misiva",
           heroBody: "Homemade Android apps: useful, no invasive ads, and your data stays on your device. While Google Play finishes opening the door, you can try them here.",
           catalogKicker: "Catalog",
           appsTitle: "Apps",
-          appsIntro: "Signed test downloads. Misiva, MyPass and Miravista, ready to install on Android.",
+          appsIntro: "Signed test downloads. Misiva, MyPass, Miravista and Monexa, ready to install on Android.",
           misivaLead: "Schedule WhatsApp messages and generate text with AI (your own Gemini API key). Everything runs on your phone.",
           misivaStatus: "Misiva status",
           badgeApk: "Test APK",
@@ -602,7 +649,7 @@ footerMisiva: "Privacidad Misiva",
           trustKicker: "Trust",
           trustTitle: "Transparency",
           trustP1: "<strong>Why direct downloads?</strong> I’m an indie developer. Publishing on Google Play takes review time. Meanwhile I offer signed APKs from this page, no middlemen.",
-          trustP2: "<strong>Misiva</strong> and <strong>Miravista</strong> are not on Play yet. <strong>MyPass</strong> will go to Google Play; test builds are here.",
+          trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong> and <strong>Monexa</strong> are not on Play yet. <strong>MyPass</strong> will go to Google Play; test builds are here.",
           trustP3: "No fake store, no hidden ads. Contact: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
           trustP4: "Each app’s privacy policy is on the card button (and in the footer).",
           supportKicker: "Support",
@@ -617,7 +664,16 @@ footerMisiva: "Privacidad Misiva",
           smB3: "Quality 480p / 720p / 1080p",
           smB4: "No account, no cloud servers",
           smNote: "Same Wi‑Fi on phone and TV. Enable unknown sources only for this app.",
+          monexaEyebrow: "Shared expenses & income",
+          monexaLead: "Track group expenses and income: categories, budgets, subscriptions and goals. Cloud sync with your account.",
+          monexaStatus: "Monexa status",
+          monexaB1: "Shared movements and categories",
+          monexaB2: "Budgets, subscriptions and goals",
+          monexaB3: "Quick expense and monthly insights",
+          monexaB4: "No invasive ads",
+          monexaNote: "Also coming to Google Play. Enable unknown sources only for this app.",
           footerMiravista: "Miravista privacy",
+          footerMonexa: "Monexa privacy",
 footerMisiva: "Misiva privacy",
           footerMypass: "MyPass privacy",
           footerSupport: "Support",
@@ -634,7 +690,7 @@ footerMisiva: "Misiva privacy",
           heroBody: "Apps Android feitos em casa: úteis, sem anúncios invasivos e com os seus dados no dispositivo. Enquanto a Google Play termina de abrir a porta, você pode testá-los aqui.",
           catalogKicker: "Catálogo",
           appsTitle: "Apps",
-          appsIntro: "Downloads de teste assinados. Misiva, MyPass e Miravista, prontos para instalar no Android.",
+          appsIntro: "Downloads de teste assinados. Misiva, MyPass, Miravista e Monexa, prontos para instalar no Android.",
           misivaLead: "Agende mensagens no WhatsApp e gere texto com IA (sua própria API key do Gemini). Tudo roda no seu celular.",
           misivaStatus: "Status Misiva",
           badgeApk: "APK de teste",
@@ -657,7 +713,7 @@ footerMisiva: "Misiva privacy",
           trustKicker: "Confiança",
           trustTitle: "Transparência",
           trustP1: "<strong>Por que downloads diretos?</strong> Sou um desenvolvedor independente. Publicar na Google Play leva tempo de revisão. Enquanto isso ofereço APKs assinados nesta página, sem intermediários.",
-          trustP2: "<strong>Misiva</strong> ainda não anuncio na Play (últimos passos). <strong>MyPass</strong> sim: vou subir na Google Play; aqui está a versão de teste.",
+          trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong> e <strong>Monexa</strong> ainda não estão na Play. <strong>MyPass</strong> sim: vou subir na Google Play; aqui está a versão de teste.",
           trustP3: "Sem loja falsa nem publicidade oculta. Contato: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
           trustP4: "As políticas de privacidade de cada app estão no botão de cada cartão (e no rodapé).",
           supportKicker: "Apoiar",
@@ -672,7 +728,16 @@ footerMisiva: "Misiva privacy",
           smB3: "Qualidade 480p / 720p / 1080p",
           smB4: "Sem conta nem servidores cloud",
           smNote: "Mesma Wi‑Fi no telemóvel e na TV. Ative origens desconhecidas só para este app.",
+          monexaEyebrow: "Despesas e receitas partilhadas",
+          monexaLead: "Controle despesas e receitas em grupo: categorias, orçamentos, subscrições e metas. Sincronização na nuvem com a sua conta.",
+          monexaStatus: "Estado Monexa",
+          monexaB1: "Movimentos e categorias em grupo",
+          monexaB2: "Orçamentos, subscrições e metas",
+          monexaB3: "Despesa rápida e análise mensal",
+          monexaB4: "Sem anúncios invasivos",
+          monexaNote: "Também chegará à Google Play. Ative origens desconhecidas só para este app.",
           footerMiravista: "Privacidade Miravista",
+          footerMonexa: "Privacidade Monexa",
 footerMisiva: "Privacidade Misiva",
           footerMypass: "Privacidade MyPass",
           footerSupport: "Suporte",
@@ -718,12 +783,16 @@ footerMisiva: "Privacidade Misiva",
         var fMypass = document.getElementById("footer-privacy-mypass");
         var sm = document.getElementById("privacy-miravista");
         var fSm = document.getElementById("footer-privacy-miravista");
+        var monexa = document.getElementById("privacy-monexa");
+        var fMonexa = document.getElementById("footer-privacy-monexa");
         if (misiva) misiva.href = p.misiva;
         if (mypass) mypass.href = p.mypass;
         if (sm) sm.href = p.miravista;
         if (fMisiva) fMisiva.href = p.misiva;
         if (fMypass) fMypass.href = p.mypass;
         if (fSm) fSm.href = p.miravista;
+        if (monexa) monexa.href = p.monexa;
+        if (fMonexa) fMonexa.href = p.monexa;
 
         document.querySelectorAll(".lang-switch button").forEach(function (btn) {
           btn.setAttribute("aria-pressed", btn.getAttribute("data-lang") === lang ? "true" : "false");
