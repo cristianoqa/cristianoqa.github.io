@@ -202,10 +202,13 @@
     .app-visual.mypass { background: linear-gradient(145deg, #1a6b9a 0%, #124868 55%, #0c1f33 100%); }
     .app-visual.miravista { background: linear-gradient(145deg, #1e4d6b 0%, #124868 55%, #0a1622 100%); }
     .app-visual.monexa { background: linear-gradient(145deg, #c41e3a 0%, #8b1528 55%, #1a0f10 100%); }
+    .app-visual.memio { background: linear-gradient(145deg, #ff6b35 0%, #e85d04 55%, #1a120e 100%); }
     .cta.miravista { background: #124868; }
     .cta.monexa { background: #c41e3a; }
+    .cta.memio { background: #ff6b35; }
     .app-card.miravista-card .benefits li::before { background: #124868; }
     .app-card.monexa-card .benefits li::before { background: #c41e3a; }
+    .app-card.memio-card .benefits li::before { background: #ff6b35; }
     .app-visual::after {
       content: ""; position: absolute; inset: auto -20% -40% 20%; height: 70%;
       background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 65%);
@@ -496,6 +499,37 @@
             </div>
           </div>
         </article>
+
+        <article class="app-card memio-card reveal" style="--d:420ms" aria-labelledby="memio-title">
+          <div class="app-visual memio" aria-hidden="true">
+            <div class="visual-stack">
+              <img class="app-mark" src="./assets/memio-icon.png?v=1" width="112" height="112" alt="" decoding="async" />
+              <p class="wordmark">Memio</p>
+            </div>
+          </div>
+          <div class="app-body">
+            <h3 id="memio-title" class="app-title">Memio</h3>
+            <p class="app-eyebrow">Generador de memes</p>
+            <p class="lead">
+              Crea memes al instante: plantillas, texto clásico arriba/abajo, arrastra, guarda y comparte. Todo en el móvil, sin cuenta.
+            </p>
+            <div class="badge-row">
+              <span class="badge play">Próximamente en Google Play</span>
+              <span class="badge apk">APK de prueba</span>
+              <span class="badge">v1.0.0</span>
+            </div>
+            <ul class="benefits">
+              <li>Plantillas + sube tu foto</li>
+              <li>Texto draggable estilo meme clásico</li>
+              <li>Guardar y compartir sin watermark</li>
+              <li>100% local, sin anuncios</li>
+            </ul>
+            <div class="cta-row">
+              <a class="cta memio" href="./descargar-memio.html">Descargar versión de pruebas (.APK)</a>
+              <a class="cta secondary" id="privacy-memio" href="/policies/memio-es.html" target="_blank" rel="noopener noreferrer">Ver política de privacidad</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -534,6 +568,7 @@
       <a id="footer-privacy-mypass" href="/policies/mypass-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMypass">Privacidad MyPass</a>
       <a id="footer-privacy-miravista" href="/policies/miravista-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMiravista">Privacidad Miravista</a>
       <a id="footer-privacy-monexa" href="/policies/monexa-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMonexa">Privacidad Monexa</a>
+      <a id="footer-privacy-memio" href="/policies/memio-es.html" target="_blank" rel="noopener noreferrer">Privacidad Memio</a>
       <a href="mailto:soporte.flowhomeapps@gmail.com" data-i18n="footerSupport">Soporte</a>
       <a href="https://ko-fi.com/cristianodeveloper" rel="noopener noreferrer" target="_blank">Ko-fi</a>
     </div>
