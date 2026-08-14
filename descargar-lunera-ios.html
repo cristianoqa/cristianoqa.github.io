@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lunera para iPhone (iOS)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: Outfit, system-ui, sans-serif; margin: 0; padding: 2rem 1.25rem; background: #faf5ff; color: #1f1235; }
+    main { max-width: 480px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 1.5rem; border: 1px solid #ddd6fe; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.75rem; }
+    p { color: #5b5563; line-height: 1.55; }
+    a.btn { display: block; text-align: center; margin-top: 1rem; padding: 0.95rem 1rem; background: #7c3aed; color: #fff; text-decoration: none; font-weight: 700; border-radius: 12px; }
+    a.btn.secondary { background: #f3e8ff; color: #5b21b6; margin-top: 0.65rem; }
+    a.btn.disabled { background: #c4b5fd; pointer-events: none; opacity: 0.85; }
+    ol { padding-left: 1.2rem; color: #5b5563; line-height: 1.6; }
+    .note { background: #f5f3ff; border-radius: 10px; padding: 0.85rem 1rem; font-size: 0.92rem; margin: 1rem 0; }
+    .platform { display: inline-block; background: #ede9fe; color: #5b21b6; font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 999px; margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="platform">iOS · iPhone · iPad</span>
+    <h1>Lunera en iPhone</h1>
+    <p>La misma app FemTech que en Android: ciclo, calendario, registro diario, enciclopedia <strong>Aprende</strong> y datos cifrados en el dispositivo.</p>
+
+    <div class="note">
+      Apple no permite instalar apps fuera de la App Store como un APK. En iOS usamos <strong>TestFlight</strong> (beta oficial de Apple), gratis para ti como usuaria.
+    </div>
+
+    <!-- Actualizar href cuando exista enlace público TestFlight -->
+    <a id="testflight-btn" class="btn disabled" href="#" aria-disabled="true">TestFlight — enlace próximamente</a>
+    <a class="btn secondary" href="./descargar-lunera.html">¿Tienes Android? Descargar APK</a>
+
+    <p><strong>Cómo instalar cuando el enlace esté activo:</strong></p>
+    <ol>
+      <li>Pulsa el botón TestFlight arriba (se abre en App Store).</li>
+      <li>Instala la app <em>TestFlight</em> si no la tienes.</li>
+      <li>Acepta la invitación a <strong>Lunera</strong> y pulsa <em>Instalar</em>.</li>
+      <li>Abre Lunera desde tu pantalla de inicio — misma experiencia que en Android.</li>
+    </ol>
+
+    <p style="font-size:0.88rem;">Versión beta: <strong>v1.1.0</strong> · Requiere iOS 15 o superior · Face ID opcional para bloqueo.</p>
+    <p><a href="./">← Volver a la landing</a></p>
+  </main>
+  <script>
+    // Pegar aquí el enlace público TestFlight (App Store Connect → TestFlight → Enlace público)
+    var TESTFLIGHT_URL = "";
+    if (TESTFLIGHT_URL) {
+      var btn = document.getElementById("testflight-btn");
+      btn.href = TESTFLIGHT_URL;
+      btn.classList.remove("disabled");
+      btn.removeAttribute("aria-disabled");
+      btn.textContent = "Instalar Lunera con TestFlight (v1.1.0)";
+    }
+  </script>
+</body>
+</html>
