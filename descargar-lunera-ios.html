@@ -22,36 +22,33 @@
   <main>
     <span class="platform">iOS · iPhone · iPad</span>
     <h1>Lunera en iPhone</h1>
-    <p>La misma app FemTech que en Android: ciclo, calendario, registro diario, enciclopedia <strong>Aprende</strong> y datos cifrados en el dispositivo.</p>
+    <p>Puedes usar Lunera ahora mismo en Safari como <strong>PWA</strong> (añadir a pantalla de inicio). La app nativa llegará por TestFlight / App Store.</p>
 
-    <div class="note">
-      Apple no permite instalar apps fuera de la App Store como un APK. En iOS usamos <strong>TestFlight</strong> (beta oficial de Apple), gratis para ti como usuaria.
-    </div>
-
-    <!-- Actualizar href cuando exista enlace público TestFlight -->
-    <a id="testflight-btn" class="btn disabled" href="#" aria-disabled="true">TestFlight — enlace próximamente</a>
+    <a class="btn" href="./lunera/">Abrir Lunera Web (PWA)</a>
+    <a id="testflight-btn" class="btn secondary disabled" href="#" aria-disabled="true">TestFlight — enlace próximamente</a>
     <a class="btn secondary" href="./descargar-lunera.html">¿Tienes Android? Descargar APK</a>
 
-    <p><strong>Cómo instalar cuando el enlace esté activo:</strong></p>
+    <div class="note">
+      <strong>En iPhone:</strong> abre la PWA → toca Compartir (□↑) → «Añadir a pantalla de inicio». Funciona sin App Store.
+    </div>
+
     <ol>
-      <li>Pulsa el botón TestFlight arriba (se abre en App Store).</li>
-      <li>Instala la app <em>TestFlight</em> si no la tienes.</li>
-      <li>Acepta la invitación a <strong>Lunera</strong> y pulsa <em>Instalar</em>.</li>
-      <li>Abre Lunera desde tu pantalla de inicio — misma experiencia que en Android.</li>
+      <li>Abre <em>Lunera Web</em>.</li>
+      <li>Añádela a tu pantalla de inicio.</li>
+      <li>Úsala offline para insight del ciclo y chat educativo.</li>
     </ol>
 
-    <p style="font-size:0.88rem;">Versión beta: <strong>v1.1.0</strong> · Requiere iOS 15 o superior · Face ID opcional para bloqueo.</p>
+    <p style="font-size:0.88rem;">PWA + APK nativo <strong>v1.1.1</strong></p>
     <p><a href="./">← Volver a la landing</a></p>
   </main>
   <script>
-    // Pegar aquí el enlace público TestFlight (App Store Connect → TestFlight → Enlace público)
     var TESTFLIGHT_URL = "";
     if (TESTFLIGHT_URL) {
       var btn = document.getElementById("testflight-btn");
       btn.href = TESTFLIGHT_URL;
       btn.classList.remove("disabled");
       btn.removeAttribute("aria-disabled");
-      btn.textContent = "Instalar Lunera con TestFlight (v1.1.0)";
+      btn.textContent = "Instalar Lunera con TestFlight";
     }
   </script>
 </body>
