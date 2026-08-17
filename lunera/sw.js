@@ -1,9 +1,8 @@
-const CACHE = "lunera-pwa-v2";
-const ASSETS = ["./index.html", "./manifest.webmanifest"];
+const CACHE = "lunera-app-v1";
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)));
   self.skipWaiting();
+  event.waitUntil(caches.open(CACHE));
 });
 
 self.addEventListener("activate", (event) => {
@@ -15,7 +14,14 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
+  if (event.request.method !== "GET") return;
   event.respondWith(
-    caches.match(event.request).then((cached) => cached || fetch(event.request))
+    fetch(event.request)
+      .then((res) => {
+        const copy = res.clone();
+        caches.open(CACHE).then((c) => c.put(event.request, copy)).catch(() => {});
+        return res;
+      })
+      .catch(() => caches.match(event.request))
   );
 });

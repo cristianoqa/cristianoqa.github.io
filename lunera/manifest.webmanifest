@@ -1,16 +1,23 @@
 {
   "name": "Lunera",
   "short_name": "Lunera",
-  "description": "Salud menstrual educativa — PWA Lunera",
-  "start_url": "./index.html",
+  "description": "Salud menstrual — la misma app Lunera en el navegador",
+  "start_url": "/lunera/",
+  "scope": "/lunera/",
   "display": "standalone",
   "background_color": "#FBF9F6",
   "theme_color": "#4A3F6B",
   "lang": "es",
   "icons": [
     {
-      "src": "../assets/lunera-icon.png",
+      "src": "/assets/lunera-icon.png",
       "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/lunera-icon.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }

@@ -1,170 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#4A3F6B" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="Lunera" />
-  <link rel="manifest" href="./manifest.webmanifest" />
-  <link rel="apple-touch-icon" href="../assets/lunera-icon.png" />
-  <title>Lunera Web (PWA)</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root { --bg:#FBF9F6; --ink:#2A2238; --muted:#8B8399; --primary:#4A3F6B; --accent:#B8956B; --card:rgba(255,255,255,.88); }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family:Outfit,system-ui,sans-serif; background:
-      radial-gradient(900px 420px at 0% 0%, #F0E8F8, transparent 55%),
-      radial-gradient(700px 380px at 100% 10%, #FCEEF2, transparent 50%), var(--bg);
-      color:var(--ink); min-height:100dvh; }
-    main { max-width:440px; margin:0 auto; padding:1.5rem 1.15rem 3rem; }
-    h1 { font-family:"Cormorant Garamond",Georgia,serif; font-size:2.2rem; margin:0 0 .35rem; }
-    .lead { color:var(--muted); line-height:1.5; margin:0 0 1.25rem; }
-    .card { background:var(--card); border:1px solid rgba(165,145,175,.2); border-radius:24px; padding:1.15rem 1.1rem; margin-bottom:1rem; box-shadow:0 12px 30px rgba(165,145,175,.08); }
-    .card h2 { margin:0 0 .5rem; font-size:1.05rem; }
-    label { display:block; font-size:.85rem; font-weight:700; margin:.75rem 0 .35rem; }
-    input, select, textarea { width:100%; border:1px solid #ddd6fe; border-radius:14px; padding:.75rem .85rem; font:inherit; background:#fff; }
-    button { width:100%; margin-top:1rem; border:0; border-radius:14px; padding:.95rem 1rem; background:var(--primary); color:#fff; font-weight:700; font-size:1rem; cursor:pointer; }
-    button.secondary { background:#f3e8ff; color:var(--primary); }
-    .out { margin-top:1rem; line-height:1.55; color:var(--ink); }
-    .disclaimer { font-size:.75rem; color:var(--muted); line-height:1.4; margin-top:1rem; }
-    .install { display:none; }
-    a { color:var(--primary); }
-    .phase { display:inline-block; background:rgba(74,63,107,.1); color:var(--primary); border-radius:999px; padding:.2rem .65rem; font-size:.8rem; font-weight:700; }
-  </style>
-</head>
-<body>
-  <main>
-    <p class="phase">PWA · iPhone / Android / escritorio</p>
-    <h1>Lunera</h1>
-    <p class="lead">Versión web para probar ya en Safari (iOS). Guarda datos en este dispositivo. La app nativa Android sigue en el APK.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Lunera</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Lunera" />
+    <link rel="apple-touch-icon" href="/assets/lunera-icon.png" />
+    <link rel="manifest" href="/lunera/manifest.webmanifest" />
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <meta name="theme-color" content="#4A3F6B">
+<link rel="icon" href="/lunera/favicon.ico"/></head>
 
-    <button class="secondary install" id="installBtn" type="button">Añadir a pantalla de inicio</button>
-
-    <section class="card">
-      <h2>Tu cuerpo hoy</h2>
-      <label for="last">Última regla (Día 1)</label>
-      <input id="last" type="date" />
-      <label for="cycle">Duración media del ciclo</label>
-      <input id="cycle" type="number" min="21" max="45" value="28" />
-      <label for="symptoms">Síntomas de hoy (opcional)</label>
-      <select id="symptoms">
-        <option value="">Ninguno</option>
-        <option value="migraine">Migraña</option>
-        <option value="cramps">Cólicos</option>
-        <option value="fatigue">Fatiga</option>
-        <option value="bloating">Hinchazón</option>
-        <option value="anxious">Ansiedad</option>
-      </select>
-      <button id="calc" type="button">Actualizar insight</button>
-      <div class="out" id="insight">Introduce tu última regla para ver el insight.</div>
-      <p class="disclaimer">Lunera IA es una herramienta de asistencia educativa y de bienestar. No provee diagnósticos médicos oficiales ni sustituye la consulta ginecológica profesional.</p>
-    </section>
-
-    <section class="card">
-      <h2>Pregúntale a Lunera IA</h2>
-      <textarea id="q" rows="3" placeholder="Ej: ¿Es normal el flujo elástico hoy?"></textarea>
-      <button id="ask" type="button">Preguntar</button>
-      <div class="out" id="answer"></div>
-      <p class="disclaimer">Si describes hemorragia, dolor insoportable, fiebre muy alta o desmayo, te pediremos acudir a urgencias.</p>
-    </section>
-
-    <p><a href="../descargar-lunera.html">Descargar APK Android</a> · <a href="../descargar-lunera-ios.html">Opciones iOS</a> · <a href="https://cristianoqa.github.io/policies/lunera-es.html">Privacidad</a> · <a href="../">Landing</a></p>
-  </main>
+  <body>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="root"></div>
+  <script src="/lunera/_expo/static/js/web/index-cc95ec7789aafbe34f3ea5c86c0229f2.js" defer></script>
   <script>
-    const KEY = "lunera-pwa-v1";
-    const $ = (id) => document.getElementById(id);
-    const saved = JSON.parse(localStorage.getItem(KEY) || "{}");
-    if (saved.last) $("last").value = saved.last;
-    if (saved.cycle) $("cycle").value = saved.cycle;
-
-    function diffDays(a, b) {
-      const ms = Date.parse(b + "T12:00:00") - Date.parse(a + "T12:00:00");
-      return Math.round(ms / 86400000);
-    }
-    function todayISO() {
-      const d = new Date();
-      const y = d.getFullYear();
-      const m = String(d.getMonth() + 1).padStart(2, "0");
-      const day = String(d.getDate()).padStart(2, "0");
-      return y + "-" + m + "-" + day;
-    }
-    function phaseFor(day, cycle) {
-      if (day <= 5) return "menstrual";
-      if (day < cycle - 15) return "follicular";
-      if (day <= cycle - 13) return "ovulation";
-      return "luteal";
-    }
-    const PHASE = {
-      menstrual: "Tus estrógenos están bajos mientras el endometrio se desprende. Prioriza descanso e hidratación.",
-      follicular: "El estrógeno sube: suele aumentar la energía. Buen momento para rutinas suaves.",
-      ovulation: "Pico de fertilidad. El flujo elástico tipo clara de huevo es habitual y saludable.",
-      luteal: "La progesterona domina. Hinchazón o cambios de humor son frecuentes; protege el sueño."
-    };
-    const HINT = {
-      migraine: " La caída hormonal puede desencadenar migrañas: reduce pantallas y descansa.",
-      cramps: " Los cólicos responden a prostaglandinas: calor local ayuda.",
-      fatigue: " La fatiga pide ritmo más lento e hierro.",
-      bloating: " La hinchazón suele ser retención hídrica: menos sal y movimiento suave.",
-      anxious: " La ansiedad puede subir al final del ciclo: respiración y descanso."
-    };
-    const EMERGENCY = /hemorragia|sangrado hemorr|dolor insoportable|fiebre muy alta|desmayo|emergency|unbearable/i;
-
-    function calc() {
-      const last = $("last").value;
-      const cycle = Math.min(45, Math.max(21, Number($("cycle").value) || 28));
-      if (!last) { $("insight").textContent = "Introduce tu última regla."; return; }
-      localStorage.setItem(KEY, JSON.stringify({ last, cycle }));
-      let day = diffDays(last, todayISO()) + 1;
-      while (day > cycle) day -= cycle;
-      if (day < 1) day = 1;
-      const phase = phaseFor(day, cycle);
-      const sym = $("symptoms").value;
-      $("insight").innerHTML = "<strong>Día " + day + " · " + phase + "</strong><br/>" + PHASE[phase] + (HINT[sym] || "");
-      return { day, phase, cycle };
-    }
-
-    $("calc").onclick = calc;
-    $("ask").onclick = () => {
-      const q = $("q").value.trim();
-      if (!q) return;
-      if (EMERGENCY.test(q)) {
-        $("answer").innerHTML = "<strong style='color:#b91c1c'>Atención:</strong> Tus síntomas podrían requerir atención inmediata. Acude a urgencias o contacta a tu ginecóloga. (112)";
-        return;
-      }
-      const ctx = calc() || { day: "?", phase: "luteal" };
-      if (/flujo|moco|el[aá]stic/i.test(q)) {
-        $("answer").textContent = "Hoy estás en el día " + ctx.day + " (" + ctx.phase + "). El flujo elástico es típico cerca de la ovulación por el estrógeno. Lunera no sustituye anticoncepción ni consejo médico.";
-      } else if (/dolor|c[oó]lico/i.test(q)) {
-        $("answer").textContent = "En fase " + ctx.phase + " el dolor suele relacionarse con prostaglandinas. Calor local e hidratación ayudan. Si te incapacita, consulta.";
-      } else {
-        $("answer").textContent = "Día " + ctx.day + ", fase " + ctx.phase + ". " + PHASE[ctx.phase] + " Pregúntame por flujo, dolor, SPM o retraso para afinar.";
-      }
-    };
-
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("./sw.js").catch(() => {});
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("/lunera/sw.js").catch(function () {});
+      });
     }
-    let deferred;
-    window.addEventListener("beforeinstallprompt", (e) => {
-      e.preventDefault();
-      deferred = e;
-      $("installBtn").style.display = "block";
-    });
-    $("installBtn").onclick = async () => {
-      if (!deferred) return;
-      deferred.prompt();
-      deferred = null;
-    };
-    // iOS tip: Share → Add to Home Screen
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    if (isIOS) {
-      $("installBtn").style.display = "block";
-      $("installBtn").textContent = "En iPhone: Compartir → Añadir a pantalla de inicio";
-      $("installBtn").onclick = () => alert("En Safari: toca Compartir (□↑) y elige «Añadir a pantalla de inicio».");
-    }
-    if (saved.last) calc();
   </script>
 </body>
 </html>
