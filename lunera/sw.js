@@ -1,4 +1,4 @@
-const CACHE = "lunera-app-v1";
+const CACHE = "lunera-app-v2";
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
