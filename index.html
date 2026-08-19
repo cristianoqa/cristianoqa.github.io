@@ -203,15 +203,15 @@
     .app-visual.miravista { background: linear-gradient(145deg, #1e4d6b 0%, #124868 55%, #0a1622 100%); }
     .app-visual.monexa { background: linear-gradient(145deg, #c41e3a 0%, #8b1528 55%, #1a0f10 100%); }
     .app-visual.memio { background: linear-gradient(145deg, #ff6b35 0%, #e85d04 55%, #1a120e 100%); }
-    .app-visual.reformapro { background: linear-gradient(145deg, #0d7377 0%, #0b5255 55%, #102427 100%); }
+    .app-visual.reformapro { background: linear-gradient(145deg, #1e3a5f 0%, #2a5080 55%, #102030 100%); }
     .cta.miravista { background: #124868; }
     .cta.monexa { background: #c41e3a; }
     .cta.memio { background: #ff6b35; }
-    .cta.reformapro { background: #0d7377; }
+    .cta.reformapro { background: #1e3a5f; }
     .app-card.miravista-card .benefits li::before { background: #124868; }
     .app-card.monexa-card .benefits li::before { background: #c41e3a; }
     .app-card.memio-card .benefits li::before { background: #ff6b35; }
-    .app-card.reformapro-card .benefits li::before { background: #0d7377; }
+    .app-card.reformapro-card .benefits li::before { background: #4a90d9; }
     .app-visual.lunera { background: linear-gradient(145deg, #7c3aed 0%, #f472b6 55%, #1f1235 100%); }
     .cta.lunera { background: #7c3aed; }
     .app-card.lunera-card .benefits li::before { background: #7c3aed; }
@@ -245,15 +245,10 @@
       font-weight: 700; letter-spacing: -0.02em; margin: 0;
     }
     .app-mark.reformapro-mark {
-      display: grid;
-      place-items: center;
-      border-radius: 28px;
-      background: linear-gradient(135deg, #ffffff 0%, #d7f1f2 100%);
-      color: #0d7377;
-      font-family: "Segoe UI", system-ui, sans-serif;
-      font-size: 2.2rem;
-      font-weight: 800;
-      letter-spacing: -0.04em;
+      width: 112px;
+      height: 112px;
+      border-radius: 24px;
+      object-fit: cover;
       box-shadow: 0 14px 28px rgba(0,0,0,0.28);
     }
 
@@ -485,7 +480,7 @@
         <article class="app-card reformapro-card reveal" style="--d:260ms" aria-labelledby="reformapro-title">
           <div class="app-visual reformapro" aria-hidden="true">
             <div class="visual-stack">
-              <div class="app-mark reformapro-mark">RP</div>
+              <img class="app-mark reformapro-mark" src="./assets/reformapro-icon.png" width="112" height="112" alt="" decoding="async" />
               <p class="wordmark">ReformaPRO</p>
             </div>
           </div>
@@ -498,7 +493,7 @@
             <div class="badge-row" data-i18n-aria="reformaproStatus">
               <span class="badge play" data-i18n="badgePlay">Próximamente en Google Play</span>
               <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
-              <span class="badge" data-i18n="reformaproVersion">v0.2.0 · build 3</span>
+              <span class="badge" data-i18n="reformaproVersion">v0.2.0 · build 4</span>
             </div>
             <ul class="benefits">
               <li data-i18n="reformaproB1">Catálogo de materiales y servicios</li>
@@ -713,7 +708,7 @@
           ctaTryWeb: "Probar ahora (web / PWA)",
           ctaDownloadApk: "Descargar APK (Android)",
           reformaproNote: "Para probar cambios nuevos usa la web — se actualiza sola. El APK solo si quieres icono en el móvil.",
-          reformaproVersion: "v0.2.0 · build 3",
+          reformaproVersion: "v0.2.0 · build 4",
           trustTitle: "Transparencia",
           trustP1: "<strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.",
           trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong>, <strong>Monexa</strong> y <strong>ReformaPRO</strong> aún no están en Play. <strong>MyPass</strong> sí irá a Google Play; aquí tienes las versiones de prueba.",
@@ -805,7 +800,7 @@ footerMisiva: "Privacidad Misiva",
           ctaTryWeb: "Try now (web / PWA)",
           ctaDownloadApk: "Download APK (Android)",
           reformaproNote: "To try the latest changes use the web — it updates automatically. APK only if you want a home-screen icon.",
-          reformaproVersion: "v0.2.0 · build 3",
+          reformaproVersion: "v0.2.0 · build 4",
           trustTitle: "Transparency",
           trustP1: "<strong>Why direct downloads?</strong> I’m an indie developer. Publishing on Google Play takes review time. Meanwhile I offer signed APKs from this page, no middlemen.",
           trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong>, <strong>Monexa</strong> and <strong>ReformaPRO</strong> are not on Play yet. <strong>MyPass</strong> will go to Google Play; test builds are here.",
@@ -897,7 +892,7 @@ footerMisiva: "Misiva privacy",
           ctaTryWeb: "Experimentar agora (web / PWA)",
           ctaDownloadApk: "Baixar APK (Android)",
           reformaproNote: "Para testar as novidades use a web — atualiza sozinha. APK só se quiser ícone no telemóvel.",
-          reformaproVersion: "v0.2.0 · build 3",
+          reformaproVersion: "v0.2.0 · build 4",
           trustTitle: "Transparência",
           trustP1: "<strong>Por que downloads diretos?</strong> Sou um desenvolvedor independente. Publicar na Google Play leva tempo de revisão. Enquanto isso ofereço APKs assinados nesta página, sem intermediários.",
           trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong>, <strong>Monexa</strong> e <strong>ReformaPRO</strong> ainda não estão na Play. <strong>MyPass</strong> sim: vou subir na Google Play; aqui está a versão de teste.",
