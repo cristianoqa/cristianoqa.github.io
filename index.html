@@ -203,12 +203,15 @@
     .app-visual.miravista { background: linear-gradient(145deg, #1e4d6b 0%, #124868 55%, #0a1622 100%); }
     .app-visual.monexa { background: linear-gradient(145deg, #c41e3a 0%, #8b1528 55%, #1a0f10 100%); }
     .app-visual.memio { background: linear-gradient(145deg, #ff6b35 0%, #e85d04 55%, #1a120e 100%); }
+    .app-visual.reformapro { background: linear-gradient(145deg, #0d7377 0%, #0b5255 55%, #102427 100%); }
     .cta.miravista { background: #124868; }
     .cta.monexa { background: #c41e3a; }
     .cta.memio { background: #ff6b35; }
+    .cta.reformapro { background: #0d7377; }
     .app-card.miravista-card .benefits li::before { background: #124868; }
     .app-card.monexa-card .benefits li::before { background: #c41e3a; }
     .app-card.memio-card .benefits li::before { background: #ff6b35; }
+    .app-card.reformapro-card .benefits li::before { background: #0d7377; }
     .app-visual.lunera { background: linear-gradient(145deg, #7c3aed 0%, #f472b6 55%, #1f1235 100%); }
     .cta.lunera { background: #7c3aed; }
     .app-card.lunera-card .benefits li::before { background: #7c3aed; }
@@ -240,6 +243,18 @@
     .app-visual .wordmark {
       font-family: Fraunces, Georgia, serif; color: #fff; font-size: 1.55rem;
       font-weight: 700; letter-spacing: -0.02em; margin: 0;
+    }
+    .app-mark.reformapro-mark {
+      display: grid;
+      place-items: center;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #ffffff 0%, #d7f1f2 100%);
+      color: #0d7377;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.28);
     }
 
     .app-body {
@@ -438,6 +453,38 @@
           </div>
         </article>
 
+        <article class="app-card reformapro-card reveal" style="--d:260ms" aria-labelledby="reformapro-title">
+          <div class="app-visual reformapro" aria-hidden="true">
+            <div class="visual-stack">
+              <div class="app-mark reformapro-mark">RP</div>
+              <p class="wordmark">ReformaPRO</p>
+            </div>
+          </div>
+          <div class="app-body">
+            <h3 id="reformapro-title" class="app-title">ReformaPRO</h3>
+            <p class="app-eyebrow" data-i18n="reformaproEyebrow">Presupuestos para reformas</p>
+            <p class="lead" data-i18n="reformaproLead">
+              Presupuestos móviles con catálogo, márgenes, impuestos, PDF y envío al cliente desde obra o visita.
+            </p>
+            <div class="badge-row" data-i18n-aria="reformaproStatus">
+              <span class="badge play" data-i18n="badgePlay">Próximamente en Google Play</span>
+              <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
+              <span class="badge">v0.1.0</span>
+            </div>
+            <ul class="benefits">
+              <li data-i18n="reformaproB1">Catálogo de materiales y servicios</li>
+              <li data-i18n="reformaproB2">Presupuestos con IVA, IRPF y margen visible</li>
+              <li data-i18n="reformaproB3">PDF, impresión y envío al cliente</li>
+              <li data-i18n="reformaproB4">Pensada para uso rápido en móvil Android</li>
+            </ul>
+            <div class="cta-stack">
+              <a class="cta reformapro" href="./descargar-reformapro.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
+              <a class="cta secondary" id="privacy-reformapro" href="/policies/reformapro-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
+              <p class="cta-note" data-i18n="reformaproNote">También llegará a Google Play. Activa orígenes desconocidos solo para esta app.</p>
+            </div>
+          </div>
+        </article>
+
         <article class="app-card miravista-card reveal" style="--d:300ms" aria-labelledby="miravista-title">
           <div class="app-visual miravista" aria-hidden="true">
             <div class="visual-stack">
@@ -573,6 +620,7 @@
     <div class="links">
       <a id="footer-privacy-misiva" href="/policies/mensajetexto.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMisiva">Privacidad Misiva</a>
       <a id="footer-privacy-mypass" href="/policies/mypass-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMypass">Privacidad MyPass</a>
+      <a id="footer-privacy-reformapro" href="/policies/reformapro-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerReformapro">Privacidad ReformaPRO</a>
       <a id="footer-privacy-miravista" href="/policies/miravista-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMiravista">Privacidad Miravista</a>
       <a id="footer-privacy-monexa" href="/policies/monexa-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMonexa">Privacidad Monexa</a>
       <a id="footer-privacy-memio" href="/policies/memio-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMemio">Privacidad Memio</a>
@@ -589,9 +637,9 @@
     (function () {
       var year = new Date().getFullYear();
       var privacy = {
-        es: { misiva: "/policies/mensajetexto.html", mypass: "/policies/mypass-es.html", miravista: "/policies/miravista-es.html", monexa: "/policies/monexa-es.html", memio: "/policies/memio-es.html", lunera: "/policies/lunera-es.html" },
-        en: { misiva: "/policies/misiva.html", mypass: "/policies/mypass.html", miravista: "/policies/miravista.html", monexa: "/policies/monexa.html", memio: "/policies/memio.html", lunera: "/policies/lunera.html" },
-        pt: { misiva: "/policies/misiva-pt.html", mypass: "/policies/mypass-pt.html", miravista: "/policies/miravista-pt.html", monexa: "/policies/monexa-pt.html", memio: "/policies/memio-pt.html", lunera: "/policies/lunera-pt.html" }
+        es: { misiva: "/policies/mensajetexto.html", mypass: "/policies/mypass-es.html", reformapro: "/policies/reformapro-es.html", miravista: "/policies/miravista-es.html", monexa: "/policies/monexa-es.html", memio: "/policies/memio-es.html", lunera: "/policies/lunera-es.html" },
+        en: { misiva: "/policies/misiva.html", mypass: "/policies/mypass.html", reformapro: "/policies/reformapro.html", miravista: "/policies/miravista.html", monexa: "/policies/monexa.html", memio: "/policies/memio.html", lunera: "/policies/lunera.html" },
+        pt: { misiva: "/policies/misiva-pt.html", mypass: "/policies/mypass-pt.html", reformapro: "/policies/reformapro-pt.html", miravista: "/policies/miravista-pt.html", monexa: "/policies/monexa-pt.html", memio: "/policies/memio-pt.html", lunera: "/policies/lunera-pt.html" }
       };
       var I18N = {
         es: {
@@ -605,7 +653,7 @@
           heroBody: "Apps Android hechas en casa: útiles, sin anuncios invasivos y con tus datos donde deben estar — en tu dispositivo. Mientras Google Play termina de abrir la puerta, puedes probarlas aquí.",
           catalogKicker: "Catálogo",
           appsTitle: "Apps",
-          appsIntro: "Descargas de prueba firmadas. Misiva, MyPass, Miravista, Monexa, Memio y Lunera, listas para instalar en Android.",
+          appsIntro: "Descargas de prueba firmadas. Misiva, MyPass, ReformaPRO, Miravista, Monexa y Lunera, listas para instalar en Android.",
           misivaLead: "Programa mensajes a WhatsApp y genera el texto con IA (tu propia API key de Gemini). Todo corre en tu móvil.",
           misivaStatus: "Estado Misiva",
           badgeApk: "APK de prueba",
@@ -625,10 +673,18 @@
           mypassB3: "Autofill Android y TOTP",
           mypassB4: "Sync en la nube incluido (gratis)",
           mypassNote: "También llegará a Google Play. Activa orígenes desconocidos solo para esta app.",
+          reformaproEyebrow: "Presupuestos para reformas",
+          reformaproLead: "Presupuestos móviles con catálogo, márgenes, impuestos, PDF y envío al cliente desde obra o visita.",
+          reformaproStatus: "Estado ReformaPRO",
+          reformaproB1: "Catálogo de materiales y servicios",
+          reformaproB2: "Presupuestos con IVA, IRPF y margen visible",
+          reformaproB3: "PDF, impresión y envío al cliente",
+          reformaproB4: "Pensada para uso rápido en móvil Android",
+          reformaproNote: "También llegará a Google Play. Activa orígenes desconocidos solo para esta app.",
           trustKicker: "Confianza",
           trustTitle: "Transparencia",
           trustP1: "<strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.",
-          trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong> y <strong>Monexa</strong> aún no están en Play. <strong>MyPass</strong> sí irá a Google Play; aquí tienes las versiones de prueba.",
+          trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong>, <strong>Monexa</strong> y <strong>ReformaPRO</strong> aún no están en Play. <strong>MyPass</strong> sí irá a Google Play; aquí tienes las versiones de prueba.",
           trustP3: "Sin tienda falsa ni publicidad oculta. Contacto: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
           trustP4: "Las políticas de privacidad de cada app están en el botón de cada tarjeta (y en el pie de página).",
           supportKicker: "Apoyar",
@@ -672,6 +728,7 @@
           footerMonexa: "Privacidad Monexa",
 footerMisiva: "Privacidad Misiva",
           footerMypass: "Privacidad MyPass",
+          footerReformapro: "Privacidad ReformaPRO",
           footerSupport: "Soporte",
           footerCopy: "© " + year + " Flow Home Apps · Hecho con calma, sin prisa de plataforma."
         },
@@ -686,7 +743,7 @@ footerMisiva: "Privacidad Misiva",
           heroBody: "Homemade Android apps: useful, no invasive ads, and your data stays on your device. While Google Play finishes opening the door, you can try them here.",
           catalogKicker: "Catalog",
           appsTitle: "Apps",
-          appsIntro: "Signed test downloads. Misiva, MyPass, Miravista, Monexa, Memio and Lunera, ready to install on Android.",
+          appsIntro: "Signed test downloads. Misiva, MyPass, ReformaPRO, Miravista, Monexa and Lunera, ready to install on Android.",
           misivaLead: "Schedule WhatsApp messages and generate text with AI (your own Gemini API key). Everything runs on your phone.",
           misivaStatus: "Misiva status",
           badgeApk: "Test APK",
@@ -706,10 +763,18 @@ footerMisiva: "Privacidad Misiva",
           mypassB3: "Android Autofill and TOTP",
           mypassB4: "Cloud sync included (free)",
           mypassNote: "Also coming to Google Play. Enable unknown sources only for this app.",
+          reformaproEyebrow: "Quoting for renovation jobs",
+          reformaproLead: "Mobile-first quotes with catalog, margins, taxes, PDF and client sending from site or visit.",
+          reformaproStatus: "ReformaPRO status",
+          reformaproB1: "Materials and services catalog",
+          reformaproB2: "Quotes with VAT, withholding and visible margin",
+          reformaproB3: "PDF, print and client delivery",
+          reformaproB4: "Built for fast Android field work",
+          reformaproNote: "Also coming to Google Play. Enable unknown sources only for this app.",
           trustKicker: "Trust",
           trustTitle: "Transparency",
           trustP1: "<strong>Why direct downloads?</strong> I’m an indie developer. Publishing on Google Play takes review time. Meanwhile I offer signed APKs from this page, no middlemen.",
-          trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong> and <strong>Monexa</strong> are not on Play yet. <strong>MyPass</strong> will go to Google Play; test builds are here.",
+          trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong>, <strong>Monexa</strong> and <strong>ReformaPRO</strong> are not on Play yet. <strong>MyPass</strong> will go to Google Play; test builds are here.",
           trustP3: "No fake store, no hidden ads. Contact: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
           trustP4: "Each app’s privacy policy is on the card button (and in the footer).",
           supportKicker: "Support",
@@ -753,6 +818,7 @@ footerMisiva: "Privacidad Misiva",
           footerMonexa: "Monexa privacy",
 footerMisiva: "Misiva privacy",
           footerMypass: "MyPass privacy",
+          footerReformapro: "ReformaPRO privacy",
           footerSupport: "Support",
           footerCopy: "© " + year + " Flow Home Apps · Built calmly, without platform rush."
         },
@@ -767,7 +833,7 @@ footerMisiva: "Misiva privacy",
           heroBody: "Apps Android feitos em casa: úteis, sem anúncios invasivos e com os seus dados no dispositivo. Enquanto a Google Play termina de abrir a porta, você pode testá-los aqui.",
           catalogKicker: "Catálogo",
           appsTitle: "Apps",
-          appsIntro: "Downloads de teste assinados. Misiva, MyPass, Miravista, Monexa, Memio e Lunera, prontos para instalar no Android.",
+          appsIntro: "Downloads de teste assinados. Misiva, MyPass, ReformaPRO, Miravista, Monexa e Lunera, prontos para instalar no Android.",
           misivaLead: "Agende mensagens no WhatsApp e gere texto com IA (sua própria API key do Gemini). Tudo roda no seu celular.",
           misivaStatus: "Status Misiva",
           badgeApk: "APK de teste",
@@ -787,10 +853,18 @@ footerMisiva: "Misiva privacy",
           mypassB3: "Autofill Android e TOTP",
           mypassB4: "Sync na nuvem incluído (grátis)",
           mypassNote: "Também chegará à Google Play. Ative origens desconhecidas só para este app.",
+          reformaproEyebrow: "Orçamentos para obras e reformas",
+          reformaproLead: "Orçamentos mobile com catálogo, margens, impostos, PDF e envio ao cliente no local da obra ou visita.",
+          reformaproStatus: "Estado ReformaPRO",
+          reformaproB1: "Catálogo de materiais e serviços",
+          reformaproB2: "Orçamentos com IVA, retenção e margem visível",
+          reformaproB3: "PDF, impressão e envio ao cliente",
+          reformaproB4: "Feita para uso rápido em Android",
+          reformaproNote: "Também chegará à Google Play. Ative origens desconhecidas só para este app.",
           trustKicker: "Confiança",
           trustTitle: "Transparência",
           trustP1: "<strong>Por que downloads diretos?</strong> Sou um desenvolvedor independente. Publicar na Google Play leva tempo de revisão. Enquanto isso ofereço APKs assinados nesta página, sem intermediários.",
-          trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong> e <strong>Monexa</strong> ainda não estão na Play. <strong>MyPass</strong> sim: vou subir na Google Play; aqui está a versão de teste.",
+          trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong>, <strong>Monexa</strong> e <strong>ReformaPRO</strong> ainda não estão na Play. <strong>MyPass</strong> sim: vou subir na Google Play; aqui está a versão de teste.",
           trustP3: "Sem loja falsa nem publicidade oculta. Contato: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
           trustP4: "As políticas de privacidade de cada app estão no botão de cada cartão (e no rodapé).",
           supportKicker: "Apoiar",
@@ -834,6 +908,7 @@ footerMisiva: "Misiva privacy",
           footerMonexa: "Privacidade Monexa",
 footerMisiva: "Privacidade Misiva",
           footerMypass: "Privacidade MyPass",
+          footerReformapro: "Privacidade ReformaPRO",
           footerSupport: "Suporte",
           footerCopy: "© " + year + " Flow Home Apps · Feito com calma, sem pressa de plataforma."
         }
@@ -873,8 +948,10 @@ footerMisiva: "Privacidade Misiva",
         var p = privacy[lang] || privacy.es;
         var misiva = document.getElementById("privacy-misiva");
         var mypass = document.getElementById("privacy-mypass");
+        var reformapro = document.getElementById("privacy-reformapro");
         var fMisiva = document.getElementById("footer-privacy-misiva");
         var fMypass = document.getElementById("footer-privacy-mypass");
+        var fReformapro = document.getElementById("footer-privacy-reformapro");
         var sm = document.getElementById("privacy-miravista");
         var fSm = document.getElementById("footer-privacy-miravista");
         var monexa = document.getElementById("privacy-monexa");
@@ -885,9 +962,11 @@ footerMisiva: "Privacidade Misiva",
         var fLunera = document.getElementById("footer-privacy-lunera");
         if (misiva) misiva.href = p.misiva;
         if (mypass) mypass.href = p.mypass;
+        if (reformapro) reformapro.href = p.reformapro;
         if (sm) sm.href = p.miravista;
         if (fMisiva) fMisiva.href = p.misiva;
         if (fMypass) fMypass.href = p.mypass;
+        if (fReformapro) fReformapro.href = p.reformapro;
         if (fSm) fSm.href = p.miravista;
         if (monexa) monexa.href = p.monexa;
         if (fMonexa) fMonexa.href = p.monexa;
