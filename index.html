@@ -341,6 +341,35 @@
       .app-card, .cta { transition: none; }
       .app-card:hover, .cta:hover { transform: none; }
     }
+
+    /* Móvil: catálogo visible de primeras, sin esperar scroll */
+    @media (max-width: 720px) {
+      .hero { padding: 1rem 0 0.35rem; }
+      .hook {
+        padding: 0.85rem 1rem 0.75rem;
+        margin-bottom: 0;
+      }
+      .hook h1 {
+        font-size: 1.35rem;
+        margin-bottom: 0.45rem;
+        max-width: none;
+      }
+      .hook p {
+        font-size: 0.88rem;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      #apps.section { margin-top: 0.75rem; }
+      #apps,
+      #apps .reveal,
+      #apps .app-card {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -469,7 +498,7 @@
             <div class="badge-row" data-i18n-aria="reformaproStatus">
               <span class="badge play" data-i18n="badgePlay">Próximamente en Google Play</span>
               <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
-              <span class="badge">v0.1.0</span>
+              <span class="badge" data-i18n="reformaproVersion">v0.2.0 · build 3</span>
             </div>
             <ul class="benefits">
               <li data-i18n="reformaproB1">Catálogo de materiales y servicios</li>
@@ -478,9 +507,10 @@
               <li data-i18n="reformaproB4">Pensada para uso rápido en móvil Android</li>
             </ul>
             <div class="cta-stack">
-              <a class="cta reformapro" href="./descargar-reformapro.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
+              <a class="cta reformapro" href="https://reformapro-web-seven.vercel.app" target="_blank" rel="noopener noreferrer" data-i18n="ctaTryWeb">Probar ahora (web / PWA)</a>
+              <a class="cta secondary" href="./descargar-reformapro.html" data-i18n="ctaDownloadApk">Descargar APK (Android)</a>
               <a class="cta secondary" id="privacy-reformapro" href="/policies/reformapro-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
-              <p class="cta-note" data-i18n="reformaproNote">También llegará a Google Play. Activa orígenes desconocidos solo para esta app.</p>
+              <p class="cta-note" data-i18n="reformaproNote">Para probar cambios nuevos usa la web — se actualiza sola. El APK solo si quieres icono en el móvil.</p>
             </div>
           </div>
         </article>
@@ -680,8 +710,10 @@
           reformaproB2: "Presupuestos con IVA, IRPF y margen visible",
           reformaproB3: "PDF, impresión y envío al cliente",
           reformaproB4: "Pensada para uso rápido en móvil Android",
-          reformaproNote: "También llegará a Google Play. Activa orígenes desconocidos solo para esta app.",
-          trustKicker: "Confianza",
+          ctaTryWeb: "Probar ahora (web / PWA)",
+          ctaDownloadApk: "Descargar APK (Android)",
+          reformaproNote: "Para probar cambios nuevos usa la web — se actualiza sola. El APK solo si quieres icono en el móvil.",
+          reformaproVersion: "v0.2.0 · build 3",
           trustTitle: "Transparencia",
           trustP1: "<strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.",
           trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong>, <strong>Monexa</strong> y <strong>ReformaPRO</strong> aún no están en Play. <strong>MyPass</strong> sí irá a Google Play; aquí tienes las versiones de prueba.",
@@ -770,8 +802,10 @@ footerMisiva: "Privacidad Misiva",
           reformaproB2: "Quotes with VAT, withholding and visible margin",
           reformaproB3: "PDF, print and client delivery",
           reformaproB4: "Built for fast Android field work",
-          reformaproNote: "Also coming to Google Play. Enable unknown sources only for this app.",
-          trustKicker: "Trust",
+          ctaTryWeb: "Try now (web / PWA)",
+          ctaDownloadApk: "Download APK (Android)",
+          reformaproNote: "To try the latest changes use the web — it updates automatically. APK only if you want a home-screen icon.",
+          reformaproVersion: "v0.2.0 · build 3",
           trustTitle: "Transparency",
           trustP1: "<strong>Why direct downloads?</strong> I’m an indie developer. Publishing on Google Play takes review time. Meanwhile I offer signed APKs from this page, no middlemen.",
           trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong>, <strong>Monexa</strong> and <strong>ReformaPRO</strong> are not on Play yet. <strong>MyPass</strong> will go to Google Play; test builds are here.",
@@ -860,8 +894,10 @@ footerMisiva: "Misiva privacy",
           reformaproB2: "Orçamentos com IVA, retenção e margem visível",
           reformaproB3: "PDF, impressão e envio ao cliente",
           reformaproB4: "Feita para uso rápido em Android",
-          reformaproNote: "Também chegará à Google Play. Ative origens desconhecidas só para este app.",
-          trustKicker: "Confiança",
+          ctaTryWeb: "Experimentar agora (web / PWA)",
+          ctaDownloadApk: "Baixar APK (Android)",
+          reformaproNote: "Para testar as novidades use a web — atualiza sozinha. APK só se quiser ícone no telemóvel.",
+          reformaproVersion: "v0.2.0 · build 3",
           trustTitle: "Transparência",
           trustP1: "<strong>Por que downloads diretos?</strong> Sou um desenvolvedor independente. Publicar na Google Play leva tempo de revisão. Enquanto isso ofereço APKs assinados nesta página, sem intermediários.",
           trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong>, <strong>Monexa</strong> e <strong>ReformaPRO</strong> ainda não estão na Play. <strong>MyPass</strong> sim: vou subir na Google Play; aqui está a versão de teste.",
@@ -995,6 +1031,19 @@ footerMisiva: "Privacidade Misiva",
 
     (function () {
       var nodes = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+      var appsSection = document.getElementById("apps");
+      var isMobile = window.matchMedia("(max-width: 720px)").matches;
+
+      function revealAppsCatalog() {
+        if (!appsSection) return;
+        appsSection.classList.add("is-in");
+        appsSection.querySelectorAll(".reveal").forEach(function (el) {
+          el.classList.add("is-in");
+        });
+      }
+
+      if (isMobile) revealAppsCatalog();
+
       if (!("IntersectionObserver" in window)) {
         nodes.forEach(function (el) { el.classList.add("is-in"); });
         return;
