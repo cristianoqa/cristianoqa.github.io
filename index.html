@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
-<html lang="es" data-deploy-stamp="2026-08-18-lunera-log-cal-logout">
+<!DOCTYPE html>
+<html lang="es" data-deploy-stamp="2026-09-04-ios-testflight-four">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flow Home Apps — Herramientas para tu día a día</title>
-  <meta name="description" content="Misiva, MyPass, Miravista y Monexa: apps Android de Flow Home Apps. Descarga de prueba mientras llegan a Google Play." />
+  <meta name="description" content="Flow Home Apps: Lunera, MyPass, ReformaPRO y Monexa en camino a iOS (TestFlight). APKs Android de prueba. Misiva y Miravista solo Android." />
   <meta name="theme-color" content="#0c1f33" />
   <link rel="canonical" href="https://cristianoqa.github.io/" />
   <link rel="icon" href="./assets/flow-home-mark.png" type="image/png" sizes="32x32" />
@@ -12,14 +12,14 @@
   <link rel="apple-touch-icon" href="./assets/flow-home-mark.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cristianoqa.github.io/" />
-  <meta property="og:title" content="Flow Home Apps — Misiva + MyPass" />
-  <meta property="og:description" content="Apps Android locales. APKs de prueba firmados mientras llegan a Google Play." />
+  <meta property="og:title" content="Flow Home Apps — Android + iOS (TestFlight)" />
+  <meta property="og:description" content="4 apps en TestFlight (Lunera, MyPass, ReformaPRO, Monexa). Misiva y Miravista solo Android. APKs de prueba firmados." />
   <meta property="og:image" content="https://cristianoqa.github.io/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Flow Home Apps — Misiva + MyPass" />
-  <meta name="twitter:description" content="Apps Android locales. APKs de prueba firmados mientras llegan a Google Play." />
+  <meta name="twitter:title" content="Flow Home Apps — Android + iOS (TestFlight)" />
+  <meta name="twitter:description" content="4 apps en TestFlight. Misiva y Miravista solo Android." />
   <meta name="twitter:image" content="https://cristianoqa.github.io/assets/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -282,6 +282,33 @@
     .badge.play { border-color: #b7d4ea; color: #124868; background: #eaf4fb; }
     .badge.apk { border-color: #b9ddd4; color: #0f6b5c; background: #eaf6f2; }
     .badge.ios { border-color: #c4b5fd; color: #5b21b6; background: #f5f3ff; }
+    .badge.android-only { border-color: #e7c4a8; color: #9a3412; background: #fff7ed; }
+    .ios-panel {
+      margin: 0 0 1.5rem;
+      padding: 1.15rem 1.25rem;
+      border-radius: var(--radius);
+      border: 1px solid #c4b5fd;
+      background: linear-gradient(135deg, #f5f3ff 0%, #eef6ff 55%, #f8fafc 100%);
+      box-shadow: var(--shadow);
+    }
+    .ios-panel h2 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.25rem;
+      margin: 0 0 0.45rem;
+      letter-spacing: -0.02em;
+    }
+    .ios-panel p { margin: 0.35rem 0; color: var(--ink-soft); font-size: 0.95rem; }
+    .ios-panel ul {
+      margin: 0.55rem 0 0.35rem;
+      padding-left: 1.15rem;
+      color: var(--ink);
+      font-size: 0.92rem;
+    }
+    .ios-panel .ios-note {
+      margin-top: 0.65rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
 
     .cta-stack { display: grid; gap: 0.55rem; margin-top: auto; padding-top: 0.35rem; }
     .cta {
@@ -388,6 +415,7 @@
         </div>
         <nav class="nav-links" aria-label="Sections" data-i18n-aria="navSections">
           <a href="#apps" data-i18n="navApps">Apps</a>
+          <a href="#ios" data-i18n="navIos">iOS</a>
           <a href="#transparencia" data-i18n="navTrust">Transparencia</a>
           <a href="#apoyo" data-i18n="navSupport">Apoyar</a>
         </nav>
@@ -396,19 +424,35 @@
     <div class="hook reveal" style="--d:120ms">
       <h1 data-i18n="heroTitle">Herramientas inteligentes para automatizar tu día a día</h1>
       <p data-i18n="heroBody">
-        Apps Android hechas en casa: útiles, sin anuncios invasivos y con tus datos
-        donde deben estar — en tu dispositivo. Mientras Google Play termina de abrir
-        la puerta, puedes probarlas aquí.
+        Apps hechas en casa: útiles, sin anuncios invasivos y con tus datos en tu dispositivo.
+        Android con APKs de prueba; cuatro apps ya en TestFlight hacia App Store.
       </p>
     </div>
   </header>
 
   <main class="wrap">
+    <section id="ios" class="ios-panel section reveal" style="--d:40ms" aria-labelledby="ios-title">
+      <span class="section-kicker" data-i18n="iosKicker">App Store · TestFlight</span>
+      <h2 id="ios-title" data-i18n="iosTitle">Cuatro apps listas para iPhone</h2>
+      <p data-i18n="iosBody">
+        Ya están en prueba cerrada (TestFlight) y en camino a la App Store:
+        <strong>Lunera</strong>, <strong>MyPass</strong>, <strong>ReformaPRO</strong> y <strong>Monexa</strong>.
+      </p>
+      <ul>
+        <li data-i18n="iosList1">Invitación por TestFlight (testers internos / externos).</li>
+        <li data-i18n="iosList2">Mismo producto que en Android; canal nativo iOS en marcha.</li>
+      </ul>
+      <p class="ios-note" data-i18n="iosExclude">
+        <strong>Sin versión iOS:</strong> Misiva y Miravista (ScreenMirror) seguirán solo en Android
+        (límites de plataforma / revisión de Apple).
+      </p>
+    </section>
+
     <section id="apps" class="section reveal" style="--d:80ms" aria-labelledby="apps-title">
       <div class="section-head">
         <span class="section-kicker" data-i18n="catalogKicker">Catálogo</span>
         <h2 id="apps-title" data-i18n="appsTitle">Apps</h2>
-        <p data-i18n="appsIntro">Descargas de prueba firmadas. Misiva, MyPass, Miravista y Monexa, listas para instalar en Android.</p>
+        <p data-i18n="appsIntro">Descargas Android firmadas. Lunera, MyPass, ReformaPRO y Monexa también en TestFlight (iOS).</p>
       </div>
 
       <div class="apps">
@@ -428,8 +472,8 @@
             </p>
             <div class="badge-row" data-i18n-aria="misivaStatus">
               <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
-              <span class="badge">Android</span>
-              <span class="badge">v2.0.88</span>
+              <span class="badge android-only" data-i18n="badgeAndroidOnly">Solo Android</span>
+              <span class="badge">v2.0.89</span>
             </div>
             <ul class="benefits">
               <li data-i18n="misivaB1">Programaciones diarias y recurrentes</li>
@@ -461,6 +505,7 @@
             </p>
             <div class="badge-row" data-i18n-aria="mypassStatus">
               <span class="badge play" data-i18n="badgePlay">Próximamente en Google Play</span>
+              <span class="badge ios" data-i18n="badgeTestFlight">TestFlight iOS</span>
               <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
               <span class="badge">v1.1.8</span>
             </div>
@@ -493,6 +538,7 @@
             </p>
             <div class="badge-row" data-i18n-aria="reformaproStatus">
               <span class="badge play" data-i18n="badgePlay">Próximamente en Google Play</span>
+              <span class="badge ios" data-i18n="badgeTestFlight">TestFlight iOS</span>
               <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
               <span class="badge" data-i18n="reformaproVersion">v0.2.0 · build 4</span>
             </div>
@@ -527,7 +573,7 @@
             </p>
             <div class="badge-row" data-i18n-aria="smStatus">
               <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
-              <span class="badge">Android</span>
+              <span class="badge android-only" data-i18n="badgeAndroidOnly">Solo Android</span>
               <span class="badge">v1.1.2</span>
             </div>
             <ul class="benefits">
@@ -560,6 +606,7 @@
             </p>
             <div class="badge-row" data-i18n-aria="monexaStatus">
               <span class="badge play" data-i18n="badgePlay">Próximamente en Google Play</span>
+              <span class="badge ios" data-i18n="badgeTestFlight">TestFlight iOS</span>
               <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
               <span class="badge">v1.0.11</span>
             </div>
@@ -592,8 +639,8 @@
             </p>
             <div class="badge-row">
               <span class="badge play" data-i18n="badgePlay">Próximamente en Google Play</span>
+              <span class="badge ios" data-i18n="badgeTestFlight">TestFlight iOS</span>
               <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
-              <span class="badge ios">TestFlight iOS</span>
               <span class="badge">v1.1.11</span>
             </div>
             <ul class="benefits">
@@ -617,7 +664,7 @@
       <span class="section-kicker" data-i18n="trustKicker">Confianza</span>
       <h2 id="transparencia-title" data-i18n="trustTitle">Transparencia</h2>
       <p data-i18n-html="trustP1"><strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.</p>
-      <p data-i18n-html="trustP2"><strong>Misiva</strong>, <strong>Miravista</strong> y <strong>Monexa</strong> aún no están en Play. <strong>MyPass</strong> sí irá a Google Play; aquí tienes las versiones de prueba.</p>
+      <p data-i18n-html="trustP2"><strong>Misiva</strong> y <strong>Miravista</strong> (ScreenMirror) son solo Android — no habrá App Store. <strong>Lunera</strong>, <strong>MyPass</strong>, <strong>ReformaPRO</strong> y <strong>Monexa</strong> ya están en TestFlight hacia iOS.</p>
       <p data-i18n-html="trustP3">Sin tienda falsa ni publicidad oculta. Contacto: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>.</p>
       <p style="margin-top:0.85rem;font-size:0.92rem;" data-i18n="trustP4">
         Las políticas de privacidad de cada app están en el botón de cada tarjeta (y en el pie de página).
@@ -673,13 +720,22 @@
           brandName: "Cristiano · desarrollador independiente",
           navSections: "Secciones",
           navApps: "Apps",
+          navIos: "iOS",
           navTrust: "Transparencia",
           navSupport: "Apoyar",
           heroTitle: "Herramientas inteligentes para automatizar tu día a día",
-          heroBody: "Apps Android hechas en casa: útiles, sin anuncios invasivos y con tus datos donde deben estar — en tu dispositivo. Mientras Google Play termina de abrir la puerta, puedes probarlas aquí.",
+          heroBody: "Apps hechas en casa: útiles, sin anuncios invasivos y con tus datos en tu dispositivo. Android con APKs de prueba; cuatro apps ya en TestFlight hacia App Store.",
+          iosKicker: "App Store · TestFlight",
+          iosTitle: "Cuatro apps listas para iPhone",
+          iosBody: "Ya están en prueba cerrada (TestFlight) y en camino a la App Store: Lunera, MyPass, ReformaPRO y Monexa.",
+          iosList1: "Invitación por TestFlight (testers internos / externos).",
+          iosList2: "Mismo producto que en Android; canal nativo iOS en marcha.",
+          iosExclude: "Sin versión iOS: Misiva y Miravista (ScreenMirror) seguirán solo en Android (límites de plataforma / revisión de Apple).",
           catalogKicker: "Catálogo",
           appsTitle: "Apps",
-          appsIntro: "Descargas de prueba firmadas. Misiva, MyPass, ReformaPRO, Miravista, Monexa y Lunera, listas para instalar en Android.",
+          appsIntro: "Descargas Android firmadas. Lunera, MyPass, ReformaPRO y Monexa también en TestFlight (iOS).",
+          badgeTestFlight: "TestFlight iOS",
+          badgeAndroidOnly: "Solo Android",
           misivaLead: "Programa mensajes a WhatsApp y genera el texto con IA (tu propia API key de Gemini). Todo corre en tu móvil.",
           misivaStatus: "Estado Misiva",
           badgeApk: "APK de prueba",
@@ -689,7 +745,7 @@
           misivaB4: "Sin subir tus mensajes a nuestros servidores",
           ctaDownload: "Descargar versión de pruebas (.APK)",
           ctaPrivacy: "Ver política de privacidad",
-          misivaNote: "En el móvil: si se abre otra página, pulsa otra vez “Descargar”.",
+          misivaNote: "En el móvil: si se abre otra página, pulsa otra vez “Descargar”. Solo Android — sin App Store.",
           mypassEyebrow: "Bóveda de contraseñas",
           mypassLead: "Bóveda cifrada en el dispositivo, Recovery Key, backup, Autofill y sync. Ahora todo incluido, sin paywall.",
           mypassStatus: "Estado MyPass",
@@ -698,21 +754,22 @@
           mypassB2: "Recovery Key + backup cifrado",
           mypassB3: "Autofill Android y TOTP",
           mypassB4: "Sync en la nube incluido (gratis)",
-          mypassNote: "También llegará a Google Play. Activa orígenes desconocidos solo para esta app.",
+          mypassNote: "También en TestFlight (iOS) y llegará a Google Play. Activa orígenes desconocidos solo para esta app.",
           reformaproEyebrow: "Presupuestos para reformas",
           reformaproLead: "Presupuestos móviles con catálogo, márgenes, impuestos, PDF y envío al cliente desde obra o visita.",
           reformaproStatus: "Estado ReformaPRO",
           reformaproB1: "Catálogo de materiales y servicios",
           reformaproB2: "Presupuestos con IVA, IRPF y margen visible",
           reformaproB3: "PDF, impresión y envío al cliente",
-          reformaproB4: "Pensada para uso rápido en móvil Android",
+          reformaproB4: "Android, PWA y TestFlight iOS",
           ctaTryWeb: "Probar ahora (web / PWA)",
           ctaDownloadApk: "Descargar APK (Android)",
-          reformaproNote: "Para probar cambios nuevos usa la web — se actualiza sola. El APK solo si quieres icono en el móvil.",
+          reformaproNote: "Web/PWA se actualiza sola. APK Android y TestFlight iOS para icono nativo.",
           reformaproVersion: "v0.2.0 · build 49",
+          trustKicker: "Confianza",
           trustTitle: "Transparencia",
           trustP1: "<strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.",
-          trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong>, <strong>Monexa</strong> y <strong>ReformaPRO</strong> aún no están en Play. <strong>MyPass</strong> sí irá a Google Play; aquí tienes las versiones de prueba.",
+          trustP2: "<strong>Misiva</strong> y <strong>Miravista</strong> (ScreenMirror) son solo Android — no habrá App Store. <strong>Lunera</strong>, <strong>MyPass</strong>, <strong>ReformaPRO</strong> y <strong>Monexa</strong> ya están en TestFlight hacia iOS.",
           trustP3: "Sin tienda falsa ni publicidad oculta. Contacto: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
           trustP4: "Las políticas de privacidad de cada app están en el botón de cada tarjeta (y en el pie de página).",
           supportKicker: "Apoyar",
@@ -726,7 +783,7 @@
           smB2: "QR para abrir en el navegador de la TV",
           smB3: "Calidad 480p / 720p / 1080p",
           smB4: "Sin cuenta ni servidores cloud",
-          smNote: "Misma Wi-Fi en móvil y TV. Activa orígenes desconocidos solo para esta app.",
+          smNote: "Solo Android (sin iOS). Misma Wi-Fi en móvil y TV. Activa orígenes desconocidos solo para esta app.",
           monexaEyebrow: "Gastos e ingresos compartidos",
           monexaLead: "Controla gastos e ingresos en grupo: categorías, presupuestos, suscripciones y metas. Sincronización en la nube con tu cuenta.",
           monexaStatus: "Estado Monexa",
@@ -734,7 +791,7 @@
           monexaB2: "Presupuestos, suscripciones y metas",
           monexaB3: "Gasto rápido y análisis mensual",
           monexaB4: "Sin anuncios invasivos",
-          monexaNote: "También llegará a Google Play. Activa orígenes desconocidos solo para esta app.",
+          monexaNote: "También en TestFlight (iOS) y llegará a Google Play. Activa orígenes desconocidos solo para esta app.",
           memioEyebrow: "Generador de memes",
           memioLead: "Crea memes al instante: plantillas, texto clásico arriba/abajo, arrastra, guarda y comparte. Todo en el móvil, sin cuenta.",
           memioB1: "Plantillas + sube tu foto",
@@ -765,13 +822,22 @@ footerMisiva: "Privacidad Misiva",
           brandName: "Cristiano · indie developer",
           navSections: "Sections",
           navApps: "Apps",
+          navIos: "iOS",
           navTrust: "Trust",
           navSupport: "Support",
           heroTitle: "Smart tools to automate your day",
-          heroBody: "Homemade Android apps: useful, no invasive ads, and your data stays on your device. While Google Play finishes opening the door, you can try them here.",
+          heroBody: "Homemade apps: useful, no invasive ads, data on your device. Android test APKs; four apps already on TestFlight toward the App Store.",
+          iosKicker: "App Store · TestFlight",
+          iosTitle: "Four apps ready for iPhone",
+          iosBody: "Already in closed testing (TestFlight) and headed to the App Store: Lunera, MyPass, ReformaPRO and Monexa.",
+          iosList1: "Invite via TestFlight (internal / external testers).",
+          iosList2: "Same product as Android; native iOS channel underway.",
+          iosExclude: "No iOS version: Misiva and Miravista (ScreenMirror) stay Android-only (platform / App Store limits).",
           catalogKicker: "Catalog",
           appsTitle: "Apps",
-          appsIntro: "Signed test downloads. Misiva, MyPass, ReformaPRO, Miravista, Monexa and Lunera, ready to install on Android.",
+          appsIntro: "Signed Android downloads. Lunera, MyPass, ReformaPRO and Monexa are also on TestFlight (iOS).",
+          badgeTestFlight: "TestFlight iOS",
+          badgeAndroidOnly: "Android only",
           misivaLead: "Schedule WhatsApp messages and generate text with AI (your own Gemini API key). Everything runs on your phone.",
           misivaStatus: "Misiva status",
           badgeApk: "Test APK",
@@ -781,7 +847,7 @@ footerMisiva: "Privacidad Misiva",
           misivaB4: "We don’t upload your messages to our servers",
           ctaDownload: "Download test build (.APK)",
           ctaPrivacy: "View privacy policy",
-          misivaNote: "On mobile: if another page opens, tap “Download” again.",
+          misivaNote: "On mobile: if another page opens, tap “Download” again. Android only — no App Store.",
           mypassEyebrow: "Password vault",
           mypassLead: "On-device encrypted vault, Recovery Key, backup, Autofill and sync. Everything included, no paywall.",
           mypassStatus: "MyPass status",
@@ -790,21 +856,22 @@ footerMisiva: "Privacidad Misiva",
           mypassB2: "Recovery Key + encrypted backup",
           mypassB3: "Android Autofill and TOTP",
           mypassB4: "Cloud sync included (free)",
-          mypassNote: "Also coming to Google Play. Enable unknown sources only for this app.",
+          mypassNote: "Also on TestFlight (iOS) and coming to Google Play. Enable unknown sources only for this app.",
           reformaproEyebrow: "Quoting for renovation jobs",
           reformaproLead: "Mobile-first quotes with catalog, margins, taxes, PDF and client sending from site or visit.",
           reformaproStatus: "ReformaPRO status",
           reformaproB1: "Materials and services catalog",
           reformaproB2: "Quotes with VAT, withholding and visible margin",
           reformaproB3: "PDF, print and client delivery",
-          reformaproB4: "Built for fast Android field work",
+          reformaproB4: "Android, PWA and TestFlight iOS",
           ctaTryWeb: "Try now (web / PWA)",
           ctaDownloadApk: "Download APK (Android)",
-          reformaproNote: "To try the latest changes use the web — it updates automatically. APK only if you want a home-screen icon.",
+          reformaproNote: "Web/PWA updates automatically. Android APK and TestFlight iOS for a native icon.",
           reformaproVersion: "v0.2.0 · build 49",
+          trustKicker: "Trust",
           trustTitle: "Transparency",
           trustP1: "<strong>Why direct downloads?</strong> I’m an indie developer. Publishing on Google Play takes review time. Meanwhile I offer signed APKs from this page, no middlemen.",
-          trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong>, <strong>Monexa</strong> and <strong>ReformaPRO</strong> are not on Play yet. <strong>MyPass</strong> will go to Google Play; test builds are here.",
+          trustP2: "<strong>Misiva</strong> and <strong>Miravista</strong> (ScreenMirror) are Android-only — no App Store. <strong>Lunera</strong>, <strong>MyPass</strong>, <strong>ReformaPRO</strong> and <strong>Monexa</strong> are already on TestFlight toward iOS.",
           trustP3: "No fake store, no hidden ads. Contact: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
           trustP4: "Each app’s privacy policy is on the card button (and in the footer).",
           supportKicker: "Support",
@@ -818,7 +885,7 @@ footerMisiva: "Privacidad Misiva",
           smB2: "QR to open in the TV browser",
           smB3: "Quality 480p / 720p / 1080p",
           smB4: "No account, no cloud servers",
-          smNote: "Same Wi-Fi on phone and TV. Enable unknown sources only for this app.",
+          smNote: "Android only (no iOS). Same Wi-Fi on phone and TV. Enable unknown sources only for this app.",
           monexaEyebrow: "Shared expenses & income",
           monexaLead: "Track group expenses and income: categories, budgets, subscriptions and goals. Cloud sync with your account.",
           monexaStatus: "Monexa status",
@@ -826,7 +893,7 @@ footerMisiva: "Privacidad Misiva",
           monexaB2: "Budgets, subscriptions and goals",
           monexaB3: "Quick expense and monthly insights",
           monexaB4: "No invasive ads",
-          monexaNote: "Also coming to Google Play. Enable unknown sources only for this app.",
+          monexaNote: "Also on TestFlight (iOS) and coming to Google Play. Enable unknown sources only for this app.",
           memioEyebrow: "Meme generator",
           memioLead: "Create memes instantly: templates, classic top/bottom text, drag, save and share. All on your phone, no account.",
           memioB1: "Templates + your own photo",
@@ -857,13 +924,22 @@ footerMisiva: "Misiva privacy",
           brandName: "Cristiano · desenvolvedor independente",
           navSections: "Seções",
           navApps: "Apps",
+          navIos: "iOS",
           navTrust: "Transparência",
           navSupport: "Apoiar",
           heroTitle: "Ferramentas inteligentes para automatizar o seu dia a dia",
-          heroBody: "Apps Android feitos em casa: úteis, sem anúncios invasivos e com os seus dados no dispositivo. Enquanto a Google Play termina de abrir a porta, você pode testá-los aqui.",
+          heroBody: "Apps feitos em casa: úteis, sem anúncios invasivos e com os seus dados no dispositivo. Android com APKs de teste; quatro apps já no TestFlight a caminho da App Store.",
+          iosKicker: "App Store · TestFlight",
+          iosTitle: "Quatro apps prontos para iPhone",
+          iosBody: "Já estão em teste fechado (TestFlight) e a caminho da App Store: Lunera, MyPass, ReformaPRO e Monexa.",
+          iosList1: "Convite via TestFlight (testers internos / externos).",
+          iosList2: "Mesmo produto que no Android; canal nativo iOS em andamento.",
+          iosExclude: "Sem versão iOS: Misiva e Miravista (ScreenMirror) ficam só no Android (limites de plataforma / revisão da Apple).",
           catalogKicker: "Catálogo",
           appsTitle: "Apps",
-          appsIntro: "Downloads de teste assinados. Misiva, MyPass, ReformaPRO, Miravista, Monexa e Lunera, prontos para instalar no Android.",
+          appsIntro: "Downloads Android assinados. Lunera, MyPass, ReformaPRO e Monexa também no TestFlight (iOS).",
+          badgeTestFlight: "TestFlight iOS",
+          badgeAndroidOnly: "Só Android",
           misivaLead: "Agende mensagens no WhatsApp e gere texto com IA (sua própria API key do Gemini). Tudo roda no seu celular.",
           misivaStatus: "Status Misiva",
           badgeApk: "APK de teste",
@@ -873,7 +949,7 @@ footerMisiva: "Misiva privacy",
           misivaB4: "Não enviamos suas mensagens aos nossos servidores",
           ctaDownload: "Baixar versão de testes (.APK)",
           ctaPrivacy: "Ver política de privacidade",
-          misivaNote: "No celular: se abrir outra página, toque em “Baixar” de novo.",
+          misivaNote: "No celular: se abrir outra página, toque em “Baixar” de novo. Só Android — sem App Store.",
           mypassEyebrow: "Cofre de senhas",
           mypassLead: "Cofre criptografado no dispositivo, Recovery Key, backup, Autofill e sync. Tudo incluído, sem paywall.",
           mypassStatus: "Status MyPass",
@@ -882,21 +958,22 @@ footerMisiva: "Misiva privacy",
           mypassB2: "Recovery Key + backup criptografado",
           mypassB3: "Autofill Android e TOTP",
           mypassB4: "Sync na nuvem incluído (grátis)",
-          mypassNote: "Também chegará à Google Play. Ative origens desconhecidas só para este app.",
+          mypassNote: "Também no TestFlight (iOS) e chegará à Google Play. Ative origens desconhecidas só para este app.",
           reformaproEyebrow: "Orçamentos para obras e reformas",
           reformaproLead: "Orçamentos mobile com catálogo, margens, impostos, PDF e envio ao cliente no local da obra ou visita.",
           reformaproStatus: "Estado ReformaPRO",
           reformaproB1: "Catálogo de materiais e serviços",
           reformaproB2: "Orçamentos com IVA, retenção e margem visível",
           reformaproB3: "PDF, impressão e envio ao cliente",
-          reformaproB4: "Feita para uso rápido em Android",
+          reformaproB4: "Android, PWA e TestFlight iOS",
           ctaTryWeb: "Experimentar agora (web / PWA)",
           ctaDownloadApk: "Baixar APK (Android)",
-          reformaproNote: "Para testar as novidades use a web — atualiza sozinha. APK só se quiser ícone no telemóvel.",
+          reformaproNote: "Web/PWA atualiza sozinha. APK Android e TestFlight iOS para ícone nativo.",
           reformaproVersion: "v0.2.0 · build 49",
+          trustKicker: "Confiança",
           trustTitle: "Transparência",
           trustP1: "<strong>Por que downloads diretos?</strong> Sou um desenvolvedor independente. Publicar na Google Play leva tempo de revisão. Enquanto isso ofereço APKs assinados nesta página, sem intermediários.",
-          trustP2: "<strong>Misiva</strong>, <strong>Miravista</strong>, <strong>Monexa</strong> e <strong>ReformaPRO</strong> ainda não estão na Play. <strong>MyPass</strong> sim: vou subir na Google Play; aqui está a versão de teste.",
+          trustP2: "<strong>Misiva</strong> e <strong>Miravista</strong> (ScreenMirror) são só Android — não haverá App Store. <strong>Lunera</strong>, <strong>MyPass</strong>, <strong>ReformaPRO</strong> e <strong>Monexa</strong> já estão no TestFlight a caminho do iOS.",
           trustP3: "Sem loja falsa nem publicidade oculta. Contato: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
           trustP4: "As políticas de privacidade de cada app estão no botão de cada cartão (e no rodapé).",
           supportKicker: "Apoiar",
@@ -910,7 +987,7 @@ footerMisiva: "Misiva privacy",
           smB2: "QR para abrir no navegador da TV",
           smB3: "Qualidade 480p / 720p / 1080p",
           smB4: "Sem conta nem servidores cloud",
-          smNote: "Mesma Wi-Fi no telemóvel e na TV. Ative origens desconhecidas só para este app.",
+          smNote: "Só Android (sem iOS). Mesma Wi-Fi no telemóvel e na TV. Ative origens desconhecidas só para este app.",
           monexaEyebrow: "Despesas e receitas partilhadas",
           monexaLead: "Controle despesas e receitas em grupo: categorias, orçamentos, subscrições e metas. Sincronização na nuvem com a sua conta.",
           monexaStatus: "Estado Monexa",
@@ -918,7 +995,7 @@ footerMisiva: "Misiva privacy",
           monexaB2: "Orçamentos, subscrições e metas",
           monexaB3: "Despesa rápida e análise mensal",
           monexaB4: "Sem anúncios invasivos",
-          monexaNote: "Também chegará à Google Play. Ative origens desconhecidas só para este app.",
+          monexaNote: "Também no TestFlight (iOS) e chegará à Google Play. Ative origens desconhecidas só para este app.",
           memioEyebrow: "Gerador de memes",
           memioLead: "Crie memes na hora: modelos, texto clássico em cima/baixo, arraste, guarde e partilhe. Tudo no telemóvel, sem conta.",
           memioB1: "Modelos + a sua foto",
