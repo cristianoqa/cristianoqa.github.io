@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReformaPRO para iPhone (iOS)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: Outfit, system-ui, sans-serif; margin: 0; padding: 2rem 1.25rem; background: #eef3f8; color: #102030; }
+    main { max-width: 480px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 1.5rem; border: 1px solid #c5d4e8; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.75rem; }
+    p { color: #3d4f63; line-height: 1.55; }
+    a.btn { display: block; text-align: center; margin-top: 1rem; padding: 0.95rem 1rem; background: #1e3a5f; color: #fff; text-decoration: none; font-weight: 700; border-radius: 12px; }
+    a.btn.secondary { background: #eef3f8; color: #1e3a5f; margin-top: 0.65rem; border: 2px solid #1e3a5f; }
+    ol { padding-left: 1.2rem; color: #3d4f63; line-height: 1.6; }
+    .note { background: #eef3f8; border: 1px solid #c5d4e8; border-radius: 10px; padding: 0.85rem 1rem; font-size: 0.92rem; margin: 1rem 0; }
+    .platform { display: inline-block; background: #dbe7f5; color: #1e3a5f; font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 999px; margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="platform">iOS · iPhone · iPad · pruebas finales</span>
+    <h1>ReformaPRO en iPhone</h1>
+    <p>
+      Sin Mac no se publica f&#225;cilmente en App Store / TestFlight.
+      Para las <strong>pruebas finales en iOS</strong> usa Safari como <strong>PWA</strong>
+      (misma app que en Vercel).
+    </p>
+
+    <a class="btn" href="https://reformapro-web-seven.vercel.app" target="_blank" rel="noopener noreferrer">Abrir ReformaPRO (Safari / PWA)</a>
+    <a class="btn secondary" href="./descargar-reformapro.html">Android — Descargar APK (build 6)</a>
+
+    <div class="note">
+      <strong>Instalar en iPhone / iPad:</strong>
+      <ol style="margin: 0.5rem 0 0; padding-left: 1.2rem;">
+        <li>Abre el enlace en <strong>Safari</strong> (no Chrome).</li>
+        <li>Toca <strong>Compartir</strong> (□↑).</li>
+        <li>Elige <strong>A&#241;adir a pantalla de inicio</strong>.</li>
+        <li>Confirma el nombre <em>ReformaPRO</em> y pulsa A&#241;adir.</li>
+      </ol>
+    </div>
+
+    <div class="note">
+      <strong>App nativa Capacitor (IPA):</strong> el branding iOS (nombre + iconos) ya est&#225;
+      preparado en el repo (<code>sync-ios-branding.py</code>, <code>CFBundleDisplayName</code>).
+      Un rebuild / firma IPA sigue necesitando <strong>Mac + Xcode</strong> (o CI tipo Codemagic).
+      Mientras tanto, la PWA es el canal de prueba en iPhone.
+    </div>
+
+    <p style="font-size:0.88rem;">
+      PWA: <a href="https://reformapro-web-seven.vercel.app" target="_blank" rel="noopener noreferrer">reformapro-web-seven.vercel.app</a>
+      · APK Android: <strong>v0.2.0 build 6</strong>
+      (<a href="./reformapro-v0.2.0-b6.apk">descargar</a>)
+    </p>
+    <p><a href="./">&#8592; Volver a la landing</a></p>
+  </main>
+</body>
+</html>
