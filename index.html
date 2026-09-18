@@ -416,6 +416,7 @@
         <nav class="nav-links" aria-label="Sections" data-i18n-aria="navSections">
           <a href="#apps" data-i18n="navApps">Apps</a>
           <a href="#ios" data-i18n="navIos">iOS</a>
+          <a href="./servicios-tiendas.html" data-i18n="navStores">Tiendas</a>
           <a href="#transparencia" data-i18n="navTrust">Transparencia</a>
           <a href="#apoyo" data-i18n="navSupport">Apoyar</a>
         </nav>
@@ -538,21 +539,22 @@
             </p>
             <div class="badge-row" data-i18n-aria="reformaproStatus">
               <span class="badge play" data-i18n="badgePlay">Próximamente en Google Play</span>
-              <span class="badge ios" data-i18n="badgeTestFlight">TestFlight iOS</span>
+              <span class="badge ios" data-i18n="reformaproIosBadge">PWA iOS</span>
               <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
-              <span class="badge" data-i18n="reformaproVersion">v0.2.0 · build 5</span>
+              <span class="badge" data-i18n="reformaproVersion">v0.2.0 · build 6</span>
             </div>
             <ul class="benefits">
               <li data-i18n="reformaproB1">Catálogo de materiales y servicios</li>
               <li data-i18n="reformaproB2">Presupuestos con IVA, IRPF y margen visible</li>
               <li data-i18n="reformaproB3">PDF, impresión y envío al cliente</li>
-              <li data-i18n="reformaproB4">Pensada para uso rápido en móvil Android</li>
+              <li data-i18n="reformaproB4">Android APK + PWA iOS (Safari)</li>
             </ul>
             <div class="cta-stack">
               <a class="cta reformapro" href="https://reformapro-web-seven.vercel.app" target="_blank" rel="noopener noreferrer" data-i18n="ctaTryWeb">Probar ahora (web / PWA)</a>
               <a class="cta secondary" href="./descargar-reformapro.html" data-i18n="ctaDownloadApk">Descargar APK (Android)</a>
+              <a class="cta secondary" href="./descargar-reformapro-ios.html" data-i18n="reformaproCtaIos">iPhone — instalar PWA</a>
               <a class="cta secondary" id="privacy-reformapro" href="/policies/reformapro-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
-              <p class="cta-note" data-i18n="reformaproNote">Para probar cambios nuevos usa la web — se actualiza sola. El APK solo si quieres icono en el móvil.</p>
+              <p class="cta-note" data-i18n="reformaproNote">iOS: Safari → Compartir → Añadir a pantalla de inicio. Android: APK build 6.</p>
             </div>
           </div>
         </article>
@@ -698,6 +700,7 @@
       <a id="footer-privacy-monexa" href="/policies/monexa-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMonexa">Privacidad Monexa</a>
       <a id="footer-privacy-memio" href="/policies/memio-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMemio">Privacidad Memio</a>
       <a id="footer-privacy-lunera" href="/policies/lunera-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerLunera">Privacidad Lunera</a>
+      <a href="./servicios-tiendas.html" data-i18n="footerStores">Webs para tiendas</a>
       <a href="mailto:soporte.flowhomeapps@gmail.com" data-i18n="footerSupport">Soporte</a>
       <a href="https://ko-fi.com/cristianodeveloper" rel="noopener noreferrer" target="_blank">Ko-fi</a>
     </div>
@@ -721,6 +724,7 @@
           navSections: "Secciones",
           navApps: "Apps",
           navIos: "iOS",
+          navStores: "Tiendas",
           navTrust: "Transparencia",
           navSupport: "Apoyar",
           heroTitle: "Herramientas inteligentes para automatizar tu día a día",
@@ -761,11 +765,13 @@
           reformaproB1: "Catálogo de materiales y servicios",
           reformaproB2: "Presupuestos con IVA, IRPF y margen visible",
           reformaproB3: "PDF, impresión y envío al cliente",
-          reformaproB4: "Android, PWA y TestFlight iOS",
+          reformaproB4: "Android APK + PWA iOS (Safari)",
           ctaTryWeb: "Probar ahora (web / PWA)",
           ctaDownloadApk: "Descargar APK (Android)",
-          reformaproNote: "Web/PWA se actualiza sola. APK Android y TestFlight iOS para icono nativo.",
-          reformaproVersion: "v0.2.0 · build 5",
+          reformaproCtaIos: "iPhone — instalar PWA",
+          reformaproIosBadge: "PWA iOS",
+          reformaproNote: "iOS: Safari → Compartir → Añadir a pantalla de inicio (reformapro-web-seven.vercel.app). Android: APK build 6.",
+          reformaproVersion: "v0.2.0 · build 6",
           trustKicker: "Confianza",
           trustTitle: "Transparencia",
           trustP1: "<strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.",
@@ -814,6 +820,7 @@
 footerMisiva: "Privacidad Misiva",
           footerMypass: "Privacidad MyPass",
           footerReformapro: "Privacidad ReformaPRO",
+          footerStores: "Webs para tiendas",
           footerSupport: "Soporte",
           footerCopy: "© " + year + " Flow Home Apps · Hecho con calma, sin prisa de plataforma."
         },
@@ -823,6 +830,7 @@ footerMisiva: "Privacidad Misiva",
           navSections: "Sections",
           navApps: "Apps",
           navIos: "iOS",
+          navStores: "Stores",
           navTrust: "Trust",
           navSupport: "Support",
           heroTitle: "Smart tools to automate your day",
@@ -863,11 +871,13 @@ footerMisiva: "Privacidad Misiva",
           reformaproB1: "Materials and services catalog",
           reformaproB2: "Quotes with VAT, withholding and visible margin",
           reformaproB3: "PDF, print and client delivery",
-          reformaproB4: "Android, PWA and TestFlight iOS",
+          reformaproB4: "Android APK + iOS PWA (Safari)",
           ctaTryWeb: "Try now (web / PWA)",
           ctaDownloadApk: "Download APK (Android)",
-          reformaproNote: "Web/PWA updates automatically. Android APK and TestFlight iOS for a native icon.",
-          reformaproVersion: "v0.2.0 · build 5",
+          reformaproCtaIos: "iPhone — install PWA",
+          reformaproIosBadge: "iOS PWA",
+          reformaproNote: "iOS: Safari → Share → Add to Home Screen (reformapro-web-seven.vercel.app). Android: APK build 6.",
+          reformaproVersion: "v0.2.0 · build 6",
           trustKicker: "Trust",
           trustTitle: "Transparency",
           trustP1: "<strong>Why direct downloads?</strong> I’m an indie developer. Publishing on Google Play takes review time. Meanwhile I offer signed APKs from this page, no middlemen.",
@@ -916,6 +926,7 @@ footerMisiva: "Privacidad Misiva",
 footerMisiva: "Misiva privacy",
           footerMypass: "MyPass privacy",
           footerReformapro: "ReformaPRO privacy",
+          footerStores: "Store websites",
           footerSupport: "Support",
           footerCopy: "© " + year + " Flow Home Apps · Built calmly, without platform rush."
         },
@@ -925,6 +936,7 @@ footerMisiva: "Misiva privacy",
           navSections: "Seções",
           navApps: "Apps",
           navIos: "iOS",
+          navStores: "Lojas",
           navTrust: "Transparência",
           navSupport: "Apoiar",
           heroTitle: "Ferramentas inteligentes para automatizar o seu dia a dia",
@@ -965,11 +977,13 @@ footerMisiva: "Misiva privacy",
           reformaproB1: "Catálogo de materiais e serviços",
           reformaproB2: "Orçamentos com IVA, retenção e margem visível",
           reformaproB3: "PDF, impressão e envio ao cliente",
-          reformaproB4: "Android, PWA e TestFlight iOS",
+          reformaproB4: "Android APK + PWA iOS (Safari)",
           ctaTryWeb: "Experimentar agora (web / PWA)",
           ctaDownloadApk: "Baixar APK (Android)",
-          reformaproNote: "Web/PWA atualiza sozinha. APK Android e TestFlight iOS para ícone nativo.",
-          reformaproVersion: "v0.2.0 · build 5",
+          reformaproCtaIos: "iPhone — instalar PWA",
+          reformaproIosBadge: "PWA iOS",
+          reformaproNote: "iOS: Safari → Partilhar → Adicionar ao ecrã principal (reformapro-web-seven.vercel.app). Android: APK build 6.",
+          reformaproVersion: "v0.2.0 · build 6",
           trustKicker: "Confiança",
           trustTitle: "Transparência",
           trustP1: "<strong>Por que downloads diretos?</strong> Sou um desenvolvedor independente. Publicar na Google Play leva tempo de revisão. Enquanto isso ofereço APKs assinados nesta página, sem intermediários.",
@@ -1018,6 +1032,7 @@ footerMisiva: "Misiva privacy",
 footerMisiva: "Privacidade Misiva",
           footerMypass: "Privacidade MyPass",
           footerReformapro: "Privacidade ReformaPRO",
+          footerStores: "Sites para lojas",
           footerSupport: "Suporte",
           footerCopy: "© " + year + " Flow Home Apps · Feito com calma, sem pressa de plataforma."
         }
