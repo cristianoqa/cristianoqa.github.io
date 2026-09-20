@@ -82,7 +82,7 @@ APPS = [
         "platforms": "Android APK (landing) y AAB hacia Google Play. Sin iOS.",
         "cta": "Programa tu primer WhatsApp con IA — descárgala en Android.",
         "url": "https://cristianoqa.github.io/descargar-misiva.html",
-        "version": "2.0.89",
+        "version": "2.0.90",
     },
     {
         "name": "MyPass",
@@ -202,12 +202,12 @@ for app in APPS:
 
 h1("3. Mensajes listos para divulgar")
 h3("WhatsApp corto — Misiva nueva")
-p("¡Misiva nueva! Programa WhatsApp + IA (Gemini) en tu Android.\nDescarga: https://cristianoqa.github.io/descargar-misiva.html\nVersión 2.0.89 — permite «orígenes desconocidos» solo para instalar.")
+p("¡Misiva nueva! Programa WhatsApp + IA (Gemini) en tu Android.\nDescarga: https://cristianoqa.github.io/descargar-misiva.html\nVersión 2.0.90 — permite «orígenes desconocidos» solo para instalar.")
 
 h3("WhatsApp — catálogo completo")
 p(
     "He actualizado mis apps (prueba):\n"
-    "• Misiva 2.0.89 (solo Android) → https://cristianoqa.github.io/descargar-misiva.html\n"
+    "• Misiva 2.0.90 (solo Android) → https://cristianoqa.github.io/descargar-misiva.html\n"
     "• Catálogo (MyPass, Monexa, ReformaPRO, Lunera, Miravista) → https://cristianoqa.github.io/\n\n"
     "Misiva y Miravista = solo Android.\n"
     "Lunera, MyPass, ReformaPRO y Monexa también en TestFlight (iPhone, con invitación)."
