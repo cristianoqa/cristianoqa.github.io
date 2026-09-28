@@ -202,15 +202,12 @@
     .app-visual.mypass { background: linear-gradient(145deg, #1a6b9a 0%, #124868 55%, #0c1f33 100%); }
     .app-visual.miravista { background: linear-gradient(145deg, #1e4d6b 0%, #124868 55%, #0a1622 100%); }
     .app-visual.monexa { background: linear-gradient(145deg, #c41e3a 0%, #8b1528 55%, #1a0f10 100%); }
-    .app-visual.memio { background: linear-gradient(145deg, #ff6b35 0%, #e85d04 55%, #1a120e 100%); }
     .app-visual.reformapro { background: linear-gradient(145deg, #1e3a5f 0%, #2a5080 55%, #102030 100%); }
     .cta.miravista { background: #124868; }
     .cta.monexa { background: #c41e3a; }
-    .cta.memio { background: #ff6b35; }
     .cta.reformapro { background: #1e3a5f; }
     .app-card.miravista-card .benefits li::before { background: #124868; }
     .app-card.monexa-card .benefits li::before { background: #c41e3a; }
-    .app-card.memio-card .benefits li::before { background: #ff6b35; }
     .app-card.reformapro-card .benefits li::before { background: #4a90d9; }
     .app-visual.lunera { background: linear-gradient(145deg, #7c3aed 0%, #f472b6 55%, #1f1235 100%); }
     .cta.lunera { background: #7c3aed; }
@@ -698,7 +695,6 @@
       <a id="footer-privacy-reformapro" href="/policies/reformapro-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerReformapro">Privacidad ReformaPRO</a>
       <a id="footer-privacy-miravista" href="/policies/miravista-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMiravista">Privacidad Miravista</a>
       <a id="footer-privacy-monexa" href="/policies/monexa-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMonexa">Privacidad Monexa</a>
-      <a id="footer-privacy-memio" href="/policies/memio-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMemio">Privacidad Memio</a>
       <a id="footer-privacy-lunera" href="/policies/lunera-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerLunera">Privacidad Lunera</a>
       <a href="./servicios-tiendas.html" data-i18n="footerStores">Webs para tiendas</a>
       <a href="mailto:soporte.flowhomeapps@gmail.com" data-i18n="footerSupport">Soporte</a>
@@ -713,9 +709,9 @@
     (function () {
       var year = new Date().getFullYear();
       var privacy = {
-        es: { misiva: "/policies/mensajetexto.html", mypass: "/policies/mypass-es.html", reformapro: "/policies/reformapro-es.html", miravista: "/policies/miravista-es.html", monexa: "/policies/monexa-es.html", memio: "/policies/memio-es.html", lunera: "/policies/lunera-es.html" },
-        en: { misiva: "/policies/misiva.html", mypass: "/policies/mypass.html", reformapro: "/policies/reformapro.html", miravista: "/policies/miravista.html", monexa: "/policies/monexa.html", memio: "/policies/memio.html", lunera: "/policies/lunera.html" },
-        pt: { misiva: "/policies/misiva-pt.html", mypass: "/policies/mypass-pt.html", reformapro: "/policies/reformapro-pt.html", miravista: "/policies/miravista-pt.html", monexa: "/policies/monexa-pt.html", memio: "/policies/memio-pt.html", lunera: "/policies/lunera-pt.html" }
+        es: { misiva: "/policies/mensajetexto.html", mypass: "/policies/mypass-es.html", reformapro: "/policies/reformapro-es.html", miravista: "/policies/miravista-es.html", monexa: "/policies/monexa-es.html", lunera: "/policies/lunera-es.html" },
+        en: { misiva: "/policies/misiva.html", mypass: "/policies/mypass.html", reformapro: "/policies/reformapro.html", miravista: "/policies/miravista.html", monexa: "/policies/monexa.html", lunera: "/policies/lunera.html" },
+        pt: { misiva: "/policies/misiva-pt.html", mypass: "/policies/mypass-pt.html", reformapro: "/policies/reformapro-pt.html", miravista: "/policies/miravista-pt.html", monexa: "/policies/monexa-pt.html", lunera: "/policies/lunera-pt.html" }
       };
       var I18N = {
         es: {
@@ -798,12 +794,6 @@
           monexaB3: "Gasto rápido y análisis mensual",
           monexaB4: "Sin anuncios invasivos",
           monexaNote: "También en TestFlight (iOS) y llegará a Google Play. Activa orígenes desconocidos solo para esta app.",
-          memioEyebrow: "Generador de memes",
-          memioLead: "Crea memes al instante: plantillas, texto clásico arriba/abajo, arrastra, guarda y comparte. Todo en el móvil, sin cuenta.",
-          memioB1: "Plantillas + sube tu foto",
-          memioB2: "Texto draggable estilo meme clásico",
-          memioB3: "Guardar y compartir sin watermark",
-          memioB4: "100% local, sin anuncios",
           luneraEyebrow: "Salud menstrual · FemTech",
           luneraLead: "Predicción de ciclo, registro diario, calendario, etapas de vida y IA educativa. Tus datos de salud se quedan en el dispositivo.",
           luneraB1: "Anillo de ciclo + fases",
@@ -813,7 +803,6 @@
           ctaAndroid: "Android — APK de prueba",
           ctaPwa: "iPhone — Abrir PWA",
           ctaIosMore: "Más opciones iOS",
-          footerMemio: "Privacidad Memio",
           footerLunera: "Privacidad Lunera",
           footerMiravista: "Privacidad Miravista",
           footerMonexa: "Privacidad Monexa",
@@ -904,12 +893,6 @@ footerMisiva: "Privacidad Misiva",
           monexaB3: "Quick expense and monthly insights",
           monexaB4: "No invasive ads",
           monexaNote: "Also on TestFlight (iOS) and coming to Google Play. Enable unknown sources only for this app.",
-          memioEyebrow: "Meme generator",
-          memioLead: "Create memes instantly: templates, classic top/bottom text, drag, save and share. All on your phone, no account.",
-          memioB1: "Templates + your own photo",
-          memioB2: "Draggable classic meme text",
-          memioB3: "Save and share without watermark",
-          memioB4: "100% local, no ads",
           luneraEyebrow: "Menstrual health · FemTech",
           luneraLead: "Cycle prediction, daily logging, calendar, life stages and educational AI. Your health data stays on the device.",
           luneraB1: "Cycle ring + phases",
@@ -919,7 +902,6 @@ footerMisiva: "Privacidad Misiva",
           ctaAndroid: "Android — test APK",
           ctaPwa: "iPhone — Open PWA",
           ctaIosMore: "More iOS options",
-          footerMemio: "Memio privacy",
           footerLunera: "Lunera privacy",
           footerMiravista: "Miravista privacy",
           footerMonexa: "Monexa privacy",
@@ -1010,12 +992,6 @@ footerMisiva: "Misiva privacy",
           monexaB3: "Despesa rápida e análise mensal",
           monexaB4: "Sem anúncios invasivos",
           monexaNote: "Também no TestFlight (iOS) e chegará à Google Play. Ative origens desconhecidas só para este app.",
-          memioEyebrow: "Gerador de memes",
-          memioLead: "Crie memes na hora: modelos, texto clássico em cima/baixo, arraste, guarde e partilhe. Tudo no telemóvel, sem conta.",
-          memioB1: "Modelos + a sua foto",
-          memioB2: "Texto arrastável estilo meme clássico",
-          memioB3: "Guardar e partilhar sem marca de água",
-          memioB4: "100% local, sem anúncios",
           luneraEyebrow: "Saúde menstrual · FemTech",
           luneraLead: "Previsão do ciclo, registo diário, calendário, etapas de vida e IA educativa. Os seus dados de saúde ficam no dispositivo.",
           luneraB1: "Anel do ciclo + fases",
@@ -1025,7 +1001,6 @@ footerMisiva: "Misiva privacy",
           ctaAndroid: "Android — APK de teste",
           ctaPwa: "iPhone — Abrir PWA",
           ctaIosMore: "Mais opções iOS",
-          footerMemio: "Privacidade Memio",
           footerLunera: "Privacidade Lunera",
           footerMiravista: "Privacidade Miravista",
           footerMonexa: "Privacidade Monexa",
@@ -1080,8 +1055,6 @@ footerMisiva: "Privacidade Misiva",
         var fSm = document.getElementById("footer-privacy-miravista");
         var monexa = document.getElementById("privacy-monexa");
         var fMonexa = document.getElementById("footer-privacy-monexa");
-        var memio = document.getElementById("privacy-memio");
-        var fMemio = document.getElementById("footer-privacy-memio");
         var lunera = document.getElementById("privacy-lunera");
         var fLunera = document.getElementById("footer-privacy-lunera");
         if (misiva) misiva.href = p.misiva;
@@ -1094,8 +1067,6 @@ footerMisiva: "Privacidade Misiva",
         if (fSm) fSm.href = p.miravista;
         if (monexa) monexa.href = p.monexa;
         if (fMonexa) fMonexa.href = p.monexa;
-        if (memio) memio.href = p.memio;
-        if (fMemio) fMemio.href = p.memio;
         if (lunera) lunera.href = p.lunera;
         if (fLunera) fLunera.href = p.lunera;
 
