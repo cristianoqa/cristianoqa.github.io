@@ -67,13 +67,14 @@ Grupo Play: `mypass_sync`.
 
 | Tipo | Play product ID | Apple Product ID | Nombre en tienda | Precio base orient. |
 |------|-----------------|------------------|------------------|---------------------|
-| Suscripción | `reformapro_pro_monthly` | `apps.flowhome.reformapro.pro.monthly` | ReformaPRO Pro (mensual) | 6,99 € / mes |
-| Suscripción | `reformapro_pro_yearly` | `apps.flowhome.reformapro.pro.yearly` | ReformaPRO Pro (anual) | 59,99 € / año |
+| Suscripción | `reformapro_pro_monthly` | `apps.flowhome.reformapro.pro.monthly` | ReformaPRO Pro (mensual) | **3,99 € / mes** (lanzamiento) |
+| Suscripción | `reformapro_pro_yearly` | `apps.flowhome.reformapro.pro.yearly` | ReformaPRO Pro (anual) | **29,99 € / año** (lanzamiento) |
 
 **Gratis:** catálogo básico, **hasta 5 presupuestos activos**, PDF con marca.  
 **Pro:** ilimitados, firma, equipo, obra/calendario, sin marca, plantillas/voz.
 
 Grupo Play: `reformapro_pro`.  
+**Precios de lanzamiento** (subir cuando haya tracción): 3,99 €/mes · 29,99 €/año.  
 *(Web/PWA: mismo entitlement vía backend; cobro web aparte si aplica — no mezclar con IAP móvil.)*
 
 ---
