@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Descargar Misiva 2.0.93</title>
+  <title>Descargar Misiva 2.0.94</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet" />
   <style>
     body { font-family: Outfit, system-ui, sans-serif; margin: 0; padding: 2rem 1.25rem; background: #f3f6f4; color: #0c1f33; }
@@ -12,11 +12,12 @@
     h2 { font-size: 1.05rem; margin: 1.5rem 0 0.6rem; color: #0e7a6b; }
     p { color: #2a4058; line-height: 1.5; }
     a.btn {
-      display: block; text-align: center; margin-top: 1.25rem; padding: 0.95rem 1rem;
+      display: block; text-align: center; margin-top: 1rem; padding: 0.95rem 1rem;
       background: #128c7e; color: #fff; text-decoration: none; font-weight: 700; border-radius: 12px;
     }
+    a.btn.secondary { background: #0c4f45; }
     .ver { font-size: 0.9rem; color: #5a7188; margin-top: 0.5rem; }
-    ol, ul { padding-left: 1.2rem; color: #2a4058; line-height: 1.55; }
+    ol { padding-left: 1.2rem; color: #2a4058; line-height: 1.55; }
     li { margin-bottom: 0.45rem; }
     .note {
       margin-top: 1rem; padding: 0.85rem 1rem; border-radius: 12px;
@@ -28,34 +29,27 @@
 <body>
   <main>
     <h1>Descarga de Misiva</h1>
-    <p>Versión de pruebas para el vídeo de Play (aviso de accesibilidad). Si no empieza sola, pulsa el botón. En el móvil a veces se abre GitHub: toca el archivo <strong>misiva-2.0.93-release.apk</strong> y luego <strong>Descargar</strong>.</p>
-    <p class="ver">Versión <strong>2.0.93</strong> (107) · aviso Accesibilidad al abrir la app (Aceptar / Rechazar)</p>
-    <a class="btn" href="https://github.com/cristianoqa/policies/releases/download/app-2026-09/misiva-2.0.93-release.apk">Descargar Misiva APK</a>
+    <p>APK de pruebas <strong>2.0.94</strong> con el aviso de accesibilidad al abrir (tras el splash).</p>
+    <p class="ver">versionCode 108 · Aceptar / Rechazar · texto qué/cómo/límites</p>
+    <a class="btn" href="https://github.com/cristianoqa/policies/releases/download/app-2026-09/misiva-2.0.94-release.apk">Descargar Misiva APK</a>
+    <a class="btn secondary" href="https://github.com/cristianoqa/policies/releases/download/app-2026-09/misiva-a11y-disclosure.mp4">Descargar vídeo Play (accesibilidad)</a>
 
-    <h2>Instalar limpio (importante para el vídeo)</h2>
-    <ol>
-      <li>Desinstala Misiva si ya la tienes (borra el consentimiento antiguo).</li>
-      <li>Instala el APK 2.0.93 y abre la app.</li>
-      <li>Al abrir debe salir el aviso <strong>«Uso del servicio de accesibilidad»</strong> con <strong>Rechazar</strong> y <strong>Aceptar</strong>.</li>
-    </ol>
-
-    <h2>Guión del vídeo (Play Console)</h2>
-    <p>Graba la pantalla del móvil (~60–90 s). Incluye todo esto:</p>
-    <ol>
-      <li><strong>Abrir la app</strong> → aparece el aviso destacado.</li>
-      <li><strong>Scroll lento</strong> por todo el texto del aviso (qué datos, cómo se usan, límites).</li>
-      <li>Pulsa <strong>Rechazar</strong> → no abre Ajustes; la app sigue usable.</li>
-      <li>Ve a <strong>Más → Estado</strong> → toca el paso de accesibilidad → vuelve el aviso.</li>
-      <li>Pulsa <strong>Aceptar</strong> → se abren Ajustes → activa <strong>Usar Misiva</strong>.</li>
-      <li>Vuelve a Misiva y muestra un uso core (programación / envío a WhatsApp).</li>
-    </ol>
+    <h2>Vídeo ya grabado (~64 s)</h2>
+    <p>Incluye: abrir app → aviso completo (scroll) → Rechazar → Más → Estado → reabrir aviso → Aceptar → Ajustes.</p>
     <div class="note">
-      Sube el vídeo a YouTube (no listado) o Drive y pega el enlace en Play Console →
-      <strong>Política → App content → Accessibility API</strong>. Luego sube el AAB
-      <code>misiva-2.0.93-release.aab</code> a Producción.
+      En Play Console → <strong>Política → App content → Accessibility API</strong>, pega el enlace del vídeo
+      (mejor súbelo a YouTube no listado o Drive y usa esa URL). Archivo local:
+      <code>D:\Misiva\releases\play-a11y-video\misiva-a11y-disclosure.mp4</code>
+      · AAB: <code>D:\Misiva\releases\misiva-2.0.94-release.aab</code>
     </div>
 
-    <p style="margin-top:1.25rem"><a href="./">← Volver a la landing</a></p>
+    <h2>Probar en el móvil</h2>
+    <ol>
+      <li>Desinstala Misiva</li>
+      <li>Instala el APK 2.0.94</li>
+      <li>Al abrir (tras el logo) sale el aviso</li>
+    </ol>
+    <p style="margin-top:1.25rem"><a href="./">← Volver</a></p>
   </main>
 </body>
 </html>
