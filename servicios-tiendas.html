@@ -3,34 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Páginas web para tiendas — Flow Home Apps</title>
-  <meta name="description" content="Páginas web claras y rápidas para tiendas locales: pack Básico o Medio, venta o venta + mantenimiento. Consulta sin compromiso." />
+  <title>Páginas web para tiendas — Flow Home</title>
+  <meta name="description" content="Web de tienda para el móvil, con WhatsApp y mapa. La diseño, la publico y el dominio queda a tu nombre. La cifra se ve en la consulta." />
   <meta name="theme-color" content="#0c1f33" />
   <link rel="canonical" href="https://cristianoqa.github.io/servicios-tiendas.html" />
-  <link rel="icon" href="./assets/flow-home-mark.png" type="image/png" sizes="32x32" />
-  <link rel="apple-touch-icon" href="./assets/flow-home-mark.png" />
+  <link rel="icon" href="./assets/flow-home-mark.png" type="image/png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cristianoqa.github.io/servicios-tiendas.html" />
-  <meta property="og:title" content="Páginas web para tiendas — Flow Home Apps" />
-  <meta property="og:description" content="Tu tienda online o escaparate digital: packs Básico y Medio. La cifra se ve en la consulta." />
+  <meta property="og:title" content="Páginas web para tiendas — Flow Home" />
+  <meta property="og:description" content="Tu tienda en Google y en WhatsApp. Consulta sin cifra publicada." />
   <meta property="og:image" content="https://cristianoqa.github.io/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --ink: #0c1f33;
-      --ink-soft: #2a4058;
-      --muted: #5a6f86;
-      --paper: #f3f6f4;
+      --soft: #3d5166;
+      --muted: #5c7084;
+      --paper: #f4f7f8;
       --card: #ffffff;
-      --line: #d5e0e8;
-      --accent: #0f6b5c;
-      --accent-2: #1a6b9a;
-      --radius: 18px;
-      --shadow: 0 18px 40px rgba(12, 31, 51, 0.08);
+      --line: #d7e0e8;
+      --accent: #0c1f33;
       --focus: #1a6b9a;
+      --radius: 16px;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -38,292 +35,397 @@
       margin: 0;
       font-family: Outfit, system-ui, sans-serif;
       color: var(--ink);
-      background:
-        radial-gradient(900px 420px at 8% -5%, #d7ece6 0%, transparent 55%),
-        radial-gradient(800px 380px at 100% 0%, #d9e7f4 0%, transparent 50%),
-        linear-gradient(180deg, #eef3f0 0%, var(--paper) 38%, #e8eef3 100%);
-      line-height: 1.55;
+      background: var(--paper);
+      line-height: 1.5;
+      padding-bottom: 5.5rem;
     }
-    a { color: var(--accent-2); }
-    .wrap { width: min(920px, calc(100% - 2rem)); margin: 0 auto; }
-    .skip-link {
-      position: absolute; left: 1rem; top: -100px; z-index: 100;
-      background: var(--ink); color: #fff; padding: 0.65rem 1rem;
-      border-radius: 10px; font-weight: 700; text-decoration: none;
-    }
-    .skip-link:focus { top: 1rem; }
+    a { color: var(--focus); }
+    img { max-width: 100%; display: block; }
     :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    .skip {
+      position: absolute; left: 1rem; top: -4rem; z-index: 20;
+      background: var(--ink); color: #fff; padding: 0.6rem 0.9rem;
+      border-radius: 10px; text-decoration: none; font-weight: 700;
+    }
+    .skip:focus { top: 0.75rem; }
+    .wrap { width: min(1080px, calc(100% - 2rem)); margin: 0 auto; }
 
-    .top {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 1rem; flex-wrap: wrap; padding: 1.75rem 0 0.5rem;
+    .nav {
+      position: sticky; top: 0; z-index: 10;
+      height: 68px;
+      display: flex; align-items: center;
+      background: rgba(244, 247, 248, 0.92);
+      border-bottom: 1px solid transparent;
+      backdrop-filter: blur(12px);
     }
-    .brand {
-      display: flex; align-items: center; gap: 0.85rem; text-decoration: none; color: inherit;
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; }
+    .brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; color: inherit; }
+    .brand img { width: 40px; height: 40px; object-fit: contain; }
+    .brand strong { display: block; font-size: 0.95rem; letter-spacing: -0.02em; }
+    .brand span { display: block; font-size: 0.75rem; color: var(--muted); font-weight: 500; }
+    .nav-cta { display: none; }
+    @media (min-width: 760px) {
+      .nav-cta { display: inline-flex; }
+      body { padding-bottom: 0; }
     }
-    .brand img { width: 56px; height: 56px; object-fit: contain; }
-    .brand-kicker {
-      font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--muted); font-weight: 600;
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 48px; padding: 0.75rem 1.15rem;
+      border-radius: 12px; text-decoration: none; font-weight: 700;
+      font-size: 0.98rem; white-space: nowrap;
+      background: var(--accent); color: #fff;
+      border: 1px solid var(--accent);
     }
-    .brand-name {
-      font-family: Fraunces, Georgia, serif;
-      font-size: 1.15rem; font-weight: 700; margin: 0.1rem 0 0;
-      letter-spacing: -0.02em;
+    .btn:hover { background: #16324d; }
+    .btn:active { transform: translateY(1px); }
+    .btn.ghost {
+      background: transparent; color: var(--ink);
     }
-    .back {
-      font-weight: 600; font-size: 0.9rem; text-decoration: none;
-      color: var(--ink-soft); padding: 0.45rem 0.85rem;
-      border: 1px solid var(--line); border-radius: 999px;
-      background: rgba(255,255,255,0.75);
-    }
-    .back:hover { color: var(--ink); border-color: var(--ink-soft); }
+    .btn.ghost:hover { background: #fff; }
 
     .hero {
-      margin: 1.5rem 0 0;
-      text-align: center;
-      padding: 2.25rem 1.35rem 2rem;
-      background: rgba(255,255,255,0.78);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      display: grid; gap: 2.5rem; align-items: center;
+      padding: 1.5rem 0 2.5rem;
     }
-    .hero .kicker {
-      display: inline-block;
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--accent); margin: 0 0 0.65rem;
+    @media (min-width: 900px) {
+      .hero {
+        grid-template-columns: 1.05fr 0.95fr;
+        align-items: center;
+        padding: 2.5rem 0 1.5rem;
+      }
     }
-    .hero h1 {
-      font-family: Fraunces, Georgia, serif;
-      font-size: clamp(1.85rem, 5vw, 2.65rem);
-      line-height: 1.12; letter-spacing: -0.03em;
-      margin: 0 auto 0.85rem; max-width: 18ch;
+    .kicker {
+      margin: 0 0 0.75rem;
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #1a6b9a;
     }
-    .hero p {
-      margin: 0 auto 1.35rem;
-      color: var(--ink-soft);
-      font-size: clamp(1rem, 2.4vw, 1.12rem);
-      max-width: 38rem;
+    h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 5vw, 3.4rem);
+      line-height: 1.05; letter-spacing: -0.04em; font-weight: 700;
+      max-width: 11em;
     }
-    .cta-row {
-      display: flex; flex-wrap: wrap; gap: 0.65rem; justify-content: center;
+    .lede {
+      margin: 1rem 0 0;
+      max-width: 38ch;
+      color: var(--soft);
+      font-size: 1.08rem;
     }
-    .cta {
-      display: inline-flex; align-items: center; justify-content: center;
-      text-decoration: none; font-weight: 700; font-size: 0.98rem;
-      min-height: 48px; padding: 0.88rem 1.2rem; border-radius: 12px;
-      color: #fff; background: var(--accent);
-      transition: filter 0.2s ease, transform 0.2s ease;
-    }
-    .cta:hover { filter: brightness(1.07); transform: translateY(-1px); }
-    .cta.secondary {
-      background: #fff; color: var(--ink); border: 1px solid var(--line); font-weight: 600;
-    }
-    .cta.secondary:hover { background: #f5f8fa; filter: none; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.4rem; }
 
-    .section { margin: 2.35rem 0 0; }
-    .section-head { margin: 0 0 1.1rem; text-align: center; }
-    .section-kicker {
-      display: inline-block;
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--accent); margin: 0 0 0.35rem;
+    .mock {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 18px 40px rgba(12, 31, 51, 0.08);
+      padding: 1.1rem;
     }
-    .section-head h2 {
-      font-family: Fraunces, Georgia, serif;
-      font-size: clamp(1.4rem, 3vw, 1.7rem);
-      margin: 0; letter-spacing: -0.02em;
+    .mock-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.9rem; }
+    .dotrow { display: flex; gap: 0.35rem; }
+    .dotrow i { width: 8px; height: 8px; border-radius: 50%; background: #d5dee6; display: block; }
+    .mock-url { font-size: 0.75rem; color: var(--muted); }
+    .shop {
+      border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
     }
-    .section-head p {
-      margin: 0.45rem auto 0; color: var(--ink-soft); max-width: 36rem;
+    .shop-hero {
+      background: linear-gradient(160deg, #0c1f33 0%, #1a4d73 100%);
+      color: #fff; padding: 1.25rem 1.1rem 1.1rem;
+    }
+    .shop-hero p { margin: 0.2rem 0 0; color: #d5e6f2; font-size: 0.88rem; }
+    .shop-hero strong { font-size: 1.25rem; letter-spacing: -0.03em; }
+    .shop-body { padding: 0.95rem 1rem 1.05rem; display: grid; gap: 0.55rem; }
+    .row {
+      display: flex; justify-content: space-between; gap: 1rem;
+      font-size: 0.92rem; padding-bottom: 0.45rem; border-bottom: 1px solid #edf2f6;
+    }
+    .row span { color: var(--muted); }
+    .wa {
+      margin-top: 0.35rem; display: flex; align-items: center; justify-content: center;
+      min-height: 44px; border-radius: 10px; background: #0f6b5c; color: #fff; font-weight: 700;
     }
 
-    .packs {
-      display: grid; gap: 1.15rem;
+    .facts {
+      display: grid; gap: 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
-    @media (min-width: 700px) {
-      .packs { grid-template-columns: 1fr 1fr; }
+    @media (min-width: 760px) {
+      .facts { grid-template-columns: repeat(3, 1fr); }
     }
-    .pack {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+    .facts article { padding: 1.15rem 0.2rem 1.2rem; }
+    @media (min-width: 760px) {
+      .facts article { padding: 1.35rem 1.25rem; }
+      .facts article + article { border-left: 1px solid var(--line); }
+    }
+    .facts strong { display: block; font-size: 1.02rem; letter-spacing: -0.02em; }
+    .facts p { margin: 0.25rem 0 0; color: var(--soft); font-size: 0.92rem; }
+
+    section { padding: 4.25rem 0 0; }
+    h2 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(1.7rem, 3vw, 2.15rem);
+      letter-spacing: -0.035em; line-height: 1.1;
+      max-width: 18ch;
+    }
+    .intro { margin: 0 0 1.5rem; color: var(--soft); max-width: 42rem; }
+
+    .offers { display: grid; gap: 1.25rem; }
+    @media (min-width: 800px) {
+      .offers { grid-template-columns: 1fr 1fr; align-items: start; }
+    }
+    .offer {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
       padding: 1.35rem 1.3rem 1.45rem;
-      display: flex; flex-direction: column; gap: 0.7rem;
     }
-    .pack.featured {
-      border-color: #9ec9bf;
-      background: linear-gradient(165deg, #ffffff 0%, #f0faf6 100%);
-    }
-    .pack h3 {
-      font-family: Fraunces, Georgia, serif;
-      font-size: 1.35rem; margin: 0; letter-spacing: -0.02em;
-    }
-    .pack .tag {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--muted); margin: 0;
-    }
-    .pack .price {
-      font-size: 1.05rem; font-weight: 700; color: var(--accent); margin: 0;
-    }
-    .pack .lead { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
-    .pack ul {
-      margin: 0.15rem 0 0; padding: 0; list-style: none;
-      display: grid; gap: 0.4rem; flex: 1;
-    }
-    .pack li {
-      position: relative; padding-left: 1.15rem;
-      font-size: 0.95rem; color: var(--ink);
-    }
-    .pack li::before {
+    .offer.main { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .offer.main p, .offer.main li { color: #d5e2ee; }
+    .offer h3 { margin: 0.35rem 0 0.45rem; font-size: 1.45rem; letter-spacing: -0.03em; }
+    .tag { margin: 0; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1a6b9a; }
+    .offer.main .tag { color: #8ec8ee; }
+    .offer ul { margin: 0.8rem 0 0; padding: 0; list-style: none; display: grid; gap: 0.45rem; }
+    .offer li { padding-left: 1.1rem; position: relative; }
+    .offer li::before {
       content: ""; position: absolute; left: 0; top: 0.55em;
-      width: 0.45rem; height: 0.45rem; border-radius: 50%;
-      background: var(--accent);
+      width: 0.4rem; height: 0.4rem; border-radius: 50%; background: currentColor;
     }
 
-    .modes {
-      display: grid; gap: 1rem;
+    .steps { display: grid; gap: 0; margin-top: 0.5rem; }
+    @media (min-width: 800px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+    .step { padding: 1.25rem 1.1rem 1.35rem 0; border-top: 1px solid var(--line); }
+    @media (min-width: 800px) {
+      .step { padding-right: 1.5rem; }
     }
-    @media (min-width: 700px) {
-      .modes { grid-template-columns: 1fr 1fr; }
+    .step b {
+      display: block; font-size: 0.78rem; letter-spacing: 0.12em; color: #1a6b9a; margin-bottom: 0.4rem;
     }
-    .mode {
-      padding: 1.25rem 1.2rem;
-      background: rgba(255,255,255,0.78);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
+    .step h3 { margin: 0 0 0.35rem; font-size: 1.15rem; letter-spacing: -0.02em; }
+    .step p { margin: 0; color: var(--soft); }
+
+    .ways { display: grid; gap: 1.5rem; margin-top: 1.25rem; }
+    @media (min-width: 800px) { .ways { grid-template-columns: 1fr 1fr; } }
+    .ways h3 { margin: 0 0 0.35rem; font-size: 1.2rem; }
+    .ways p { margin: 0; color: var(--soft); }
+
+    .note-band {
+      margin-top: 4.25rem;
+      padding: 1.35rem 1.3rem;
+      background: #fff;
+      border-left: 4px solid var(--ink);
+      border-radius: 0 12px 12px 0;
     }
-    .mode h3 {
-      font-family: Fraunces, Georgia, serif;
-      font-size: 1.15rem; margin: 0 0 0.4rem;
+    .note-band p { margin: 0; max-width: 62ch; }
+
+    .faq { display: grid; gap: 0; margin-top: 0.4rem; }
+    details { border-top: 1px solid var(--line); }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary {
+      cursor: pointer; font-weight: 650; padding: 1rem 0;
+      list-style: none; display: flex; justify-content: space-between; gap: 1rem;
     }
-    .mode p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--muted); font-weight: 500; }
+    details[open] summary::after { content: "–"; }
+    details p { margin: 0 0 1rem; color: var(--soft); max-width: 62ch; }
 
     .close {
-      margin: 2.35rem 0 0;
-      padding: 1.75rem 1.35rem;
-      text-align: center;
-      background: rgba(255,255,255,0.78);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      margin: 4.25rem 0 0;
+      padding: 2.5rem 1.4rem;
+      background: var(--ink);
+      color: #fff;
+      border-radius: 20px;
+      text-align: left;
     }
-    .close h2 {
-      font-family: Fraunces, Georgia, serif;
-      font-size: 1.45rem; margin: 0 0 0.55rem; letter-spacing: -0.02em;
-    }
-    .close p { margin: 0 auto 1.15rem; color: var(--ink-soft); max-width: 32rem; }
-    .note { margin: 0.85rem 0 0; font-size: 0.85rem; color: var(--muted); }
+    .close h2 { color: #fff; max-width: 16ch; }
+    .close p { margin: 0 0 1.2rem; color: #d5e2ee; max-width: 36rem; }
+    .close .btn { background: #fff; color: var(--ink); border-color: #fff; }
+    .close .btn:hover { background: #e7eef4; }
+    .fine { margin: 0.85rem 0 0; font-size: 0.88rem; color: #b7c9d8; }
 
-    footer {
-      padding: 2.25rem 0 2.5rem;
-      color: var(--muted); font-size: 0.88rem; text-align: center;
+    footer { padding: 1.5rem 0 2rem; color: var(--muted); font-size: 0.88rem; }
+    footer a { color: var(--muted); }
+
+    .dock {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 12;
+      padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom));
+      background: rgba(244, 247, 248, 0.96);
+      border-top: 1px solid var(--line);
     }
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { text-decoration: underline; color: var(--ink-soft); }
+    .dock .btn { width: 100%; }
+    @media (min-width: 760px) { .dock { display: none; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn:active { transform: none; }
+    }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
-
-  <header class="wrap top">
-    <a class="brand" href="./">
-      <img src="./assets/flow-home-mark.png" width="56" height="56" alt="Flow Home Apps" />
-      <div>
-        <span class="brand-kicker">Flow Home Apps</span>
-        <p class="brand-name">Cristiano · páginas para tiendas</p>
-      </div>
-    </a>
-    <a class="back" href="./">← Apps</a>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="./">
+        <img src="./assets/flow-home-mark.png" width="40" height="40" alt="" />
+        <div>
+          <strong>Flow Home</strong>
+          <span>Páginas para tiendas</span>
+        </div>
+      </a>
+      <a class="btn nav-cta" href="mailto:soporte.flowhomeapps@gmail.com?subject=Consulta%20web%20para%20mi%20tienda">Consultar</a>
+    </div>
   </header>
 
-  <main id="contenido" class="wrap">
-    <section class="hero" aria-labelledby="hero-title">
-      <span class="kicker">Servicio a medida</span>
-      <h1 id="hero-title">Tu tienda merece una web que venda por ti</h1>
-      <p>
-        Página clara, rápida y fácil de actualizar: horarios, productos, WhatsApp y ubicación.
-        Sin plantillas genéricas ni letra pequeña rara.
-      </p>
-      <div class="cta-row">
-        <a class="cta" href="mailto:soporte.flowhomeapps@gmail.com?subject=Consulta%20web%20para%20mi%20tienda">Consultar</a>
-        <a class="cta secondary" href="#packs">Ver packs</a>
-      </div>
-    </section>
-
-    <section id="packs" class="section" aria-labelledby="packs-title">
-      <div class="section-head">
-        <span class="section-kicker">Packs</span>
-        <h2 id="packs-title">Dos caminos, según tu tienda</h2>
-        <p>Dos formas de encargarlo. La cifra la vemos en la consulta.</p>
-      </div>
-      <div class="packs">
-        <article class="pack">
-          <p class="tag">Pack Básico</p>
-          <h3>Escaparate digital</h3>
-          <p class="lead">Ideal si quieres presencia seria en Google y que te escriban por WhatsApp.</p>
-          <ul>
-            <li>1–3 páginas (inicio, productos/servicios, contacto)</li>
-            <li>Móvil primero, carga rápida</li>
-            <li>Botón a WhatsApp y mapa</li>
-            <li>Formulario o enlace de contacto</li>
-            <li>Entrega lista para publicar</li>
-          </ul>
-        </article>
-        <article class="pack featured">
-          <p class="tag">Pack Medio</p>
-          <h3>Tienda que convierte</h3>
-          <p class="lead">Para quien quiere catálogo, más contenido y un diseño que se note.</p>
-          <ul>
-            <li>Todo lo del Básico</li>
-            <li>Catálogo / secciones por categoría</li>
-            <li>Fotos optimizadas y textos claros</li>
-            <li>SEO básico (títulos, descripción, Google)</li>
-            <li>Ajustes de diseño a tu marca</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="modos-title">
-      <div class="section-head">
-        <span class="section-kicker">Cómo contratas</span>
-        <h2 id="modos-title">Venta o venta + mantenimiento</h2>
-        <p>Tú eliges si quieres cerrar el proyecto o que yo te acompañe mes a mes.</p>
-      </div>
-      <div class="modes">
-        <div class="mode">
-          <h3>Solo venta</h3>
-          <p>
-            Te entrego la web publicada (o lista para publicar), con una breve guía.
-            Tú te quedas con el dominio y el hosting. Ideal si no cambias nada a menudo.
-          </p>
+  <main id="contenido">
+    <div class="wrap">
+      <section class="hero" style="padding-top:1.25rem">
+        <div>
+          <p class="kicker">Para comercios locales</p>
+          <h1>Tu tienda, en Google y en WhatsApp.</h1>
+          <p class="lede">La diseño, la publico y el dominio queda a tu nombre. La cifra se ve en la consulta.</p>
+          <div class="hero-actions">
+            <a class="btn" href="mailto:soporte.flowhomeapps@gmail.com?subject=Consulta%20web%20para%20mi%20tienda">Consultar</a>
+            <a class="btn ghost" href="#incluye">Qué incluye</a>
+          </div>
         </div>
-        <div class="mode">
-          <h3>Venta + mantenimiento</h3>
-          <p>
-            Misma entrega, más un plan mensual: cambios de horario, fotos, textos,
-            avisos de ofertas y soporte. Tranquilo: yo me encargo de que no se rompa.
-          </p>
+        <div class="mock" aria-hidden="true">
+          <div class="mock-top">
+            <div class="dotrow"><i></i><i></i><i></i></div>
+            <span class="mock-url">tutienda.com</span>
+          </div>
+          <div class="shop">
+            <div class="shop-hero">
+              <strong>Tu comercio</strong>
+              <p>Abierto hoy · Centro</p>
+            </div>
+            <div class="shop-body">
+              <div class="row"><span>Horario</span><b>10:00 – 14:00</b></div>
+              <div class="row"><span>Dónde</span><b>Mapa en la misma página</b></div>
+              <div class="row"><span>Carta</span><b>Productos claros</b></div>
+              <div class="wa">Escribir por WhatsApp</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="close" aria-labelledby="close-title">
-      <h2 id="close-title">¿Hablamos 10 minutos?</h2>
-      <p>
-        Cuéntame qué vendes y si ya tienes dominio o fotos.
-        Te digo qué pack encaja. La cifra, en la consulta, sin compromiso.
-      </p>
-      <div class="cta-row">
-        <a class="cta" href="mailto:soporte.flowhomeapps@gmail.com?subject=Consulta%20web%20para%20mi%20tienda">Escribir a Cristiano</a>
+      <div class="facts">
+        <article>
+          <strong>Primero el móvil</strong>
+          <p>La mayoría entra desde el teléfono. La página se lee ahí, sin pellizcar.</p>
+        </article>
+        <article>
+          <strong>WhatsApp y mapa</strong>
+          <p>Un botón para escribirte y la ubicación, sin buscarlos en otro sitio.</p>
+        </article>
+        <article>
+          <strong>Queda a tu nombre</strong>
+          <p>Dominio y hosting tuyos. Te dejo una guía corta para el día a día.</p>
+        </article>
       </div>
-      <p class="note">soporte.flowhomeapps@gmail.com · Respondo en horario laboral (España / Latam)</p>
-    </section>
+
+      <section id="incluye">
+        <h2>Dos formas de encargar la web.</h2>
+        <p class="intro">El pack se elige según lo que vendes. La cifra no está publicada: te la digo cuando sé el caso.</p>
+        <div class="offers">
+          <article class="offer">
+            <p class="tag">Básico</p>
+            <h3>Escaparate</h3>
+            <p>Presencia seria y un camino claro para que te escriban.</p>
+            <ul>
+              <li>De una a tres páginas</li>
+              <li>Horario, productos y contacto</li>
+              <li>WhatsApp y mapa</li>
+              <li>Lista para publicar</li>
+            </ul>
+          </article>
+          <article class="offer main">
+            <p class="tag">Medio</p>
+            <h3>Tienda con más detalle</h3>
+            <p>Cuando hace falta catálogo, más texto y un diseño ajustado a tu marca.</p>
+            <ul>
+              <li>Todo lo del escaparate</li>
+              <li>Secciones por categoría</li>
+              <li>Fotos y textos ordenados</li>
+              <li>Títulos listos para Google</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>De la consulta a la web publicada.</h2>
+        <div class="steps">
+          <article class="step">
+            <b>01</b>
+            <h3>Me escribes</h3>
+            <p>Qué vendes, si tienes fotos y si ya hay dominio. Con eso basta.</p>
+          </article>
+          <article class="step">
+            <b>02</b>
+            <h3>Te digo el encaje</h3>
+            <p>Qué pack corresponde y la cifra. Si no encaja, te lo digo.</p>
+          </article>
+          <article class="step">
+            <b>03</b>
+            <h3>La publico</h3>
+            <p>La dejas online y te entrego el acceso. El dominio sigue siendo tuyo.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Cierras el trabajo, o sigo yo.</h2>
+        <div class="ways">
+          <article>
+            <h3>Solo la web</h3>
+            <p>Entrega publicada y una guía breve. Sirve si el horario y la carta casi no cambian.</p>
+          </article>
+          <article>
+            <h3>Web y mantenimiento</h3>
+            <p>La misma entrega, más cambios de fotos, textos, ofertas y avisos. Yo miro que no se rompa.</p>
+          </article>
+        </div>
+        <div class="note-band">
+          <p>Si lo que necesitas no es la web de una tienda, también hago sistemas a medida. Cuéntalo en la misma consulta.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Antes de escribir.</h2>
+        <div class="faq">
+          <details>
+            <summary>¿Por qué no hay precio en la página?</summary>
+            <p>Cada tienda pide un alcance distinto. La cifra sale en la consulta, cuando sé páginas, fotos y si quieres mantenimiento.</p>
+          </details>
+          <details>
+            <summary>¿El dominio queda a mi nombre?</summary>
+            <p>Sí. Dominio y hosting son tuyos. No te dejo atado a una cuenta mía para poder abrir la web.</p>
+          </details>
+          <details>
+            <summary>¿Tengo que saber de informática?</summary>
+            <p>No. Tú aportas qué vendes, las fotos que tengas y el teléfono de WhatsApp. Yo monto y publico.</p>
+          </details>
+          <details>
+            <summary>¿También haces otra cosa que no sea una tienda?</summary>
+            <p>Sí. Sistemas a medida, además de las apps de Flow Home. Si no es una web de comercio, dilo en el correo.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="close" aria-labelledby="cierre">
+        <h2 id="cierre">Cuéntame qué vendes.</h2>
+        <p>Con el oficio, el barrio y si ya tienes dominio, te digo el pack y la cifra.</p>
+        <a class="btn" href="mailto:soporte.flowhomeapps@gmail.com?subject=Consulta%20web%20para%20mi%20tienda">Consultar</a>
+        <p class="fine">soporte.flowhomeapps@gmail.com · Respondo en horario laboral, España y Latam.</p>
+      </section>
+
+      <footer>
+        <a href="./">Flow Home</a> · Páginas web para tiendas
+      </footer>
+    </div>
   </main>
 
-  <footer class="wrap">
-    <p><a href="./">Flow Home Apps</a> · Páginas web para tiendas</p>
-  </footer>
+  <div class="dock">
+    <a class="btn" href="mailto:soporte.flowhomeapps@gmail.com?subject=Consulta%20web%20para%20mi%20tienda">Consultar</a>
+  </div>
 </body>
 </html>
