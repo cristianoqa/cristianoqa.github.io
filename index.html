@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es" data-deploy-stamp="2026-09-04-ios-testflight-four">
+<html lang="es" data-deploy-stamp="2026-10-24-services-stores">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flow Home Apps — Herramientas para tu día a día</title>
-  <meta name="description" content="Flow Home Apps: Lunera, MyPass, ReformaPRO y Monexa en camino a iOS (TestFlight). APKs Android de prueba. Misiva y Miravista solo Android." />
+  <meta name="description" content="Apps, sistemas y páginas web. Monexa en el App Store. Misiva en Google Play. También páginas para tiendas y sistemas a medida." />
   <meta name="theme-color" content="#0c1f33" />
   <link rel="canonical" href="https://cristianoqa.github.io/" />
   <link rel="icon" href="./assets/flow-home-mark.png" type="image/png" sizes="32x32" />
@@ -12,14 +12,14 @@
   <link rel="apple-touch-icon" href="./assets/flow-home-mark.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cristianoqa.github.io/" />
-  <meta property="og:title" content="Flow Home Apps — Android + iOS (TestFlight)" />
-  <meta property="og:description" content="4 apps en TestFlight (Lunera, MyPass, ReformaPRO, Monexa). Misiva y Miravista solo Android. APKs de prueba firmados." />
+  <meta property="og:title" content="Flow Home Apps — Apps, sistemas y páginas web" />
+  <meta property="og:description" content="Monexa en el App Store. Misiva en Google Play. Páginas para tiendas y sistemas a medida." />
   <meta property="og:image" content="https://cristianoqa.github.io/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Flow Home Apps — Android + iOS (TestFlight)" />
-  <meta name="twitter:description" content="4 apps en TestFlight. Misiva y Miravista solo Android." />
+  <meta name="twitter:title" content="Flow Home Apps — Apps, sistemas y páginas web" />
+  <meta name="twitter:description" content="Monexa en el App Store. Misiva en Google Play. Páginas web y sistemas a medida." />
   <meta name="twitter:image" content="https://cristianoqa.github.io/assets/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -306,6 +306,25 @@
       font-size: 0.88rem;
       color: var(--muted);
     }
+    .ios-panel a { font-weight: 700; }
+
+    .offer {
+      margin: 0 0 1.5rem;
+      padding: 1.2rem 1.25rem 1.3rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+    .offer h2 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.35rem;
+      margin: 0.2rem 0 0.45rem;
+      letter-spacing: -0.02em;
+    }
+    .offer p { margin: 0; color: var(--ink-soft); max-width: 62ch; }
+    .offer-actions { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.95rem; }
+    .offer-actions .cta { width: auto; }
 
     .cta-stack { display: grid; gap: 0.55rem; margin-top: auto; padding-top: 0.35rem; }
     .cta {
@@ -412,8 +431,8 @@
         </div>
         <nav class="nav-links" aria-label="Sections" data-i18n-aria="navSections">
           <a href="#apps" data-i18n="navApps">Apps</a>
+          <a href="#servicios" data-i18n="navServices">Servicios</a>
           <a href="#ios" data-i18n="navIos">iOS</a>
-          <a href="./servicios-tiendas.html" data-i18n="navStores">Tiendas</a>
           <a href="#transparencia" data-i18n="navTrust">Transparencia</a>
           <a href="#apoyo" data-i18n="navSupport">Apoyar</a>
         </nav>
@@ -422,35 +441,35 @@
     <div class="hook reveal" style="--d:120ms">
       <h1 data-i18n="heroTitle">Herramientas inteligentes para automatizar tu día a día</h1>
       <p data-i18n="heroBody">
-        Apps hechas en casa: útiles, sin anuncios invasivos y con tus datos en tu dispositivo.
-        Android con APKs de prueba; cuatro apps ya en TestFlight hacia App Store.
+        Apps para el día a día, y también sistemas y páginas web para negocios.
       </p>
     </div>
   </header>
 
   <main class="wrap">
+    <section id="servicios" class="offer section reveal" style="--d:40ms" aria-labelledby="servicios-title">
+      <span class="section-kicker" data-i18n="servicesKicker">Para negocios</span>
+      <h2 id="servicios-title" data-i18n="servicesTitle">Sistemas y páginas web</h2>
+      <p data-i18n="servicesBody">Hago páginas web para tiendas y sistemas a medida: el proceso, los datos y la herramienta que el negocio necesita.</p>
+      <div class="offer-actions">
+        <a class="cta" href="./servicios-tiendas.html" data-i18n="ctaWeb">Ver páginas para tiendas</a>
+        <a class="cta secondary" href="mailto:soporte.flowhomeapps@gmail.com" data-i18n="ctaSystems">Cuéntame el sistema</a>
+      </div>
+    </section>
+
     <section id="ios" class="ios-panel section reveal" style="--d:40ms" aria-labelledby="ios-title">
-      <span class="section-kicker" data-i18n="iosKicker">App Store · TestFlight</span>
-      <h2 id="ios-title" data-i18n="iosTitle">Cuatro apps listas para iPhone</h2>
-      <p data-i18n="iosBody">
-        Ya están en prueba cerrada (TestFlight) y en camino a la App Store:
-        <strong>Lunera</strong>, <strong>MyPass</strong>, <strong>ReformaPRO</strong> y <strong>Monexa</strong>.
-      </p>
-      <ul>
-        <li data-i18n="iosList1">Invitación por TestFlight (testers internos / externos).</li>
-        <li data-i18n="iosList2">Mismo producto que en Android; canal nativo iOS en marcha.</li>
-      </ul>
-      <p class="ios-note" data-i18n="iosExclude">
-        <strong>Sin versión iOS:</strong> Misiva y Miravista (ScreenMirror) seguirán solo en Android
-        (límites de plataforma / revisión de Apple).
-      </p>
+      <span class="section-kicker" data-i18n="iosKicker">App Store</span>
+      <h2 id="ios-title" data-i18n="iosTitle">Monexa ya está en el iPhone</h2>
+      <p data-i18n="iosBody">Monexa se descarga en el App Store. Lunera, MyPass y ReformaPRO siguen en TestFlight.</p>
+      <p><a href="https://apps.apple.com/app/monexa/id6808671510" target="_blank" rel="noopener noreferrer" data-i18n="iosMonexaLink">Abrir Monexa en el App Store</a></p>
+      <p class="ios-note" data-i18n="iosExclude">Misiva está en Google Play. Miravista sigue solo en Android.</p>
     </section>
 
     <section id="apps" class="section reveal" style="--d:80ms" aria-labelledby="apps-title">
       <div class="section-head">
         <span class="section-kicker" data-i18n="catalogKicker">Catálogo</span>
         <h2 id="apps-title" data-i18n="appsTitle">Apps</h2>
-        <p data-i18n="appsIntro">Descargas Android firmadas. Lunera, MyPass, ReformaPRO y Monexa también en TestFlight (iOS).</p>
+        <p data-i18n="appsIntro">Monexa está en el App Store. Misiva, en Google Play. El resto sigue con descarga directa o TestFlight.</p>
       </div>
 
       <div class="apps">
@@ -569,9 +588,8 @@
               Sincronización en la nube con tu cuenta.
             </p>
             <div class="badge-row" data-i18n-aria="monexaStatus">
-              <span class="badge play" data-i18n="badgePlay">Próximamente en Google Play</span>
-              <span class="badge ios" data-i18n="badgeTestFlight">TestFlight iOS</span>
-              <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
+              <span class="badge ios" data-i18n="badgeAppStore">App Store</span>
+              <span class="badge apk" data-i18n="badgeAndroidWeb">Android en la web</span>
               <span class="badge">v1.0.13</span>
             </div>
             <ul class="benefits">
@@ -581,9 +599,10 @@
               <li data-i18n="monexaB4">Sin anuncios invasivos</li>
             </ul>
             <div class="cta-stack">
-              <a class="cta monexa" href="./descargar-monexa.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
+              <a class="cta monexa" href="https://apps.apple.com/app/monexa/id6808671510" target="_blank" rel="noopener noreferrer" data-i18n="ctaMonexaIos">iPhone — App Store</a>
+              <a class="cta secondary" href="./descargar-monexa.html" data-i18n="ctaMonexaAndroid">Android — descargar</a>
               <a class="cta secondary" id="privacy-monexa" href="/policies/monexa-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
-              <p class="cta-note" data-i18n="monexaNote">También llegará a Google Play. Activa orígenes desconocidos solo para esta app.</p>
+              <p class="cta-note" data-i18n="monexaNote">iPhone en el App Store. Android se descarga en esta página, no en Google Play.</p>
             </div>
           </div>
         </article>
@@ -602,7 +621,7 @@
               Todo corre en tu móvil.
             </p>
             <div class="badge-row" data-i18n-aria="misivaStatus">
-              <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
+              <span class="badge play" data-i18n="badgePlayLive">Google Play</span>
               <span class="badge android-only" data-i18n="badgeAndroidOnly">Solo Android</span>
               <span class="badge">v2.0.94</span>
             </div>
@@ -613,9 +632,10 @@
               <li data-i18n="misivaB4">Sin subir tus mensajes a nuestros servidores</li>
             </ul>
             <div class="cta-stack">
-              <a class="cta" href="./descargar-misiva.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
+              <a class="cta" href="https://play.google.com/store/apps/details?id=com.personal.mensajetexto" target="_blank" rel="noopener noreferrer" data-i18n="ctaMisivaPlay">Google Play</a>
+              <a class="cta secondary" href="./descargar-misiva.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
               <a class="cta secondary" id="privacy-misiva" href="/policies/mensajetexto.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
-              <p class="cta-note" data-i18n="misivaNote">En el móvil: si se abre otra página, pulsa otra vez “Descargar”.</p>
+              <p class="cta-note" data-i18n="misivaNote">En Google Play. Sin versión para iPhone. El APK sigue aquí por si la tienda no abre.</p>
             </div>
           </div>
         </article>
@@ -658,7 +678,7 @@
       <span class="section-kicker" data-i18n="trustKicker">Confianza</span>
       <h2 id="transparencia-title" data-i18n="trustTitle">Transparencia</h2>
       <p data-i18n-html="trustP1"><strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.</p>
-      <p data-i18n-html="trustP2"><strong>Misiva</strong> y <strong>Miravista</strong> (ScreenMirror) son solo Android — no habrá App Store. <strong>Lunera</strong>, <strong>MyPass</strong>, <strong>ReformaPRO</strong> y <strong>Monexa</strong> ya están en TestFlight hacia iOS.</p>
+      <p data-i18n-html="trustP2"><strong>Monexa</strong> ya está en el App Store. <strong>Misiva</strong> está en Google Play y no tiene versión para iPhone. <strong>Miravista</strong> sigue solo en Android. <strong>Lunera</strong>, <strong>MyPass</strong> y <strong>ReformaPRO</strong> siguen en TestFlight.</p>
       <p data-i18n-html="trustP3">Sin tienda falsa ni publicidad oculta. Contacto: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>.</p>
       <p style="margin-top:0.85rem;font-size:0.92rem;" data-i18n="trustP4">
         Las políticas de privacidad de cada app están en el botón de cada tarjeta (y en el pie de página).
@@ -714,21 +734,32 @@
           brandName: "Cristiano · desarrollador independiente",
           navSections: "Secciones",
           navApps: "Apps",
+          navServices: "Servicios",
           navIos: "iOS",
           navStores: "Tiendas",
           navTrust: "Transparencia",
           navSupport: "Apoyar",
           heroTitle: "Herramientas inteligentes para automatizar tu día a día",
-          heroBody: "Apps hechas en casa: útiles, sin anuncios invasivos y con tus datos en tu dispositivo. Android con APKs de prueba; cuatro apps ya en TestFlight hacia App Store.",
-          iosKicker: "App Store · TestFlight",
-          iosTitle: "Cuatro apps listas para iPhone",
-          iosBody: "Ya están en prueba cerrada (TestFlight) y en camino a la App Store: Lunera, MyPass, ReformaPRO y Monexa.",
-          iosList1: "Invitación por TestFlight (testers internos / externos).",
-          iosList2: "Mismo producto que en Android; canal nativo iOS en marcha.",
-          iosExclude: "Sin versión iOS: Misiva y Miravista (ScreenMirror) seguirán solo en Android (límites de plataforma / revisión de Apple).",
+          heroBody: "Apps para el día a día, y también sistemas y páginas web para negocios.",
+          servicesKicker: "Para negocios",
+          servicesTitle: "Sistemas y páginas web",
+          servicesBody: "Hago páginas web para tiendas y sistemas a medida: el proceso, los datos y la herramienta que el negocio necesita.",
+          ctaWeb: "Ver páginas para tiendas",
+          ctaSystems: "Cuéntame el sistema",
+          iosKicker: "App Store",
+          iosTitle: "Monexa ya está en el iPhone",
+          iosBody: "Monexa se descarga en el App Store. Lunera, MyPass y ReformaPRO siguen en TestFlight.",
+          iosExclude: "Misiva está en Google Play. Miravista sigue solo en Android.",
           catalogKicker: "Catálogo",
           appsTitle: "Apps",
-          appsIntro: "Descargas Android firmadas. Lunera, MyPass, ReformaPRO y Monexa también en TestFlight (iOS).",
+          appsIntro: "Monexa está en el App Store. Misiva, en Google Play. El resto sigue con descarga directa o TestFlight.",
+          badgeAppStore: "App Store",
+          badgeAndroidWeb: "Android en la web",
+          iosMonexaLink: "Abrir Monexa en el App Store",
+          ctaMonexaIos: "iPhone — App Store",
+          ctaMonexaAndroid: "Android — descargar",
+          badgePlayLive: "Google Play",
+          ctaMisivaPlay: "Google Play",
           badgeTestFlight: "TestFlight iOS",
           badgeAndroidOnly: "Solo Android",
           misivaLead: "Programa mensajes a WhatsApp y genera el texto con IA (tu propia API key de Gemini). Todo corre en tu móvil.",
@@ -740,7 +771,7 @@
           misivaB4: "Sin subir tus mensajes a nuestros servidores",
           ctaDownload: "Descargar versión de pruebas (.APK)",
           ctaPrivacy: "Ver política de privacidad",
-          misivaNote: "En el móvil: si se abre otra página, pulsa otra vez “Descargar”. Solo Android — sin App Store.",
+          misivaNote: "En Google Play. Sin versión para iPhone. El APK sigue aquí por si la tienda no abre.",
           mypassEyebrow: "Bóveda de contraseñas",
           mypassLead: "Bóveda cifrada en el dispositivo, Recovery Key, backup, Autofill y sync. Ahora todo incluido, sin paywall.",
           mypassStatus: "Estado MyPass",
@@ -766,7 +797,7 @@
           trustKicker: "Confianza",
           trustTitle: "Transparencia",
           trustP1: "<strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.",
-          trustP2: "<strong>Misiva</strong> y <strong>Miravista</strong> (ScreenMirror) son solo Android — no habrá App Store. <strong>Lunera</strong>, <strong>MyPass</strong>, <strong>ReformaPRO</strong> y <strong>Monexa</strong> ya están en TestFlight hacia iOS.",
+          trustP2: "<strong>Monexa</strong> ya está en el App Store. <strong>Misiva</strong> está en Google Play y no tiene versión para iPhone. <strong>Miravista</strong> sigue solo en Android. <strong>Lunera</strong>, <strong>MyPass</strong> y <strong>ReformaPRO</strong> siguen en TestFlight.",
           trustP3: "Sin tienda falsa ni publicidad oculta. Contacto: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
           trustP4: "Las políticas de privacidad de cada app están en el botón de cada tarjeta (y en el pie de página).",
           supportKicker: "Apoyar",
@@ -788,7 +819,7 @@
           monexaB2: "Presupuestos, suscripciones y metas",
           monexaB3: "Gasto rápido y análisis mensual",
           monexaB4: "Sin anuncios invasivos",
-          monexaNote: "También en TestFlight (iOS) y llegará a Google Play. Activa orígenes desconocidos solo para esta app.",
+          monexaNote: "iPhone en el App Store. Android se descarga en esta página, no en Google Play.",
           luneraEyebrow: "Salud menstrual · FemTech",
           luneraLead: "Predicción de ciclo, registro diario, calendario, etapas de vida y IA educativa. Tus datos de salud se quedan en el dispositivo.",
           luneraB1: "Anillo de ciclo + fases",
@@ -813,21 +844,32 @@ footerMisiva: "Privacidad Misiva",
           brandName: "Cristiano · indie developer",
           navSections: "Sections",
           navApps: "Apps",
+          navServices: "Services",
           navIos: "iOS",
           navStores: "Stores",
           navTrust: "Trust",
           navSupport: "Support",
           heroTitle: "Smart tools to automate your day",
-          heroBody: "Homemade apps: useful, no invasive ads, data on your device. Android test APKs; four apps already on TestFlight toward the App Store.",
-          iosKicker: "App Store · TestFlight",
-          iosTitle: "Four apps ready for iPhone",
-          iosBody: "Already in closed testing (TestFlight) and headed to the App Store: Lunera, MyPass, ReformaPRO and Monexa.",
-          iosList1: "Invite via TestFlight (internal / external testers).",
-          iosList2: "Same product as Android; native iOS channel underway.",
-          iosExclude: "No iOS version: Misiva and Miravista (ScreenMirror) stay Android-only (platform / App Store limits).",
+          heroBody: "Everyday apps, plus custom systems and websites for businesses.",
+          servicesKicker: "For businesses",
+          servicesTitle: "Systems and websites",
+          servicesBody: "I build shop websites and custom systems: the process, the data and the tool the business needs.",
+          ctaWeb: "See shop websites",
+          ctaSystems: "Tell me about the system",
+          iosKicker: "App Store",
+          iosTitle: "Monexa is on iPhone",
+          iosBody: "Monexa is on the App Store. Lunera, MyPass and ReformaPRO are still on TestFlight.",
+          iosExclude: "Misiva is on Google Play. Miravista stays Android-only.",
           catalogKicker: "Catalog",
           appsTitle: "Apps",
-          appsIntro: "Signed Android downloads. Lunera, MyPass, ReformaPRO and Monexa are also on TestFlight (iOS).",
+          appsIntro: "Monexa is on the App Store. Misiva is on Google Play. The rest still use a direct download or TestFlight.",
+          badgeAppStore: "App Store",
+          badgeAndroidWeb: "Android on the web",
+          iosMonexaLink: "Open Monexa on the App Store",
+          ctaMonexaIos: "iPhone — App Store",
+          ctaMonexaAndroid: "Android — download",
+          badgePlayLive: "Google Play",
+          ctaMisivaPlay: "Google Play",
           badgeTestFlight: "TestFlight iOS",
           badgeAndroidOnly: "Android only",
           misivaLead: "Schedule WhatsApp messages and generate text with AI (your own Gemini API key). Everything runs on your phone.",
@@ -839,7 +881,7 @@ footerMisiva: "Privacidad Misiva",
           misivaB4: "We don’t upload your messages to our servers",
           ctaDownload: "Download test build (.APK)",
           ctaPrivacy: "View privacy policy",
-          misivaNote: "On mobile: if another page opens, tap “Download” again. Android only — no App Store.",
+          misivaNote: "On Google Play. No iPhone version. The APK stays here if the store does not open.",
           mypassEyebrow: "Password vault",
           mypassLead: "On-device encrypted vault, Recovery Key, backup, Autofill and sync. Everything included, no paywall.",
           mypassStatus: "MyPass status",
@@ -865,7 +907,7 @@ footerMisiva: "Privacidad Misiva",
           trustKicker: "Trust",
           trustTitle: "Transparency",
           trustP1: "<strong>Why direct downloads?</strong> I’m an indie developer. Publishing on Google Play takes review time. Meanwhile I offer signed APKs from this page, no middlemen.",
-          trustP2: "<strong>Misiva</strong> and <strong>Miravista</strong> (ScreenMirror) are Android-only — no App Store. <strong>Lunera</strong>, <strong>MyPass</strong>, <strong>ReformaPRO</strong> and <strong>Monexa</strong> are already on TestFlight toward iOS.",
+          trustP2: "<strong>Monexa</strong> is on the App Store. <strong>Misiva</strong> is on Google Play and has no iPhone version. <strong>Miravista</strong> stays Android-only. <strong>Lunera</strong>, <strong>MyPass</strong> and <strong>ReformaPRO</strong> are still on TestFlight.",
           trustP3: "No fake store, no hidden ads. Contact: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
           trustP4: "Each app’s privacy policy is on the card button (and in the footer).",
           supportKicker: "Support",
@@ -887,7 +929,7 @@ footerMisiva: "Privacidad Misiva",
           monexaB2: "Budgets, subscriptions and goals",
           monexaB3: "Quick expense and monthly insights",
           monexaB4: "No invasive ads",
-          monexaNote: "Also on TestFlight (iOS) and coming to Google Play. Enable unknown sources only for this app.",
+          monexaNote: "iPhone on the App Store. Android downloads from this page, not Google Play.",
           luneraEyebrow: "Menstrual health · FemTech",
           luneraLead: "Cycle prediction, daily logging, calendar, life stages and educational AI. Your health data stays on the device.",
           luneraB1: "Cycle ring + phases",
@@ -912,21 +954,32 @@ footerMisiva: "Misiva privacy",
           brandName: "Cristiano · desenvolvedor independente",
           navSections: "Seções",
           navApps: "Apps",
+          navServices: "Serviços",
           navIos: "iOS",
           navStores: "Lojas",
           navTrust: "Transparência",
           navSupport: "Apoiar",
           heroTitle: "Ferramentas inteligentes para automatizar o seu dia a dia",
-          heroBody: "Apps feitos em casa: úteis, sem anúncios invasivos e com os seus dados no dispositivo. Android com APKs de teste; quatro apps já no TestFlight a caminho da App Store.",
-          iosKicker: "App Store · TestFlight",
-          iosTitle: "Quatro apps prontos para iPhone",
-          iosBody: "Já estão em teste fechado (TestFlight) e a caminho da App Store: Lunera, MyPass, ReformaPRO e Monexa.",
-          iosList1: "Convite via TestFlight (testers internos / externos).",
-          iosList2: "Mesmo produto que no Android; canal nativo iOS em andamento.",
-          iosExclude: "Sem versão iOS: Misiva e Miravista (ScreenMirror) ficam só no Android (limites de plataforma / revisão da Apple).",
+          heroBody: "Apps para o dia a dia, e também sistemas e páginas web para negócios.",
+          servicesKicker: "Para negócios",
+          servicesTitle: "Sistemas e páginas web",
+          servicesBody: "Faço páginas para lojas e sistemas sob medida: o processo, os dados e a ferramenta de que o negócio precisa.",
+          ctaWeb: "Ver páginas para lojas",
+          ctaSystems: "Conta-me o sistema",
+          iosKicker: "App Store",
+          iosTitle: "A Monexa já está no iPhone",
+          iosBody: "A Monexa descarrega-se na App Store. Lunera, MyPass e ReformaPRO continuam no TestFlight.",
+          iosExclude: "A Misiva está na Google Play. A Miravista continua só no Android.",
           catalogKicker: "Catálogo",
           appsTitle: "Apps",
-          appsIntro: "Downloads Android assinados. Lunera, MyPass, ReformaPRO e Monexa também no TestFlight (iOS).",
+          appsIntro: "A Monexa está na App Store. A Misiva, na Google Play. O resto segue com download direto ou TestFlight.",
+          badgeAppStore: "App Store",
+          badgeAndroidWeb: "Android na web",
+          iosMonexaLink: "Abrir a Monexa na App Store",
+          ctaMonexaIos: "iPhone — App Store",
+          ctaMonexaAndroid: "Android — baixar",
+          badgePlayLive: "Google Play",
+          ctaMisivaPlay: "Google Play",
           badgeTestFlight: "TestFlight iOS",
           badgeAndroidOnly: "Só Android",
           misivaLead: "Agende mensagens no WhatsApp e gere texto com IA (sua própria API key do Gemini). Tudo roda no seu celular.",
@@ -938,7 +991,7 @@ footerMisiva: "Misiva privacy",
           misivaB4: "Não enviamos suas mensagens aos nossos servidores",
           ctaDownload: "Baixar versão de testes (.APK)",
           ctaPrivacy: "Ver política de privacidade",
-          misivaNote: "No celular: se abrir outra página, toque em “Baixar” de novo. Só Android — sem App Store.",
+          misivaNote: "Na Google Play. Sem versão para iPhone. O APK continua aqui se a loja não abrir.",
           mypassEyebrow: "Cofre de senhas",
           mypassLead: "Cofre criptografado no dispositivo, Recovery Key, backup, Autofill e sync. Tudo incluído, sem paywall.",
           mypassStatus: "Status MyPass",
@@ -964,7 +1017,7 @@ footerMisiva: "Misiva privacy",
           trustKicker: "Confiança",
           trustTitle: "Transparência",
           trustP1: "<strong>Por que downloads diretos?</strong> Sou um desenvolvedor independente. Publicar na Google Play leva tempo de revisão. Enquanto isso ofereço APKs assinados nesta página, sem intermediários.",
-          trustP2: "<strong>Misiva</strong> e <strong>Miravista</strong> (ScreenMirror) são só Android — não haverá App Store. <strong>Lunera</strong>, <strong>MyPass</strong>, <strong>ReformaPRO</strong> e <strong>Monexa</strong> já estão no TestFlight a caminho do iOS.",
+          trustP2: "<strong>Monexa</strong> já está na App Store. <strong>Misiva</strong> está na Google Play e não tem versão para iPhone. <strong>Miravista</strong> continua só no Android. <strong>Lunera</strong>, <strong>MyPass</strong> e <strong>ReformaPRO</strong> continuam no TestFlight.",
           trustP3: "Sem loja falsa nem publicidade oculta. Contato: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
           trustP4: "As políticas de privacidade de cada app estão no botão de cada cartão (e no rodapé).",
           supportKicker: "Apoiar",
@@ -986,7 +1039,7 @@ footerMisiva: "Misiva privacy",
           monexaB2: "Orçamentos, subscrições e metas",
           monexaB3: "Despesa rápida e análise mensal",
           monexaB4: "Sem anúncios invasivos",
-          monexaNote: "Também no TestFlight (iOS) e chegará à Google Play. Ative origens desconhecidas só para este app.",
+          monexaNote: "iPhone na App Store. O Android descarrega-se nesta página, não na Google Play.",
           luneraEyebrow: "Saúde menstrual · FemTech",
           luneraLead: "Previsão do ciclo, registo diário, calendário, etapas de vida e IA educativa. Os seus dados de saúde ficam no dispositivo.",
           luneraB1: "Anel do ciclo + fases",
