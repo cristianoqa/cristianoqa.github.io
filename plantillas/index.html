@@ -245,20 +245,51 @@
     .feat-card__media {
       aspect-ratio: 16 / 10;
       overflow: hidden;
-      background: #071422;
-    }
-    .feat-card__media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 35%;
-      transition: transform 220ms ease;
-    }
-    .feat-card:hover .feat-card__media img { transform: scale(1.03); }
-    .feat-card__media--lezzet {
       display: grid;
       align-content: end;
       padding: 1.2rem;
+    }
+    .feat-card__media .eyebrow {
+      margin: 0;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+    .feat-card__media .big {
+      margin: 0.35rem 0 0;
+      font-size: clamp(2.4rem, 6vw, 3.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+    }
+    .feat-card__media .chip {
+      display: inline-flex;
+      margin-top: 0.85rem;
+      min-height: 1.7rem;
+      align-items: center;
+      padding: 0 0.65rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+    .feat-card__media--granada {
+      color: #f7f4ea;
+      background:
+        linear-gradient(180deg, transparent 8%, rgba(15, 20, 16, 0.88) 72%),
+        radial-gradient(circle at 78% 18%, rgba(212, 160, 23, 0.55), transparent 42%),
+        #0f1410;
+    }
+    .feat-card__media--granada .big {
+      font-family: Outfit, system-ui, sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .feat-card__media--granada .chip {
+      background: #d4a017;
+      color: #0f1410;
+    }
+    .feat-card__media--lezzet {
       color: #f6efe6;
       background:
         linear-gradient(180deg, transparent 10%, rgba(26, 18, 12, 0.85) 70%),
@@ -266,24 +297,12 @@
         #1a120c;
     }
     .feat-card__media--lezzet .big {
-      margin: 0;
       font-family: Fraunces, Georgia, serif;
-      font-size: clamp(2.4rem, 6vw, 3.2rem);
       font-style: italic;
-      line-height: 0.95;
-      letter-spacing: -0.03em;
     }
     .feat-card__media--lezzet .chip {
-      display: inline-flex;
-      margin-top: 0.85rem;
-      min-height: 1.7rem;
-      align-items: center;
-      padding: 0 0.65rem;
-      border-radius: 999px;
       background: #c45c26;
       color: #fff;
-      font-size: 0.72rem;
-      font-weight: 700;
     }
     .feat-card__copy {
       padding: 1rem 1.15rem 1.2rem;
@@ -364,8 +383,10 @@
       <p class="mt-2 max-w-xl text-ink-soft">Sitios de ejemplo con diseño completo. No son el sitio oficial del negocio.</p>
       <div class="feat-grid mt-6">
         <a class="feat-card" href="../cerveceria-granada/">
-          <div class="feat-card__media">
-            <img src="../assets/ejemplo-cerveceria.jpg" width="960" height="600" alt="Terraza de ejemplo para Cervecería Granada" />
+          <div class="feat-card__media feat-card__media--granada" aria-hidden="true">
+            <p class="eyebrow">Móstoles · desde 1975</p>
+            <p class="big">GRANADA</p>
+            <span class="chip">Terraza · carta · WhatsApp</span>
           </div>
           <div class="feat-card__copy">
             <p class="tag">Ejemplo cliente</p>
@@ -376,6 +397,7 @@
         </a>
         <a class="feat-card" href="../lezzet/">
           <div class="feat-card__media feat-card__media--lezzet" aria-hidden="true">
+            <p class="eyebrow">Cocina turca</p>
             <p class="big">LEZZET</p>
             <span class="chip">Mesa · carta · WhatsApp</span>
           </div>
