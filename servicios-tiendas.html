@@ -3,248 +3,248 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Páginas web para tiendas — Flow Home</title>
-  <meta name="description" content="Web de tienda para el móvil, con WhatsApp y mapa. La diseño, la publico y el dominio queda a tu nombre. La cifra se ve en la consulta." />
-  <meta name="theme-color" content="#0f172a" />
+  <title>Webs para tiendas — Flow Home Apps</title>
+  <meta name="description" content="Diseño y publico la web de tu tienda. El dominio queda a tu nombre. El presupuesto te lo digo al escribirme." />
+  <meta name="theme-color" content="#071422" />
   <link rel="canonical" href="https://cristianoqa.github.io/servicios-tiendas.html" />
-  <link rel="icon" href="./assets/flow-home-mark.png" type="image/png" />
+  <link rel="icon" href="./assets/flow-home-mark.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="./assets/flow-home-mark.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cristianoqa.github.io/servicios-tiendas.html" />
-  <meta property="og:title" content="Páginas web para tiendas — Flow Home" />
-  <meta property="og:description" content="Tu tienda en Google y en WhatsApp. Consulta sin cifra publicada." />
+  <meta property="og:title" content="Webs para tiendas — Flow Home Apps" />
+  <meta property="og:description" content="La diseño, la publico y el dominio queda a tu nombre. El presupuesto llega en la respuesta." />
   <meta property="og:image" content="https://cristianoqa.github.io/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Webs para tiendas — Flow Home Apps" />
+  <meta name="twitter:description" content="Web de tienda diseñada y publicada. El dominio queda a tu nombre." />
+  <meta name="twitter:image" content="https://cristianoqa.github.io/assets/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ["Inter", "system-ui", "sans-serif"] }
-        }
-      }
-    };
-  </script>
-  <style>
-    :focus-visible { outline: 3px solid #1d4ed8; outline-offset: 3px; }
-    summary::-webkit-details-marker { display: none; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/landing.css?v=20261030b" />
 </head>
-<body class="bg-slate-50 font-sans text-slate-900 antialiased pb-24 md:pb-0">
-  <a class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-white" href="#contenido">Saltar al contenido</a>
+<body class="font-sans text-ink antialiased" data-page="stores">
+  <a class="skip-link" href="#contenido" data-i18n="storesSkip">Saltar al contenido</a>
 
-  <header class="sticky top-0 z-20 border-b border-slate-200/80 bg-slate-50/90 backdrop-blur">
-    <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-      <a href="./" class="flex items-center gap-3 text-slate-900 no-underline">
-        <img src="./assets/flow-home-mark.png" width="36" height="36" alt="" class="h-9 w-9 object-contain" />
-        <span>
-          <span class="block text-sm font-extrabold leading-none tracking-tight">Flow Home</span>
-          <span class="mt-1 block text-xs font-medium text-slate-500">Páginas para tiendas</span>
+  <header class="hero-bar sticky top-0 z-40">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3">
+      <a href="./" class="mr-auto flex min-w-0 items-center gap-3">
+        <img class="size-11 shrink-0 rounded-xl bg-white object-contain p-1" src="./assets/flow-home-mark.png" width="44" height="44" alt="Flow Home Apps" />
+        <span class="min-w-0 leading-tight">
+          <span class="block text-sm font-bold text-white">Flow Home Apps</span>
+          <span class="block text-xs text-white/70" data-i18n="brandName">Cristiano · desarrollador independiente</span>
         </span>
       </a>
-      <a href="mailto:soporte.flowhomeapps@gmail.com?subject=Consulta%20web%20para%20mi%20tienda" class="hidden min-h-11 items-center rounded-xl bg-slate-900 px-4 text-sm font-bold text-white no-underline hover:bg-slate-800 md:inline-flex">Consultar</a>
+      <div class="lang-switch inline-flex overflow-hidden rounded-full border border-white/20" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">PT-BR</button>
+      </div>
+      <a class="btn-pill" data-wa="base" data-i18n="ctaQuote" data-i18n-aria="ctaQuoteAria" href="https://wa.me/34634160319?text=" target="_blank" rel="noopener noreferrer">Pedir presupuesto</a>
+      <nav class="flex w-full gap-1 overflow-x-auto" aria-label="Sections" data-i18n-aria="navSections">
+        <a class="inline-flex min-h-11 shrink-0 items-center rounded-lg px-3 text-sm font-semibold text-white/75 hover:text-white" href="./" data-i18n="navApps">Apps</a>
+        <a class="inline-flex min-h-11 shrink-0 items-center border-b-2 border-[#2ad4c4] px-3 text-sm font-semibold text-white" href="./servicios-tiendas.html" aria-current="page" data-i18n="navServices">Webs para tiendas</a>
+      </nav>
     </div>
   </header>
 
   <main id="contenido">
-    <section class="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-8 pt-10 lg:grid-cols-2 lg:pt-16">
-      <div>
-        <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-semibold text-slate-700">
-          <i data-lucide="sparkles" class="h-4 w-4 text-blue-700"></i>
-          Tu negocio listo en Internet
-        </p>
-        <h1 class="max-w-xl text-4xl font-extrabold leading-[1.08] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-          Tu tienda, en <span class="text-blue-700">Google</span> y en <span class="text-emerald-700">WhatsApp</span>.
-        </h1>
-        <p class="mt-5 max-w-md text-lg leading-relaxed text-slate-600">
-          La diseño, la publico y el dominio queda a tu nombre. La cifra se ve en la consulta.
-        </p>
-        <ul class="mt-6 space-y-3 text-base font-medium text-slate-800">
-          <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700"></i> Diseño y publicación incluidos</li>
-          <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700"></i> WhatsApp, horario y mapa en la misma página</li>
-          <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700"></i> Dominio y hosting a tu nombre</li>
-        </ul>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="mailto:soporte.flowhomeapps@gmail.com?subject=Consulta%20web%20para%20mi%20tienda" class="inline-flex min-h-12 items-center justify-center rounded-xl bg-blue-700 px-6 text-base font-bold text-white no-underline hover:bg-blue-800">Consultar</a>
-          <a href="#incluye" class="inline-flex min-h-12 items-center justify-center rounded-xl border border-slate-300 bg-white px-6 text-base font-bold text-slate-900 no-underline hover:bg-slate-100">Qué incluye</a>
-        </div>
-      </div>
-
-      <div class="mx-auto w-full max-w-sm rounded-[2rem] bg-slate-900 p-3 shadow-2xl shadow-slate-900/20" aria-hidden="true">
-        <div class="overflow-hidden rounded-[1.5rem] bg-slate-950">
-          <div class="flex items-center justify-between px-5 py-3 text-xs text-slate-400">
-            <span>9:41</span>
-            <span>tutienda.com</span>
-          </div>
-          <div class="bg-gradient-to-br from-slate-800 to-blue-950 px-5 py-6 text-white">
-            <p class="text-xl font-extrabold tracking-tight">Tu comercio</p>
-            <p class="mt-1 text-sm text-blue-100">Abierto hoy · Centro</p>
-          </div>
-          <div class="space-y-3 bg-slate-900 px-5 py-5 text-sm text-slate-200">
-            <div class="flex items-center justify-between border-b border-white/10 pb-3">
-              <span class="inline-flex items-center gap-2 text-slate-400"><i data-lucide="clock" class="h-4 w-4"></i> Horario</span>
-              <span class="font-semibold">10:00 – 14:00</span>
+    <section class="hero-stage" aria-labelledby="servicios-hero">
+      <div class="relative mx-auto grid max-w-6xl items-center gap-8 px-4 py-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-12 lg:py-16">
+        <div>
+          <p class="w-fit rounded-full border border-white/25 px-3 py-1 text-sm text-white/90" data-i18n="storesChip">Webs para tiendas</p>
+          <h1 id="servicios-hero" class="mt-5 max-w-[16ch] font-sans text-4xl font-bold leading-[1.05] tracking-tight text-balance text-white sm:text-5xl" data-i18n="storesHeroTitle">La página de tu tienda, hecha y publicada.</h1>
+          <p class="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg" data-i18n="storesHeroBody">La diseño, la publico y el dominio queda a tu nombre. Horario, productos, mapa y, si lo pides, un botón a tu WhatsApp. Tú no escribes código.</p>
+          <div class="mt-8 flex flex-col gap-4">
+            <div>
+              <a class="btn-pill w-full sm:w-auto" data-wa="base" data-i18n="ctaQuote" data-i18n-aria="ctaQuoteAria" href="https://wa.me/34634160319?text=" target="_blank" rel="noopener noreferrer">Pedir presupuesto</a>
+              <p class="mt-2 max-w-sm text-sm text-white/65" data-i18n="storesWaHint">WhatsApp se abre con el mensaje listo.</p>
             </div>
-            <div class="flex items-center justify-between border-b border-white/10 pb-3">
-              <span class="inline-flex items-center gap-2 text-slate-400"><i data-lucide="map-pin" class="h-4 w-4"></i> Dónde</span>
-              <span class="font-semibold">Mapa en la página</span>
-            </div>
-            <div class="flex items-center justify-between pb-1">
-              <span class="inline-flex items-center gap-2 text-slate-400"><i data-lucide="utensils" class="h-4 w-4"></i> Carta</span>
-              <span class="font-semibold">Productos claros</span>
-            </div>
-            <div class="mt-2 flex min-h-11 items-center justify-center gap-2 rounded-xl bg-emerald-600 font-bold text-white">
-              <i data-lucide="message-circle" class="h-4 w-4"></i>
-              Escribir por WhatsApp
-            </div>
+            <p class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+              <a class="inline-flex min-h-11 items-center font-semibold text-white/80 underline-offset-4 hover:text-white hover:underline" data-mail-quote data-i18n="storesPreferMail" href="mailto:soporte.flowhomeapps@gmail.com">Escribir por correo</a>
+              <span class="text-white/30" aria-hidden="true">·</span>
+              <a class="inline-flex min-h-11 items-center font-semibold text-white/80 underline-offset-4 hover:text-white hover:underline" href="#incluye" data-i18n="storesSeePacks">Ver qué incluye</a>
+            </p>
           </div>
         </div>
+        <figure>
+          <a class="browser-shot" href="./cerveceria-granada/" data-i18n-aria="storesExampleAria">
+            <span class="browser-shot__chrome" aria-hidden="true"><i></i><i></i><i></i><span class="ml-2" data-i18n="storesExampleChrome">ejemplo</span></span>
+            <img src="./assets/ejemplo-cerveceria.jpg" width="960" height="600" alt="Propuesta de web de Cervecería Granada: terraza, nombre del bar y botones de contacto" />
+          </a>
+          <figcaption class="mt-3 text-sm leading-snug text-white/75">
+            <span data-i18n="storesExampleCap">Propuesta para un bar, para ver el tipo de página. No es el sitio oficial.</span>
+            <a class="font-semibold text-[#9ae8df] underline-offset-4 hover:underline" href="./cerveceria-granada/" data-i18n="storesExampleOpen">Abrir el ejemplo</a>
+            <span aria-hidden="true"> · </span>
+            <a class="font-semibold text-[#9ae8df] underline-offset-4 hover:underline" href="./plantillas/" data-i18n="storesTemplatesOpen">Ver 15 plantillas</a>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="mx-auto grid max-w-6xl gap-4 px-4 py-8 sm:grid-cols-3">
-      <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md">
-        <i data-lucide="smartphone" class="h-6 w-6 text-blue-700"></i>
-        <h2 class="mt-4 text-lg font-extrabold tracking-tight">Primero el móvil</h2>
-        <p class="mt-2 text-sm leading-relaxed text-slate-600">La mayoría entra desde el teléfono. La página se lee ahí, sin pellizcar.</p>
-      </article>
-      <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md">
-        <i data-lucide="map-pinned" class="h-6 w-6 text-blue-700"></i>
-        <h2 class="mt-4 text-lg font-extrabold tracking-tight">WhatsApp y mapa</h2>
-        <p class="mt-2 text-sm leading-relaxed text-slate-600">Un botón para escribirte y la ubicación, sin buscarlos en otro sitio.</p>
-      </article>
-      <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md">
-        <i data-lucide="key-round" class="h-6 w-6 text-blue-700"></i>
-        <h2 class="mt-4 text-lg font-extrabold tracking-tight">Queda a tu nombre</h2>
-        <p class="mt-2 text-sm leading-relaxed text-slate-600">Dominio y hosting tuyos. Te dejo una guía corta para el día a día.</p>
-      </article>
-    </section>
-
-    <section id="incluye" class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="max-w-lg text-3xl font-extrabold tracking-tight sm:text-4xl">Dos formas de encargar la web.</h2>
-      <p class="mt-3 max-w-xl text-slate-600">El pack se elige según lo que vendes. La cifra no está publicada: te la digo cuando sé el caso.</p>
-      <div class="mt-8 grid gap-5 lg:grid-cols-2">
-        <article class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
-          <p class="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">Básico</p>
-          <h3 class="mt-2 text-2xl font-extrabold tracking-tight">Escaparate</h3>
-          <p class="mt-2 text-slate-600">Presencia seria y un camino claro para que te escriban.</p>
-          <ul class="mt-6 space-y-3 text-sm font-medium text-slate-800">
-            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-blue-700"></i> De una a tres páginas</li>
-            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-blue-700"></i> Horario, productos y contacto</li>
-            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-blue-700"></i> WhatsApp y mapa</li>
-            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-blue-700"></i> Lista para publicar</li>
-          </ul>
-        </article>
-        <article class="relative rounded-3xl border-2 border-blue-700 bg-white p-7 shadow-md">
-          <span class="absolute -top-3 right-6 rounded-full bg-blue-700 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">Recomendado</span>
-          <p class="text-xs font-bold uppercase tracking-[0.14em] text-blue-700">Medio</p>
-          <h3 class="mt-2 text-2xl font-extrabold tracking-tight">Tienda con más detalle</h3>
-          <p class="mt-2 text-slate-600">Cuando hace falta catálogo, más texto y un diseño ajustado a tu marca.</p>
-          <ul class="mt-6 space-y-3 text-sm font-medium text-slate-800">
-            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-blue-700"></i> Todo lo del escaparate</li>
-            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-blue-700"></i> Secciones por categoría</li>
-            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-blue-700"></i> Fotos y textos ordenados</li>
-            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-blue-700"></i> Títulos listos para Google</li>
-          </ul>
-        </article>
-      </div>
-      <aside class="mt-5 flex gap-3 rounded-2xl border border-slate-200 bg-white p-5">
-        <i data-lucide="wrench" class="mt-0.5 h-5 w-5 shrink-0 text-blue-700"></i>
-        <p class="text-sm leading-relaxed text-slate-700"><span class="font-bold text-slate-900">Sistemas a medida.</span> Si lo que necesitas no es la web de una tienda, también lo hago. Cuéntalo en la misma consulta.</p>
-      </aside>
-    </section>
-
-    <section class="mx-auto max-w-6xl px-4 py-8">
-      <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">De la consulta a la web publicada.</h2>
-      <div class="mt-8 grid gap-4 md:grid-cols-3">
-        <article class="rounded-2xl bg-white p-6">
-          <p class="text-5xl font-extrabold text-blue-100">01</p>
-          <h3 class="mt-2 text-xl font-extrabold">Me escribes</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">Qué vendes, si tienes fotos y si ya hay dominio. Con eso basta.</p>
-        </article>
-        <article class="rounded-2xl bg-white p-6">
-          <p class="text-5xl font-extrabold text-blue-100">02</p>
-          <h3 class="mt-2 text-xl font-extrabold">Te digo el encaje</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">Qué pack corresponde y la cifra. Si no encaja, te lo digo.</p>
-        </article>
-        <article class="rounded-2xl bg-white p-6">
-          <p class="text-5xl font-extrabold text-blue-100">03</p>
-          <h3 class="mt-2 text-xl font-extrabold">La publico</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">La dejas online y te entrego el acceso. El dominio sigue siendo tuyo.</p>
-        </article>
-      </div>
-      <div class="mt-4 grid gap-4 md:grid-cols-2">
-        <article class="rounded-2xl border border-slate-200 bg-white p-6">
-          <h3 class="text-lg font-extrabold">Solo la web</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">Entrega publicada y una guía breve. Sirve si el horario y la carta casi no cambian.</p>
-        </article>
-        <article class="rounded-2xl border border-slate-200 bg-white p-6">
-          <h3 class="text-lg font-extrabold">Web y mantenimiento</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate-600">La misma entrega, más cambios de fotos, textos, ofertas y avisos. Yo miro que no se rompa.</p>
-        </article>
+    <section class="border-b border-line bg-white/50" aria-labelledby="plantillas-title">
+      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 md:py-12">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h2 id="plantillas-title" class="font-display text-3xl tracking-tight" data-i18n="storesTemplatesTitle">Elige un estilo. El panel es el mismo.</h2>
+            <p class="mt-2 max-w-xl text-ink-soft" data-i18n="storesTemplatesLead">Hay quince plantillas distintas. Todas se alimentan del mismo contenido: horario, productos, teléfono y WhatsApp. Tú eliges la piel; el dueño actualiza los datos.</p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a class="btn-primary shrink-0" href="./plantillas/" data-i18n="storesTemplatesCta">Ver plantillas</a>
+            <a class="btn-secondary shrink-0" href="./plantillas/panel/" data-i18n="storesPanelCta">Probar demo del panel</a>
+          </div>
+        </div>
+        <p class="max-w-2xl text-sm text-muted" data-i18n="storesPanelNote">Hay una demo local en el navegador. El panel real (login + 2FA) irá en panel.flowhomeapps.com cuando el staging pase seguridad; todavía no es producción.</p>
+        <p class="text-sm font-semibold text-ink-soft" data-i18n="storesPanelDomain">panel.flowhomeapps.com (en preparación)</p>
       </div>
     </section>
 
-    <section class="mx-auto max-w-3xl px-4 py-12">
-      <h2 class="text-3xl font-extrabold tracking-tight">Antes de escribir.</h2>
-      <div class="mt-6 space-y-3">
-        <details class="rounded-2xl border border-slate-200 bg-white px-5 open:shadow-sm">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-base font-bold">
-            ¿Por qué no hay precio en la página?
-            <i data-lucide="chevron-down" class="h-5 w-5 shrink-0 text-slate-400"></i>
-          </summary>
-          <p class="pb-4 text-sm leading-relaxed text-slate-600">Cada tienda pide un alcance distinto. La cifra sale en la consulta, cuando sé páginas, fotos y si quieres mantenimiento.</p>
-        </details>
-        <details class="rounded-2xl border border-slate-200 bg-white px-5">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-base font-bold">
-            ¿El dominio queda a mi nombre?
-            <i data-lucide="chevron-down" class="h-5 w-5 shrink-0 text-slate-400"></i>
-          </summary>
-          <p class="pb-4 text-sm leading-relaxed text-slate-600">Sí. Dominio y hosting son tuyos. No te dejo atado a una cuenta mía para poder abrir la web.</p>
-        </details>
-        <details class="rounded-2xl border border-slate-200 bg-white px-5">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-base font-bold">
-            ¿Tengo que saber de informática?
-            <i data-lucide="chevron-down" class="h-5 w-5 shrink-0 text-slate-400"></i>
-          </summary>
-          <p class="pb-4 text-sm leading-relaxed text-slate-600">No. Tú aportas qué vendes, las fotos que tengas y el teléfono de WhatsApp. Yo monto y publico.</p>
-        </details>
-        <details class="rounded-2xl border border-slate-200 bg-white px-5">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-base font-bold">
-            ¿También haces otra cosa que no sea una tienda?
-            <i data-lucide="chevron-down" class="h-5 w-5 shrink-0 text-slate-400"></i>
-          </summary>
-          <p class="pb-4 text-sm leading-relaxed text-slate-600">Sí. Sistemas a medida, además de las apps de Flow Home. Si no es una web de comercio, dilo en el correo.</p>
-        </details>
-      </div>
-    </section>
+    <div class="mx-auto flex max-w-6xl flex-col gap-14 px-4 py-10 md:gap-16 md:py-16">
+      <section aria-labelledby="hecha-title">
+        <h2 id="hecha-title" class="font-display text-3xl tracking-tight" data-i18n="storesDoneTitle">Qué queda hecho</h2>
+        <div class="mt-6 grid gap-5 md:grid-cols-3">
+          <article class="rounded-2xl border border-line bg-white p-5">
+            <h3 class="font-display text-xl tracking-tight" data-i18n="storesDoneMobileTitle">Primero el móvil</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft" data-i18n="storesDoneMobileBody">Botones grandes y texto legible, sin pellizcar la pantalla.</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-white p-5">
+            <h3 class="font-display text-xl tracking-tight" data-i18n="storesDoneDataTitle">Datos de la tienda</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft" data-i18n="storesDoneDataBody">Horario, productos y mapa. El botón de WhatsApp, si lo pides, abre tu número. Es un enlace, no una lista de clientes.</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-white p-5">
+            <h3 class="font-display text-xl tracking-tight" data-i18n="storesDoneOwnTitle">Queda a tu nombre</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft" data-i18n="storesDoneOwnBody">Dominio y hosting tuyos, más una guía corta para el día a día.</p>
+          </article>
+        </div>
+      </section>
 
-    <section class="mx-auto max-w-6xl px-4 pb-16">
-      <div class="rounded-3xl bg-slate-900 px-6 py-10 text-white sm:px-10">
-        <h2 class="max-w-md text-3xl font-extrabold tracking-tight sm:text-4xl">Cuéntame qué vendes.</h2>
-        <p class="mt-3 max-w-lg text-slate-300">Con el oficio, el barrio y si ya tienes dominio, te digo el pack y la cifra.</p>
-        <a href="mailto:soporte.flowhomeapps@gmail.com?subject=Consulta%20web%20para%20mi%20tienda" class="mt-6 inline-flex min-h-12 items-center rounded-xl bg-white px-6 text-base font-bold text-slate-900 no-underline hover:bg-slate-100">Consultar</a>
-        <p class="mt-4 text-sm text-slate-400">soporte.flowhomeapps@gmail.com · Respondo en horario laboral, España y Latam.</p>
-      </div>
-    </section>
+      <section id="incluye" class="scroll-mt-28" aria-labelledby="incluye-title">
+        <h2 id="incluye-title" class="max-w-xl font-display text-3xl tracking-tight text-balance" data-i18n="storesPacksTitle">Elige por lo que vendes.</h2>
+        <p class="mt-3 max-w-xl text-ink-soft" data-i18n="storesPacksLead">Dos alcances. El presupuesto llega en la respuesta, cuando sé páginas, fotos y si quieres mantenimiento.</p>
+        <div class="mt-8 grid gap-5 lg:grid-cols-2">
+          <article class="flex flex-col rounded-3xl border border-line bg-white p-7">
+            <p class="text-sm font-semibold text-accent" data-i18n="storesPackBasicKicker">Si cabe en una visita</p>
+            <h3 class="mt-2 font-display text-2xl tracking-tight" data-i18n="storesPackBasicTitle">Escaparate</h3>
+            <p class="mt-2 text-ink-soft" data-i18n="storesPackBasicLead">Horario, lo que vendes y cómo contactarte.</p>
+            <ul class="benefits mt-6">
+              <li><span data-i18n="storesPackBasicB1">De una a tres páginas</span></li>
+              <li><span data-i18n="storesPackBasicB2">Horario, productos y contacto</span></li>
+              <li><span data-i18n="storesPackBasicB3">Mapa y, si lo quieres, enlace a WhatsApp</span></li>
+              <li><span data-i18n="storesPackBasicB4">Preparada para publicar</span></li>
+            </ul>
+            <div class="mt-auto pt-6">
+              <a class="btn-pill w-full" data-wa="esc" data-i18n="ctaQuote" data-i18n-aria="ctaQuoteEscAria" href="https://wa.me/34634160319?text=" target="_blank" rel="noopener noreferrer">Pedir presupuesto</a>
+            </div>
+          </article>
+          <article class="flex flex-col rounded-3xl border border-line bg-white p-7">
+            <p class="text-sm font-semibold text-accent" data-i18n="storesPackMoreKicker">Si hay carta o catálogo</p>
+            <h3 class="mt-2 font-display text-2xl tracking-tight" data-i18n="storesPackMoreTitle">Tienda con más secciones</h3>
+            <p class="mt-2 text-ink-soft" data-i18n="storesPackMoreLead">Varias categorías, más texto y el diseño ajustado a tu marca.</p>
+            <ul class="benefits mt-6">
+              <li><span data-i18n="storesPackMoreB1">Todo lo del escaparate</span></li>
+              <li><span data-i18n="storesPackMoreB2">Secciones por categoría</span></li>
+              <li><span data-i18n="storesPackMoreB3">Fotos y textos ordenados</span></li>
+              <li><span data-i18n="storesPackMoreB4">Textos revisados contigo antes de publicar</span></li>
+            </ul>
+            <div class="mt-auto pt-6">
+              <a class="btn-pill w-full" data-wa="more" data-i18n="ctaQuote" data-i18n-aria="ctaQuoteMoreAria" href="https://wa.me/34634160319?text=" target="_blank" rel="noopener noreferrer">Pedir presupuesto</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="pasos-title">
+        <h2 id="pasos-title" class="font-display text-3xl tracking-tight" data-i18n="storesStepsTitle">De la consulta a la web publicada.</h2>
+        <ol class="mt-8 grid gap-4 md:grid-cols-3">
+          <li class="rounded-2xl border border-line bg-white p-6">
+            <p class="font-display text-3xl text-accent">01</p>
+            <h3 class="mt-2 font-display text-xl tracking-tight" data-i18n="storesStep1Title">Me escribes</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft" data-i18n="storesStep1Body">Qué vendes, si tienes fotos y si ya hay dominio. El mensaje de WhatsApp ya trae esas líneas.</p>
+          </li>
+          <li class="rounded-2xl border border-line bg-white p-6">
+            <p class="font-display text-3xl text-accent">02</p>
+            <h3 class="mt-2 font-display text-xl tracking-tight" data-i18n="storesStep2Title">Te digo el alcance</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft" data-i18n="storesStep2Body">Qué alcance corresponde y el presupuesto. Si no encaja, te lo digo en esa misma respuesta.</p>
+          </li>
+          <li class="rounded-2xl border border-line bg-white p-6">
+            <p class="font-display text-3xl text-accent">03</p>
+            <h3 class="mt-2 font-display text-xl tracking-tight" data-i18n="storesStep3Title">La publico</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft" data-i18n="storesStep3Body">La dejo online y te entrego el acceso. El dominio sigue siendo tuyo.</p>
+          </li>
+        </ol>
+        <div class="mt-8">
+          <p class="text-sm font-semibold text-accent" data-i18n="storesAfterKicker">Después de publicarla</p>
+          <p class="mt-1 max-w-xl text-ink-soft" data-i18n="storesAfterLead">Tres caminos. El presupuesto marca cuál encaja.</p>
+        </div>
+        <div class="mt-4 grid gap-4 md:grid-cols-3">
+          <article class="rounded-2xl border border-line bg-white p-6">
+            <h3 class="font-display text-xl tracking-tight" data-i18n="storesOnlyTitle">Solo la web</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft" data-i18n="storesOnlyBody">Te dejo la página online y una guía corta. Si más adelante cambias el horario, una foto o un texto, lo haces tú con esa guía. Vale si casi no tocas la página.</p>
+          </article>
+          <article class="rounded-2xl border border-accent/40 bg-white p-6">
+            <p class="text-xs font-bold uppercase tracking-wide text-accent" data-i18n="storesPanelBadge">Demo + dominio listo</p>
+            <h3 class="mt-1 font-display text-xl tracking-tight" data-i18n="storesPanelTitle">Web con panel</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft" data-i18n="storesPanelBody">Eliges una de las 15 plantillas y editas horario, productos, fotos y fichaje desde un panel con doble factor. Mientras tanto puedes probar la demo; el acceso multi-tienda se entrega al contratar.</p>
+            <a class="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-accent underline-offset-4 hover:underline" href="./plantillas/panel/" data-i18n="storesPanelLink">Abrir demo del panel</a>
+          </article>
+          <article class="rounded-2xl border border-line bg-white p-6">
+            <h3 class="font-display text-xl tracking-tight" data-i18n="storesMaintTitle">Web y mantenimiento</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft" data-i18n="storesMaintBody">Te dejo la misma página online. Cuando quieras cambiar una foto, un precio, una oferta o un aviso, me lo dices y lo hago yo. También miro que la página siga abriendo bien.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title" class="font-display text-3xl tracking-tight" data-i18n="storesFaqTitle">Antes de escribir.</h2>
+        <div class="mt-6 space-y-3">
+          <details class="rounded-2xl border border-line bg-white px-5" open>
+            <summary class="min-h-12 py-4 text-base font-semibold" data-i18n="storesFaqPriceQ">¿Cuándo sé el presupuesto?</summary>
+            <p class="pb-4 text-sm leading-relaxed text-ink-soft" data-i18n="storesFaqPriceA">En la respuesta, cuando sé páginas, fotos y si quieres mantenimiento. No publico un precio único porque el alcance cambia de una tienda a otra.</p>
+          </details>
+          <details class="rounded-2xl border border-line bg-white px-5">
+            <summary class="min-h-12 py-4 text-base font-semibold" data-i18n="storesFaqLeadsQ">¿Me consigues clientes o una posición en Google?</summary>
+            <p class="pb-4 text-sm leading-relaxed text-ink-soft" data-i18n="storesFaqLeadsA">No. Publico la página y te dejo el dominio. No hago anuncios ni te traigo clientes.</p>
+          </details>
+          <details class="rounded-2xl border border-line bg-white px-5">
+            <summary class="min-h-12 py-4 text-base font-semibold" data-i18n="storesFaqDomainQ">¿El dominio queda a mi nombre?</summary>
+            <p class="pb-4 text-sm leading-relaxed text-ink-soft" data-i18n="storesFaqDomainA">Sí. Dominio y hosting son tuyos. No te dejo atado a una cuenta mía para poder abrir la web.</p>
+          </details>
+          <details class="rounded-2xl border border-line bg-white px-5">
+            <summary class="min-h-12 py-4 text-base font-semibold" data-i18n="storesFaqTechQ">¿Tengo que saber de informática?</summary>
+            <p class="pb-4 text-sm leading-relaxed text-ink-soft" data-i18n="storesFaqTechA">No. Tú aportas qué vendes y las fotos que tengas. Si quieres el botón de WhatsApp, también el número. Yo monto y publico.</p>
+          </details>
+          <details class="rounded-2xl border border-line bg-white px-5">
+            <summary class="min-h-12 py-4 text-base font-semibold" data-i18n="storesFaqPanelQ">¿Ya puedo gestionar la web con el panel?</summary>
+            <p class="pb-4 text-sm leading-relaxed text-ink-soft" data-i18n="storesFaqPanelA">Puedes probar la demo: eliges plantilla, editas los datos y ves el resultado. El panel con usuario, varias tiendas y publicación real se activa cuando contratas esa opción.</p>
+          </details>
+        </div>
+        <p class="mt-6 max-w-xl text-sm leading-relaxed text-ink-soft" data-i18n="storesCustomNote">Si lo que necesitas no es la web de una tienda, dilo en el mismo mensaje. También hago sistemas a medida.</p>
+      </section>
+
+      <section class="cta-panel px-6 py-10 sm:px-10" aria-labelledby="cierre-title">
+        <h2 id="cierre-title" class="max-w-md font-sans text-3xl font-bold tracking-tight text-balance sm:text-4xl" data-i18n="storesCloseTitle">Pide el presupuesto.</h2>
+        <p class="mt-3 max-w-lg text-white/75" data-i18n="storesCloseBody">Dime qué vendes. Te respondo con qué incluye y cuánto cuesta.</p>
+        <div class="mt-6">
+          <a class="btn-pill w-full sm:w-auto" data-wa="base" data-i18n="ctaQuote" data-i18n-aria="ctaQuoteAria" href="https://wa.me/34634160319?text=" target="_blank" rel="noopener noreferrer">Pedir presupuesto</a>
+          <p class="mt-2 text-sm text-white/65" data-i18n="storesWaHint">WhatsApp se abre con el mensaje listo.</p>
+        </div>
+        <p class="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+          <a class="inline-flex min-h-11 items-center font-semibold text-white/80 underline-offset-4 hover:text-white hover:underline" data-mail-quote data-i18n="storesPreferMail" href="mailto:soporte.flowhomeapps@gmail.com">Escribir por correo</a>
+          <span class="text-white/30" aria-hidden="true">·</span>
+          <button type="button" id="copy-mail" class="inline-flex min-h-11 items-center font-semibold text-white/80 underline-offset-4 hover:text-white hover:underline" data-i18n="storesCopyMail">Copiar correo</button>
+        </p>
+        <p id="copy-status" class="mt-2 text-sm text-white/80" role="status" aria-live="polite"></p>
+      </section>
+    </div>
   </main>
 
-  <footer class="border-t border-slate-200">
-    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-6 text-sm text-slate-500">
-      <a href="./" class="font-semibold text-slate-700 no-underline">Flow Home</a>
-      <span>Páginas web para tiendas</span>
+  <footer class="border-t border-line">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-8 text-sm text-muted">
+      <a class="font-semibold text-ink-soft hover:text-ink hover:underline" href="./">Flow Home Apps</a>
+      <p data-i18n-html="footerCopy">© 2026 Flow Home Apps · Hecho con calma, sin prisa de plataforma.</p>
     </div>
   </footer>
 
-  <div class="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white/95 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:hidden">
-    <a href="mailto:soporte.flowhomeapps@gmail.com?subject=Consulta%20web%20para%20mi%20tienda" class="flex min-h-12 items-center justify-center rounded-xl bg-blue-700 text-base font-bold text-white no-underline">Consultar</a>
-  </div>
-
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <script>
-    if (window.lucide) lucide.createIcons();
-  </script>
+  <script type="module" src="./src/landing.js"></script>
 </body>
 </html>

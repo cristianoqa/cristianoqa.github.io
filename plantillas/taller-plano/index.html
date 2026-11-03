@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Taller plano — Plantilla Flow Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}
+img{max-width:100%;display:block;height:auto}a{color:inherit}
+.demo{margin:0;padding:.55rem 1rem;text-align:center;font-size:.82rem;font-weight:600}
+.hours-row{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px solid color-mix(in srgb, currentColor 14%, transparent)}
+.menu-item{display:flex;justify-content:space-between;gap:1rem;align-items:flex-start}
+.menu-item h3{margin:0 0 .25rem;font-size:1.05rem}.menu-item p{margin:0;opacity:.8;font-size:.92rem}
+.menu-item__price{font-weight:700;white-space:nowrap}
+.site-foot{padding:2rem 1.25rem;font-size:.85rem;opacity:.75}
+.wrap{width:min(1100px,100% - 2rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.7rem 1.2rem;font-weight:700;text-decoration:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+:root{--bg:#e9eef2;--ink:#102a43;--line:#7b8a99;--accent:#0b6e4f}
+body{margin:0;font-family:"Space Grotesk",sans-serif;background:var(--bg);color:var(--ink);
+background-image:linear-gradient(rgba(16,42,67,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(16,42,67,.06) 1px,transparent 1px);
+background-size:28px 28px}
+.demo{background:var(--ink);color:#fff}
+.sheet{max-width:980px;margin:1.5rem auto;padding:1rem;border:1px solid var(--line);background:rgba(255,255,255,.86)}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:.78rem;display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--line);padding-bottom:.7rem}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);margin:.8rem 0 .4rem;letter-spacing:-.03em}
+.btn-a{background:var(--accent);color:#fff}.btn-b{border:1px solid var(--ink)}
+.grid{display:grid;gap:1rem;margin-top:1.2rem}@media(min-width:800px){.grid{grid-template-columns:1.2fr .8fr}}
+.box{border:1px dashed var(--line);padding:1rem}
+.menu-item__price{font-family:"IBM Plex Mono",monospace;color:var(--accent)}
+</style>
+</head>
+<body>
+<p class="demo">Plantilla demo · Flow Home Apps · Contenido de ejemplo para el panel</p>
+<div class="sheet">
+<div class="meta"><span>PLANO / WEB</span><span data-bind="shop.city"></span><span data-bind="shop.category"></span></div>
+<h1 data-bind="shop.name"></h1>
+<p data-bind="shop.tagline"></p>
+<div style="display:flex;gap:.7rem;flex-wrap:wrap;margin:1rem 0">
+<a class="btn btn-a" data-bind-href="telHref">Pedir cita</a>
+<a class="btn btn-b" data-bind-href="waHref">WhatsApp</a>
+</div>
+<div class="grid">
+<div class="box" id="carta"><div data-menu></div></div>
+<div class="box"><div data-hours></div><p style="margin-top:1rem" data-bind="shop.story"></p><p data-bind="shop.address"></p></div>
+</div>
+</div>
+<footer class="site-foot"><p><span data-bind="shop.name"></span> · <span data-bind="shop.city"></span></p><p>© <span data-year></span> · Plantilla Flow Home Apps</p></footer>
+<script type="module" src="../motor.js"></script>
+</body></html>

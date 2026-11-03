@@ -1,0 +1,198 @@
+GUÍA COMERCIAL — LEZZET RESTAURANTE TURCO
+Propuesta de web + mantenimiento mensualMóstoles (Madrid) · Flow Home Apps · Octubre 2026
+Documento interno para presentar / cerrar la venta con el propietario. Incluye precios, qué incluye cada paquete, script de reunión, mensajes WhatsApp y upsells.
+1. Contexto del cliente
+LEZZET Restaurante Turco — C. Camino de Leganés, 16, 28937 Móstoles, Madrid.
+Teléfono: +34 919 95 25 30
+Instagram: https://www.instagram.com/restaurante.turco/
+Google Maps: valoración ~4,9 (cientos de opiniones) — SIN web propia
+Ya venden en Just Eat / Uber Eats (comisión alta por pedido)
+Demo propuesta: https://cristianoqa.github.io/lezzet/
+Oportunidad: el local tiene reputación fuerte en Google pero no controla su primera impresión digital. Quien busca “turco Móstoles” acaba en agregadores o en Maps. Una web propia + WhatsApp = canal directo (menos dependencia de Just Eat, más reservas de mesa).
+2. Cómo abordar la reunión (10–15 min)
+2.1 Orden recomendado
+Abrir la demo en EL MÓVIL del dueño (no en tu portátil).
+Frase de apertura: «Hoy estás solo en Google y Just Eat. Quien busca turco en Móstoles no tiene tu web. Esto es cómo te verían.»
+Recorrer: carta → reseñas Google → reserva WhatsApp → Instagram → mapa.
+Preguntar: «¿Los precios de sala son estos o Just Eat los tiene distintos?»
+Pedir 8–12 fotos buenas (fachada, parrilla, platos, sala) por WhatsApp.
+Cerrar con precio setup + cuota mensual (ver sección 4).
+2.2 Preguntas de cierre
+«¿Te lo dejo publicado con tu dominio esta semana?»
+«¿Prefieres que yo actualice la carta cada mes, o quieres un panel? (Recomendamos que lo llevemos nosotros.)»
+«¿Empezamos por Esencial 39 €/mes o Crecimiento 69 €/mes?»
+2.3 Qué NO decir
+No hablar de HTML, Tailwind, GitHub, “IA”, etc.
+No prometer “posición 1 en Google” ni “llenar el local”.
+Hablar de: más reservas, imagen profesional, canal directo WhatsApp, menos dependencia de Just Eat.
+3. Qué se entrega (producto)
+3.1 Web / landing — puesta en marcha (incluido en el pago único)
+Diseño mobile-first (se ve bien en el móvil del cliente).
+Hero con foto real del local.
+Carta destacada (platos estrella + precios; carta completa opcional).
+Bloque de reseñas Google (valoración real + enlace a dejar reseña).
+Reservas / eventos → WhatsApp del restaurante (sin promesas falsas de tiempo de respuesta).
+Horarios, dirección, teléfono, mapa Google.
+Enlace Instagram @restaurante.turco.
+Al publicar: se quita el banner de “Propuesta / demo”.
+Dominio propio (ej. lezzetmostoles.es) — 1er año incluido en setup si se acuerda.
+Hosting (GitHub Pages / Vercel) + HTTPS.
+SEO básico: nombre + Móstoles + enlaces a Google Business / Instagram.
+Ajustes de contenidos la 1ª semana tras entrega (textos, precios, fotos que envíe).
+3.2 Lo que NO incluye el precio base (salvo acuerdo aparte)
+Pedidos online propios (competir con Just Eat) — fase 2.
+App nativa iOS/Android.
+Traducción multiidioma completa.
+TPV / facturación / carta digital con stock en tiempo real.
+Fotografía profesional (se puede coordinar; la paga el cliente al fotógrafo).
+Campañas de anuncios de pago (Google/Meta) — solo en plan Pro local o aparte.
+SEO “garantizado” posición 1.
+4. Precios (detalle completo)
+Precios orientativos mercado España (autónomo / microagencia, local de barrio). Ajustables según negociación.
+4.1 Puesta en marcha (pago único)
+<w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:type="auto" w:w="0"/><w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/></w:tblPr><w:tblGrid><w:gridCol w:w="3324"/><w:gridCol w:w="3324"/><w:gridCol w:w="3324"/></w:tblGrid><w:tr><w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Concepto
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Qué incluye exactamente
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Precio
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Setup Estándar (recomendado)
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Landing completa + dominio 1er año + hosting + WhatsApp + Instagram + Google + 1 semana de ajustes de contenido
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>450 €
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Setup Lanzamiento (cierre)
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Igual alcance que Estándar; precio si el cliente duda
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>399 €
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Setup Premium
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Estándar + carta completa online + QR mesa + 1 ronda extra de fotos
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>550–650 €
+Anclaje: presenta 450 €. Si frena, baja a 399 € sin recortar alcance Estándar.
+4.2 Desglose interno del Setup Estándar (para ti)
+<w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:type="auto" w:w="0"/><w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/></w:tblPr><w:tblGrid><w:gridCol w:w="3324"/><w:gridCol w:w="3324"/><w:gridCol w:w="3324"/></w:tblGrid><w:tr><w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Partida
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Qué haces
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Valor percibido
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Diseño + maquetación mobile
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Landing, tipografía, marca rojo/ámbar
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Alto
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Contenidos
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Carta, textos, reseñas, horarios
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Alto
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Integraciones
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>WhatsApp, Maps, Instagram, tel
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Alto
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Dominio + DNS + HTTPS
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Registro y publicación
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Medio
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Formación breve
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Cómo pedir cambios por WhatsApp
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Medio
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Buffer 1ª semana
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Retoques precios/fotos
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Alto
+4.3 Cuotas mensuales de soporte (recurrente)
+Objetivo: ingreso mensual estable. Compromiso mínimo recomendado: 3 meses.
+<w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:type="auto" w:w="0"/><w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/></w:tblPr><w:tblGrid><w:gridCol w:w="1994"/><w:gridCol w:w="1994"/><w:gridCol w:w="1994"/><w:gridCol w:w="1994"/><w:gridCol w:w="1994"/></w:tblGrid><w:tr><w:tc><w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Plan
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>€/mes
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Cambios/mes
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Para quién
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Qué incluye exactamente
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Esencial
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>39 €
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Hasta 2
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Dueño que no quiere tocar nada
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Actualizar precios, platos, horarios o textos; publicar fotos que envíe por WhatsApp; corrección de enlaces rotos; backup; aviso si algo falla; respuesta en 24–48 h laborables.
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Crecimiento
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>69 €
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Hasta 6
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Quiere verse activo online
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Todo Esencial + más frecuencia; 1 sugerencia de copy/post Instagram al mes; revisión ligera ficha Google (fotos/horarios); recordatorio pedir reseñas; informe breve por WhatsApp 1×/mes.
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Pro local
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>99–129 €
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Prioridad
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Quiere crecer con anuncios
+<w:tcPr><w:tcW w:type="dxa" w:w="1994"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Todo Crecimiento + gestión ligera de campaña (el presupuesto de ads lo paga el cliente aparte) + informe mensual 1 página (visitas, clics, reservas estimadas).
+Para LEZZET: ofrecer Esencial 39 €/mes o Crecimiento 69 €/mes. Pro solo si pregunta por anuncios.
+4.4 Qué cuenta como “1 cambio” en la cuota
+Cambiar el precio de 1–varios platos en la misma tanda = 1 cambio.
+Sustituir / añadir hasta ~5 fotos en la misma tanda = 1 cambio.
+Actualizar horario o teléfono = 1 cambio.
+Añadir un plato nuevo con texto + foto = 1 cambio.
+Fuera de cuota: rediseño de sección, nueva página, traducción, campaña ads, sesión foto.
+4.5 Extras (upsell una vez)
+<w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:type="auto" w:w="0"/><w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/></w:tblPr><w:tblGrid><w:gridCol w:w="3324"/><w:gridCol w:w="3324"/><w:gridCol w:w="3324"/></w:tblGrid><w:tr><w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Extra
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Precio orientativo
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Notas
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Carta completa online (todas las secciones)
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>80–150 €
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>O regalo si cierras Crecimiento 3 meses
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>QR en mesa → web / carta
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>30–50 €
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Diseño + PDF listo para imprimir
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Optimización Google Business (1 vez)
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>80 €
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Fotos, horarios, descripción, posts iniciales
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Botones Just Eat / Uber Eats
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Incluido en setup
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Enlazan a su ficha actual
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Sesión foto profesional
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Presupuesto fotógrafo
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Tú coordinas; no lo absorbas en 39 €/mes
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Renovación dominio (año 2+)
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>10–15 €/año
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Repercutir o incluir en cuota
+4.6 Ejemplos de oferta cerrada
+Setup 450 € + Esencial 39 € × 3 meses → mes 1 = 489 €; luego 39 €/mes.
+Setup 399 € lanzamiento + 1er mes Esencial gratis → mes 1 = 399 €; luego 39 €/mes.
+Setup 450 € + Crecimiento 69 € (1er mes cuota gratis) → mes 1 = 450 €; luego 69 €/mes.
+5. Portal para que el cliente suba fotos ¿sí o no?
+Recomendación: NO en la primera venta.
+<w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:type="auto" w:w="0"/><w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/></w:tblPr><w:tblGrid><w:gridCol w:w="3324"/><w:gridCol w:w="3324"/><w:gridCol w:w="3324"/></w:tblGrid><w:tr><w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Opción
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Ventajas
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Inconvenientes
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Tú mantienes (cuota mensual)
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Cobras cada mes; control de calidad; el dueño no rompe el diseño
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Dependes de que te mande fotos/precios por WhatsApp
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Portal / CMS (WordPress, etc.)
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Él se siente “autónomo”
+<w:tcPr><w:tcW w:type="dxa" w:w="3324"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Más caro de montar; se lían; dejan de pagar cuota; la web se degrada
+Frase lista:
+«Puedo dejarte un panel para que subas fotos tú, pero la mayoría de restaurantes no lo usan y la web se queda desactualizada. Lo que mejor funciona es: tú me mandas por WhatsApp la foto o el precio nuevo, y yo lo publico en 24–48 h. Eso va en la cuota mensual.»
+6. Script de precios (decir en voz alta)
+«La puesta en marcha son 450 € (web + dominio + configuración). El mantenimiento para que la carta y las fotos no se queden viejas: 39 €/mes (2 cambios) o 69 €/mes si quieres que te lleve más activo. Tú me mandas cambios por WhatsApp; yo actualizo. Sin panel complicado. ¿Empezamos por el Esencial o el Crecimiento?»
+Si frena por dinero:
+«Dejamos la web en 399 € de lanzamiento y el primer mes de Esencial gratis.»
+7. Mensajes WhatsApp (copiar / pegar)
+7.1 Primera toma de contacto (citar / citar reunión)
+Hola 👋 Soy Cristiano (Flow Home Apps).He preparado una propuesta de página web para LEZZET (versión demo, aún no es oficial):👉 https://cristianoqa.github.io/lezzet/Está pensada para móvil: carta, reseñas de Google, reserva por WhatsApp, horarios, mapa e Instagram.¿Te viene bien que hablemos 10 minutos esta semana para enseñártela y ver si te encaja publicarla con vuestro dominio?Puedo pasarme al local o lo vemos por llamada/WhatsApp. ¡Gracias!
+7.2 Tras ver la demo (con precios)
+Hola,Como hablamos, la propuesta para LEZZET quedaría así:• Puesta en marcha: 450 € (web completa + dominio 1er año + configuración + ajustes la 1ª semana)• Mantenimiento: 39 €/mes (hasta 2 cambios: precios, platos, fotos, horarios) o 69 €/mes si preferís más movimiento (hasta 6 cambios + apoyo Instagram/Google ligero)Vosotros me enviáis cambios por WhatsApp y yo los publico en 24–48 h.Si os encaja, esta semana dejamos dominio y fotos y la publicamos sin el aviso de “propuesta”.¿Lo vemos?
+7.3 Recordatorio (si no contestan en 3–4 días)
+Hola de nuevo 🙂 ¿Pudisteis mirar la demo de LEZZET?https://cristianoqa.github.io/lezzet/Si queréis, os dejo 10 min esta semana sin compromiso. Un saludo.
+8. Checklist día de la reunión
+Abrir demo en su móvil
+Mostrar Instagram ya enlazado
+Pedir 8–12 fotos (fachada, parrilla, platos, sala)
+Confirmar precios de SALA (Just Eat puede diferir)
+Anotar dominio preferido
+Enviar oferta escrita por WhatsApp el mismo día
+Acordar forma de pago (Bizum / transferencia / link SumUp)
+Acordar fecha de publicación
+9. Flujo tras el “sí”
+Cobrar setup (o 50% al empezar / 50% al publicar).
+Registrar dominio + quitar banner “Propuesta”.
+Sustituir fotos de demo por fotos reales del local.
+Ajustar precios de sala.
+Activar cuota mensual (Bizum recurrente o recordatorio mensual).
+Entregar URL final + QR opcional.
+10. Resumen ejecutivo
+<w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:type="auto" w:w="0"/><w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/></w:tblPr><w:tblGrid><w:gridCol w:w="4986"/><w:gridCol w:w="4986"/></w:tblGrid><w:tr><w:tc><w:tcPr><w:tcW w:type="dxa" w:w="4986"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Concepto
+<w:tcPr><w:tcW w:type="dxa" w:w="4986"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b/><w:color w:val="7F1D1D"/><w:sz w:val="20"/></w:rPr><w:t>Número / decisión
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="4986"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Demo
+<w:tcPr><w:tcW w:type="dxa" w:w="4986"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>https://cristianoqa.github.io/lezzet/
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="4986"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Setup recomendado
+<w:tcPr><w:tcW w:type="dxa" w:w="4986"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>450 € (ancla) / 399 € (cierre)
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="4986"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Mensual recomendado
+<w:tcPr><w:tcW w:type="dxa" w:w="4986"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>39 € Esencial o 69 € Crecimiento
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="4986"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Compromiso cuota
+<w:tcPr><w:tcW w:type="dxa" w:w="4986"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Mínimo 3 meses
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="4986"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Portal cliente
+<w:tcPr><w:tcW w:type="dxa" w:w="4986"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>NO ahora — WhatsApp → tú publicas
+<w:tc><w:tcPr><w:tcW w:type="dxa" w:w="4986"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Objetivo
+<w:tcPr><w:tcW w:type="dxa" w:w="4986"/></w:tcPr><w:p><w:r/><w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri"/><w:b w:val="0"/><w:sz w:val="20"/></w:rPr><w:t>Setup + recurrente sin complicar operación
+— Fin del documento — Flow Home Apps

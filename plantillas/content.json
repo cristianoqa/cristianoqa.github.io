@@ -1,0 +1,35 @@
+{
+  "shop": {
+    "name": "Casa Norte",
+    "category": "Tienda de barrio",
+    "city": "Móstoles",
+    "address": "Calle Ejemplo 12",
+    "phone": "+34900000000",
+    "phoneDisplay": "900 000 000",
+    "whatsapp": "34900000000",
+    "tagline": "Lo de siempre, bien hecho.",
+    "story": "Somos un negocio de barrio. Horario claro, productos a la vista y trato directo. Esta página es una demo de plantilla Flow Home Apps: el contenido lo cambiarás tú desde el panel.",
+    "hours": [
+      { "days": "Lunes a viernes", "time": "9:00 – 21:00" },
+      { "days": "Sábado", "time": "10:00 – 14:00" },
+      { "days": "Domingo", "time": "Cerrado" }
+    ],
+    "menu": [
+      {
+        "name": "Producto destacado",
+        "desc": "Lo que más piden. Descripción corta y precio visible.",
+        "price": "4,50 €"
+      },
+      {
+        "name": "Oferta de la semana",
+        "desc": "Cambia cuando quieras desde el panel: foto, texto y precio.",
+        "price": "6,90 €"
+      },
+      {
+        "name": "Pack para llevar",
+        "desc": "Ideal para quien entra con prisa y quiere algo claro.",
+        "price": "9,50 €"
+      }
+    ]
+  }
+}

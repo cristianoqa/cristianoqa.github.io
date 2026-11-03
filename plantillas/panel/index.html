@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Panel de la tienda (demo) — Flow Home Apps</title>
+  <meta name="description" content="Demo del panel: elige plantilla, edita los datos de la tienda y mira la vista previa." />
+  <link rel="icon" href="../../assets/flow-home-mark.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/landing.css?v=20261030c" />
+  <style>
+    .panel-shell { display: grid; gap: 1rem; }
+    @media (min-width: 1100px) {
+      .panel-shell { grid-template-columns: minmax(320px, 420px) minmax(0, 1fr); align-items: start; }
+    }
+    .panel-card {
+      border: 1px solid var(--color-line); background: #fff; border-radius: 1rem; padding: 1rem 1.1rem;
+    }
+    .panel-card h2 { margin: 0 0 .75rem; font-family: Fraunces, Georgia, serif; font-size: 1.25rem; }
+    label { display: grid; gap: .3rem; font-size: .85rem; font-weight: 600; color: #2a4058; margin-bottom: .75rem; }
+    input, textarea, select {
+      width: 100%; min-height: 44px; border: 1px solid var(--color-line); border-radius: .75rem;
+      padding: .55rem .75rem; font: inherit; color: var(--color-ink); background: #fff;
+    }
+    textarea { min-height: 88px; resize: vertical; }
+    .row-2 { display: grid; gap: .75rem; }
+    @media (min-width: 520px) { .row-2 { grid-template-columns: 1fr 1fr; } }
+    .list-block { border: 1px dashed var(--color-line); border-radius: .85rem; padding: .75rem; margin-bottom: .75rem; }
+    .list-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .35rem; }
+    .preview-frame {
+      width: 100%; min-height: 72vh; border: 1px solid var(--color-line); border-radius: 1rem; background: #fff;
+    }
+    .toolbar { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .75rem; }
+    .note {
+      margin: 0 0 1rem; padding: .75rem 1rem; border-radius: .85rem;
+      background: #fff6e8; border: 1px solid #f5d7a6; color: #7c2d12; font-size: .9rem;
+    }
+    .status { min-height: 1.25rem; font-size: .9rem; color: #0f6b5c; }
+    .ghost-btn {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 44px;
+      padding: .55rem .9rem; border-radius: .75rem; border: 1px solid var(--color-line);
+      background: #fff; font: inherit; font-weight: 600; cursor: pointer;
+    }
+    .ghost-btn:hover { border-color: #0f6b5c; }
+  </style>
+</head>
+<body class="font-sans text-ink antialiased">
+  <a class="skip-link" href="#editor">Saltar al editor</a>
+  <header class="hero-bar sticky top-0 z-40">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3">
+      <a href="../../" class="mr-auto flex min-w-0 items-center gap-3">
+        <img class="size-11 shrink-0 rounded-xl bg-white object-contain p-1" src="../../assets/flow-home-mark.png" width="44" height="44" alt="Flow Home Apps" />
+        <span class="min-w-0 leading-tight">
+          <span class="block text-sm font-bold text-white">Flow Home Apps</span>
+          <span class="block text-xs text-white/70">Panel de la tienda · demo</span>
+        </span>
+      </a>
+      <a class="btn-pill-ghost" href="../">Plantillas</a>
+      <a class="btn-pill" href="../../servicios-tiendas.html">Webs para tiendas</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-8 md:py-10">
+    <p class="text-sm font-semibold text-accent">Demo del panel</p>
+    <h1 class="mt-2 max-w-2xl font-display text-3xl tracking-tight md:text-4xl">Elige plantilla. Edita datos. Mira el resultado.</h1>
+    <p class="note mt-4" role="note">
+      Esto es una <strong>demo en tu navegador</strong> (guarda un borrador local). Todavía no es el panel multi-cliente con usuario y contraseña. Sirve para enseñar cómo se gestionan las 15 plantillas con el mismo contenido.
+    </p>
+
+    <div class="panel-shell" id="editor">
+      <form class="panel-card" id="shop-form">
+        <h2>1. Plantilla</h2>
+        <label>Estilo de la web
+          <select id="templateId" name="templateId" required></select>
+        </label>
+
+        <h2 class="mt-4">2. Datos de la tienda</h2>
+        <div class="row-2">
+          <label>Nombre<input id="name" name="name" required /></label>
+          <label>Categoría<input id="category" name="category" required /></label>
+        </div>
+        <div class="row-2">
+          <label>Ciudad<input id="city" name="city" required /></label>
+          <label>Dirección<input id="address" name="address" required /></label>
+        </div>
+        <div class="row-2">
+          <label>Teléfono (para llamar)<input id="phone" name="phone" placeholder="+34900000000" required /></label>
+          <label>Teléfono visible<input id="phoneDisplay" name="phoneDisplay" placeholder="900 000 000" required /></label>
+        </div>
+        <label>WhatsApp (sin +)<input id="whatsapp" name="whatsapp" placeholder="34900000000" required /></label>
+        <label>Frase corta<input id="tagline" name="tagline" required /></label>
+        <label>Texto de la tienda<textarea id="story" name="story" required></textarea></label>
+
+        <h2 class="mt-2">3. Horario</h2>
+        <div id="hours-list"></div>
+        <button type="button" class="ghost-btn" id="add-hour">Añadir franja</button>
+
+        <h2 class="mt-4">4. Productos / carta</h2>
+        <div id="menu-list"></div>
+        <button type="button" class="ghost-btn" id="add-menu">Añadir producto</button>
+
+        <div class="toolbar mt-4">
+          <button type="submit" class="btn-primary">Guardar y ver</button>
+          <button type="button" class="ghost-btn" id="open-tab">Abrir plantilla</button>
+          <button type="button" class="ghost-btn" id="download-json">Descargar JSON</button>
+          <button type="button" class="ghost-btn" id="reset-draft">Restablecer demo</button>
+        </div>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </form>
+
+      <section class="panel-card" aria-labelledby="preview-title">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h2 id="preview-title" class="!mb-0">Vista previa</h2>
+          <p class="text-sm text-muted" id="preview-label"></p>
+        </div>
+        <iframe class="preview-frame mt-3" id="preview" title="Vista previa de la plantilla elegida"></iframe>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="./panel.js"></script>
+</body>
+</html>

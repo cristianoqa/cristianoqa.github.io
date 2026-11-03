@@ -1,0 +1,13 @@
+{
+  "name": "flow-home-apps",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/landing.css -o ./assets/landing.css --minify",
+    "test": "node --test src/catalog-filter.test.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

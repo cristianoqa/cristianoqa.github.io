@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es" data-deploy-stamp="2026-10-24-services-stores">
+<html lang="es" data-deploy-stamp="2026-10-28-catalog-layout">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flow Home Apps — Herramientas para tu día a día</title>
-  <meta name="description" content="Apps, sistemas y páginas web. Monexa en el App Store. Misiva en Google Play. También páginas para tiendas y sistemas a medida." />
+  <meta name="description" content="Apps y webs para tiendas hechas con calma. Catálogo de apps y webs para tiendas." />
   <meta name="theme-color" content="#0c1f33" />
   <link rel="canonical" href="https://cristianoqa.github.io/" />
   <link rel="icon" href="./assets/flow-home-mark.png" type="image/png" sizes="32x32" />
@@ -13,1161 +13,331 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cristianoqa.github.io/" />
   <meta property="og:title" content="Flow Home Apps — Apps, sistemas y páginas web" />
-  <meta property="og:description" content="Monexa en el App Store. Misiva en Google Play. Páginas para tiendas y sistemas a medida." />
+  <meta property="og:description" content="Apps y webs para tiendas hechas con calma." />
   <meta property="og:image" content="https://cristianoqa.github.io/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Flow Home Apps — Apps, sistemas y páginas web" />
-  <meta name="twitter:description" content="Monexa en el App Store. Misiva en Google Play. Páginas web y sistemas a medida." />
+  <meta name="twitter:description" content="Apps, sistemas y páginas web hechas con calma." />
   <meta name="twitter:image" content="https://cristianoqa.github.io/assets/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --ink: #0c1f33;
-      --ink-soft: #2a4058;
-      --muted: #5a6f86;
-      --paper: #f3f6f4;
-      --card: #ffffff;
-      --line: #d5e0e8;
-      --accent: #0f6b5c;
-      --accent-2: #1a6b9a;
-      --misiva: #0e7a6b;
-      --mypass: #156089;
-      --monexa: #c41e3a;
-      --radius: 18px;
-      --shadow: 0 18px 40px rgba(12, 31, 51, 0.08);
-      --focus: #1a6b9a;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Outfit, system-ui, sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(900px 420px at 8% -5%, #d7ece6 0%, transparent 55%),
-        radial-gradient(800px 380px at 100% 0%, #d9e7f4 0%, transparent 50%),
-        linear-gradient(180deg, #eef3f0 0%, var(--paper) 38%, #e8eef3 100%);
-      line-height: 1.55;
-    }
-    a { color: var(--accent-2); }
-    img { max-width: 100%; display: block; }
-    .wrap { width: min(980px, calc(100% - 2rem)); margin: 0 auto; }
-
-    .skip-link {
-      position: absolute; left: 1rem; top: -100px; z-index: 100;
-      background: var(--ink); color: #fff; padding: 0.65rem 1rem;
-      border-radius: 10px; font-weight: 700; text-decoration: none;
-    }
-    .skip-link:focus { top: 1rem; }
-
-    :focus-visible {
-      outline: 3px solid var(--focus);
-      outline-offset: 3px;
-    }
-    .cta:focus-visible, .nav-links a:focus-visible, .lang-switch button:focus-visible {
-      outline-offset: 2px;
-    }
-
-    .hero { padding: 2.5rem 0 1.25rem; }
-    .brand-row {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 0.75rem; flex-wrap: nowrap; margin-bottom: 2rem;
-    }
-    .brand {
-      display: flex; align-items: center; gap: 1rem;
-    }
-    .brand-logo {
-      width: 84px; height: 84px; object-fit: contain; flex-shrink: 0;
-    }
-    @media (max-width: 480px) {
-      .brand-logo { width: 72px; height: 72px; }
-    }
-    .brand-kicker {
-      font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--muted); font-weight: 600;
-    }
-    .brand-name {
-      font-family: Fraunces, Georgia, serif;
-      font-size: clamp(1.35rem, 3.2vw, 1.75rem);
-      font-weight: 700; letter-spacing: -0.02em; margin: 0.15rem 0 0; color: var(--ink);
-    }
-    .header-actions {
-      display: flex; align-items: center; gap: 0.55rem;
-      flex-wrap: nowrap; flex-shrink: 0; max-width: 100%;
-    }
-    .lang-switch {
-      display: inline-flex; border: 1px solid var(--line); border-radius: 999px;
-      overflow: hidden; background: rgba(255,255,255,0.85); flex-shrink: 0;
-    }
-    .lang-switch button {
-      appearance: none; border: 0; background: transparent;
-      font: inherit; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.04em;
-      color: var(--ink-soft); padding: 0.5rem 0.55rem; min-height: 40px; cursor: pointer;
-    }
-    .lang-switch button[aria-pressed="true"] {
-      background: var(--ink); color: #fff;
-    }
-    .lang-switch button:hover:not([aria-pressed="true"]) { background: #f3f7fa; color: var(--ink); }
-    .nav-links {
-      display: flex; gap: 0.4rem; flex-wrap: nowrap; align-items: center;
-    }
-    .nav-links a {
-      text-decoration: none; color: var(--ink-soft); font-weight: 600;
-      font-size: 0.88rem; white-space: nowrap;
-      min-height: 40px;
-      padding: 0.5rem 0.75rem; border-radius: 999px;
-      border: 1px solid var(--line); background: rgba(255,255,255,0.75);
-      display: inline-flex; align-items: center; justify-content: center;
-    }
-    .nav-links a:hover { border-color: var(--ink-soft); color: var(--ink); }
-    @media (max-width: 720px) {
-      .brand-row { flex-wrap: wrap; }
-      .header-actions {
-        width: 100%; justify-content: flex-start;
-        overflow-x: auto; -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; padding-bottom: 0.15rem;
-      }
-      .header-actions::-webkit-scrollbar { display: none; }
-    }
-
-    .hook {
-      width: 100%;
-      text-align: center;
-      padding: 1.75rem 1.25rem 1.5rem;
-      background: rgba(255,255,255,0.78);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .hook h1 {
-      font-family: Fraunces, Georgia, serif;
-      font-size: clamp(1.75rem, 4.8vw, 2.55rem);
-      line-height: 1.15; letter-spacing: -0.03em;
-      margin: 0 auto 0.9rem; font-weight: 700;
-      max-width: 22ch;
-    }
-    .hook p {
-      margin: 0 auto;
-      color: var(--ink-soft);
-      font-size: clamp(1rem, 2.4vw, 1.12rem);
-      max-width: 42rem;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
-      transition-delay: var(--d, 0ms);
-    }
-    .reveal.is-in { opacity: 1; transform: none; }
-
-    .section { margin: 2.5rem 0 0; }
-    .section-head { margin: 0 0 1.1rem; }
-    .section-kicker {
-      display: inline-block;
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--accent);
-      margin: 0 0 0.35rem;
-    }
-    .section-head h2 {
-      font-family: Fraunces, Georgia, serif;
-      font-size: clamp(1.45rem, 3vw, 1.75rem);
-      margin: 0; letter-spacing: -0.02em;
-    }
-    .section-head p {
-      margin: 0.4rem 0 0;
-      color: var(--ink-soft);
-      max-width: 40rem;
-    }
-
-    .apps { display: grid; gap: 1.35rem; }
-    @media (min-width: 820px) { .apps { grid-template-columns: repeat(3, 1fr); } }
-    @media (min-width: 820px) and (max-width: 1100px) { .apps { grid-template-columns: 1fr 1fr; } }
-
-    .app-card {
-      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-      box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .app-card:hover { transform: translateY(-3px); box-shadow: 0 22px 48px rgba(12, 31, 51, 0.11); }
-    .app-visual {
-      aspect-ratio: 16 / 10; display: grid; place-items: center;
-      position: relative; overflow: hidden;
-    }
-    .app-visual.misiva { background: linear-gradient(145deg, #0f6b5c 0%, #0c4f45 55%, #163a4a 100%); }
-    .app-visual.mypass { background: linear-gradient(145deg, #1a6b9a 0%, #124868 55%, #0c1f33 100%); }
-    .app-visual.miravista { background: linear-gradient(145deg, #1e4d6b 0%, #124868 55%, #0a1622 100%); }
-    .app-visual.monexa { background: linear-gradient(145deg, #c41e3a 0%, #8b1528 55%, #1a0f10 100%); }
-    .app-visual.reformapro { background: linear-gradient(145deg, #1e3a5f 0%, #2a5080 55%, #102030 100%); }
-    .cta.miravista { background: #124868; }
-    .cta.monexa { background: #c41e3a; }
-    .cta.reformapro { background: #1e3a5f; }
-    .app-card.miravista-card .benefits li::before { background: #124868; }
-    .app-card.monexa-card .benefits li::before { background: #c41e3a; }
-    .app-card.reformapro-card .benefits li::before { background: #4a90d9; }
-    .app-visual.lunera { background: linear-gradient(145deg, #7c3aed 0%, #f472b6 55%, #1f1235 100%); }
-    .cta.lunera { background: #7c3aed; }
-    .app-card.lunera-card .benefits li::before { background: #7c3aed; }
-    .app-visual::after {
-      content: ""; position: absolute; inset: auto -20% -40% 20%; height: 70%;
-      background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 65%);
-      pointer-events: none;
-    }
-    .visual-stack {
-      display: flex; flex-direction: column; align-items: center; gap: 0.65rem;
-      position: relative; z-index: 1;
-    }
-    .app-visual img, .app-visual .app-mark {
-      width: 112px; height: 112px; object-fit: contain;
-      border-radius: 26px;
-      box-shadow: 0 14px 28px rgba(0,0,0,0.28);
-      background: transparent; padding: 0; border: none; outline: none;
-    }
-    .app-visual.mypass .app-mark {
-      border-radius: 0; box-shadow: none; border: none; outline: none;
-      filter: none;
-    }
-    @media (max-width: 480px) {
-      .app-visual img, .app-visual .app-mark {
-        width: 96px; height: 96px; border-radius: 22px;
-      }
-      .app-visual.mypass .app-mark { border-radius: 0; }
-    }
-    .app-visual .wordmark {
-      font-family: Fraunces, Georgia, serif; color: #fff; font-size: 1.55rem;
-      font-weight: 700; letter-spacing: -0.02em; margin: 0;
-    }
-    .app-mark.reformapro-mark {
-      width: 112px;
-      height: 112px;
-      border-radius: 24px;
-      object-fit: contain;
-      background: transparent;
-      box-shadow: 0 14px 28px rgba(0,0,0,0.28);
-    }
-
-    .app-body {
-      padding: 1.25rem 1.25rem 1.4rem; display: flex; flex-direction: column;
-      gap: 0.75rem; flex: 1;
-    }
-    .app-title {
-      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
-    }
-    .app-eyebrow {
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--muted); margin: 0;
-    }
-    .app-body .lead { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
-    .benefits { margin: 0.15rem 0 0; padding: 0; list-style: none; display: grid; gap: 0.4rem; }
-    .benefits li { position: relative; padding-left: 1.15rem; color: var(--ink); font-size: 0.95rem; }
-    .benefits li::before {
-      content: ""; position: absolute; left: 0; top: 0.55em;
-      width: 0.45rem; height: 0.45rem; border-radius: 50%; background: var(--accent);
-    }
-    .app-card.mypass-card .benefits li::before { background: var(--mypass); }
-    .badge-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .badge {
-      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
-      padding: 0.28rem 0.55rem; border-radius: 999px; border: 1px solid var(--line);
-      color: var(--ink-soft); background: #f7faf8;
-    }
-    .badge.play { border-color: #b7d4ea; color: #124868; background: #eaf4fb; }
-    .badge.apk { border-color: #b9ddd4; color: #0f6b5c; background: #eaf6f2; }
-    .badge.ios { border-color: #c4b5fd; color: #5b21b6; background: #f5f3ff; }
-    .badge.android-only { border-color: #e7c4a8; color: #9a3412; background: #fff7ed; }
-    .ios-panel {
-      margin: 0 0 1.5rem;
-      padding: 1.15rem 1.25rem;
-      border-radius: var(--radius);
-      border: 1px solid #c4b5fd;
-      background: linear-gradient(135deg, #f5f3ff 0%, #eef6ff 55%, #f8fafc 100%);
-      box-shadow: var(--shadow);
-    }
-    .ios-panel h2 {
-      font-family: Fraunces, Georgia, serif;
-      font-size: 1.25rem;
-      margin: 0 0 0.45rem;
-      letter-spacing: -0.02em;
-    }
-    .ios-panel p { margin: 0.35rem 0; color: var(--ink-soft); font-size: 0.95rem; }
-    .ios-panel ul {
-      margin: 0.55rem 0 0.35rem;
-      padding-left: 1.15rem;
-      color: var(--ink);
-      font-size: 0.92rem;
-    }
-    .ios-panel .ios-note {
-      margin-top: 0.65rem;
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
-    .ios-panel a { font-weight: 700; }
-
-    .offer {
-      margin: 0 0 1.5rem;
-      padding: 1.2rem 1.25rem 1.3rem;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: #fff;
-      box-shadow: var(--shadow);
-    }
-    .offer h2 {
-      font-family: Fraunces, Georgia, serif;
-      font-size: 1.35rem;
-      margin: 0.2rem 0 0.45rem;
-      letter-spacing: -0.02em;
-    }
-    .offer p { margin: 0; color: var(--ink-soft); max-width: 62ch; }
-    .offer-actions { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.95rem; }
-    .offer-actions .cta { width: auto; }
-
-    .cta-stack { display: grid; gap: 0.55rem; margin-top: auto; padding-top: 0.35rem; }
-    .cta {
-      display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
-      text-decoration: none; font-weight: 700; font-size: 0.98rem;
-      min-height: 48px;
-      padding: 0.88rem 1.05rem; border-radius: 12px; color: #fff; background: var(--misiva);
-      transition: filter 0.2s ease, transform 0.2s ease;
-    }
-    .cta:hover { filter: brightness(1.07); transform: translateY(-1px); }
-    .cta:active { transform: translateY(0); }
-    .cta.mypass { background: var(--mypass); }
-    .cta.secondary {
-      background: #fff; color: var(--ink); border: 1px solid var(--line);
-      font-weight: 600;
-    }
-    .cta.secondary:hover { background: #f5f8fa; filter: none; }
-    .cta-note { margin: 0; font-size: 0.8rem; color: var(--muted); }
-
-    section.block {
-      margin: 2.5rem 0 0; padding: 1.5rem 1.35rem;
-      background: rgba(255,255,255,0.78); border: 1px solid var(--line); border-radius: var(--radius);
-    }
-    section.block .section-kicker { display: block; }
-    section.block h2 {
-      font-family: Fraunces, Georgia, serif; font-size: 1.45rem; margin: 0.2rem 0 0.75rem; letter-spacing: -0.02em;
-      color: var(--ink);
-    }
-    section.block p { margin: 0; color: var(--ink-soft); }
-    section.block p + p { margin-top: 0.65rem; }
-
-    section.block.support .support-actions {
-      display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem;
-    }
-    section.block.support .cta.kofi {
-      background: var(--mypass); color: #fff; min-width: min(100%, 240px);
-    }
-    section.block.support .cta.paypal {
-      background: #fff; color: var(--ink); border: 1px solid var(--line); font-weight: 600;
-    }
-
-    footer { padding: 2rem 0 2.75rem; color: var(--muted); font-size: 0.88rem; }
-    footer .links { display: flex; flex-wrap: wrap; gap: 0.75rem 1.1rem; margin-bottom: 0.65rem; }
-    footer a {
-      color: var(--ink-soft); text-decoration: none; font-weight: 500;
-      min-height: 44px; display: inline-flex; align-items: center;
-    }
-    footer a:hover { text-decoration: underline; }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .reveal { opacity: 1; transform: none; transition: none; }
-      .app-card, .cta { transition: none; }
-      .app-card:hover, .cta:hover { transform: none; }
-    }
-
-    /* Móvil: catálogo visible de primeras, sin esperar scroll */
-    @media (max-width: 720px) {
-      .hero { padding: 1rem 0 0.35rem; }
-      .hook {
-        padding: 0.85rem 1rem 0.75rem;
-        margin-bottom: 0;
-      }
-      .hook h1 {
-        font-size: 1.35rem;
-        margin-bottom: 0.45rem;
-        max-width: none;
-      }
-      .hook p {
-        font-size: 0.88rem;
-        line-height: 1.4;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-      #apps.section { margin-top: 0.75rem; }
-      #apps,
-      #apps .reveal,
-      #apps .app-card {
-        opacity: 1 !important;
-        transform: none !important;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/landing.css?v=20261030a" />
 </head>
-<body>
+<body class="font-sans text-ink antialiased">
   <a class="skip-link" href="#apps" data-i18n="skip">Saltar al catálogo de apps</a>
 
-  <header class="hero wrap">
-    <div class="brand-row reveal" style="--d:0ms">
-      <div class="brand">
-        <img class="brand-logo" src="./assets/flow-home-mark.png" width="84" height="84" alt="Flow Home Apps" />
-        <div>
-          <span class="brand-kicker">Flow Home Apps</span>
-          <p class="brand-name" data-i18n="brandName">Cristiano · desarrollador independiente</p>
-        </div>
+  <header class="hero-bar sticky top-0 z-40">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3">
+      <a href="#inicio" class="mr-auto flex min-w-0 items-center gap-3">
+        <img class="size-11 shrink-0 rounded-xl bg-white object-contain p-1" src="./assets/flow-home-mark.png" width="44" height="44" alt="Flow Home Apps" />
+        <span class="min-w-0 leading-tight">
+          <span class="block text-sm font-bold text-white">Flow Home Apps</span>
+          <span class="block text-xs text-white/70" data-i18n="brandName">Cristiano · desarrollador independiente</span>
+        </span>
+      </a>
+      <div class="lang-switch inline-flex overflow-hidden rounded-full border border-white/20" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false">PT-BR</button>
       </div>
-      <div class="header-actions">
-        <div class="lang-switch" role="group" aria-label="Language">
-          <button type="button" data-lang="es" aria-pressed="true">ES</button>
-          <button type="button" data-lang="en" aria-pressed="false">EN</button>
-          <button type="button" data-lang="pt" aria-pressed="false">PT-BR</button>
-        </div>
-        <nav class="nav-links" aria-label="Sections" data-i18n-aria="navSections">
-          <a href="#apps" data-i18n="navApps">Apps</a>
-          <a href="#servicios" data-i18n="navServices">Servicios</a>
-          <a href="#ios" data-i18n="navIos">iOS</a>
-          <a href="#transparencia" data-i18n="navTrust">Transparencia</a>
-          <a href="#apoyo" data-i18n="navSupport">Apoyar</a>
-        </nav>
-      </div>
-    </div>
-    <div class="hook reveal" style="--d:120ms">
-      <h1 data-i18n="heroTitle">Herramientas inteligentes para automatizar tu día a día</h1>
-      <p data-i18n="heroBody">
-        Apps para el día a día, y también sistemas y páginas web para negocios.
-      </p>
+      <a class="btn-pill" href="#apps" data-i18n="ctaCatalog">Ver Catálogo de Apps</a>
+      <nav class="flex w-full gap-1 overflow-x-auto" aria-label="Sections" data-i18n-aria="navSections">
+        <a class="inline-flex min-h-11 shrink-0 items-center rounded-lg px-3 text-sm font-semibold text-white/75 hover:text-white" href="#apps" data-i18n="navApps">Apps</a>
+        <a class="inline-flex min-h-11 shrink-0 items-center rounded-lg px-3 text-sm font-semibold text-white/75 hover:text-white" href="./servicios-tiendas.html" data-i18n="navServices">Webs para tiendas</a>
+        <a class="inline-flex min-h-11 shrink-0 items-center rounded-lg px-3 text-sm font-semibold text-white/75 hover:text-white" href="#transparencia" data-i18n="navTrust">Transparencia</a>
+        <a class="inline-flex min-h-11 shrink-0 items-center rounded-lg px-3 text-sm font-semibold text-white/75 hover:text-white" href="#apoyo" data-i18n="navSupport">Apoyar</a>
+      </nav>
     </div>
   </header>
 
-  <main class="wrap">
-    <section id="servicios" class="offer section reveal" style="--d:40ms" aria-labelledby="servicios-title">
-      <span class="section-kicker" data-i18n="servicesKicker">Para negocios</span>
-      <h2 id="servicios-title" data-i18n="servicesTitle">Sistemas y páginas web</h2>
-      <p data-i18n="servicesBody">Hago páginas web para tiendas y sistemas a medida: el proceso, los datos y la herramienta que el negocio necesita.</p>
-      <div class="offer-actions">
-        <a class="cta" href="./servicios-tiendas.html" data-i18n="ctaWeb">Ver páginas para tiendas</a>
-        <a class="cta secondary" href="mailto:soporte.flowhomeapps@gmail.com" data-i18n="ctaSystems">Cuéntame el sistema</a>
+  <main>
+    <section id="inicio" class="hero-stage" aria-labelledby="hero-title">
+      <div class="hero-radar" aria-hidden="true">
+        <svg viewBox="0 0 760 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="390" cy="340" r="90" stroke="#2ad4c4" stroke-opacity="0.45" />
+          <circle cx="390" cy="340" r="160" stroke="#2ad4c4" stroke-opacity="0.32" />
+          <circle cx="390" cy="340" r="230" stroke="#7ee8dc" stroke-opacity="0.22" />
+          <circle cx="390" cy="340" r="300" stroke="#2ad4c4" stroke-opacity="0.16" />
+          <path d="M390 340 L650 180 A300 300 0 0 1 680 420 Z" fill="#2ad4c4" fill-opacity="0.08" />
+          <path d="M120 470 C220 430 300 450 390 340" stroke="#9ae8df" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="6 8" />
+          <path d="M210 180 C300 220 340 280 390 340" stroke="#9ae8df" stroke-opacity="0.28" stroke-width="2" />
+          <circle cx="390" cy="340" r="8" fill="#2ad4c4" />
+          <circle cx="250" cy="210" r="5" fill="#ff8a7a" />
+          <circle cx="560" cy="250" r="5" fill="#ff8a7a" />
+          <circle cx="600" cy="430" r="5" fill="#ff8a7a" />
+          <circle cx="300" cy="500" r="5" fill="#ff8a7a" />
+        </svg>
+      </div>
+      <div class="relative mx-auto flex min-h-[34rem] max-w-6xl flex-col justify-center px-4 py-14 md:min-h-[38rem] md:py-20">
+        <p class="w-fit rounded-full border border-white/25 px-3 py-1 text-sm text-white/90" data-i18n="heroChip">Apps y sistemas</p>
+        <h1 id="hero-title" class="mt-5 max-w-[14ch] font-sans text-4xl font-bold leading-[1.05] tracking-tight text-balance text-white sm:text-5xl lg:text-6xl" data-i18n="heroTitle">Herramientas inteligentes para automatizar tu día a día.</h1>
+        <p class="mt-5 max-w-md text-base leading-relaxed text-white/80 sm:text-lg" data-i18n="heroBody">Apps para el día a día, y también webs para tiendas. Hechas con calma por un desarrollador independiente.</p>
+        <div class="mt-8 flex flex-row flex-wrap gap-3">
+          <a class="btn-pill" href="#apps" data-i18n="ctaCatalog">Ver Catálogo de Apps</a>
+          <a class="btn-pill-ghost" href="./servicios-tiendas.html" data-i18n="ctaHeroBusiness">Webs para tiendas</a>
+        </div>
       </div>
     </section>
 
-    <section id="ios" class="ios-panel section reveal" style="--d:40ms" aria-labelledby="ios-title">
-      <span class="section-kicker" data-i18n="iosKicker">App Store</span>
-      <h2 id="ios-title" data-i18n="iosTitle">Monexa ya está en el iPhone</h2>
-      <p data-i18n="iosBody">Monexa se descarga en el App Store. Lunera, MyPass y ReformaPRO siguen en TestFlight.</p>
-      <p><a href="https://apps.apple.com/app/monexa/id6808671510" target="_blank" rel="noopener noreferrer" data-i18n="iosMonexaLink">Abrir Monexa en el App Store</a></p>
-      <p class="ios-note" data-i18n="iosExclude">Misiva está en Google Play. Miravista sigue solo en Android.</p>
-    </section>
+    <div class="mx-auto flex max-w-6xl flex-col gap-14 px-4 py-10 md:gap-16 md:py-16">
 
-    <section id="apps" class="section reveal" style="--d:80ms" aria-labelledby="apps-title">
-      <div class="section-head">
-        <span class="section-kicker" data-i18n="catalogKicker">Catálogo</span>
-        <h2 id="apps-title" data-i18n="appsTitle">Apps</h2>
-        <p data-i18n="appsIntro">Monexa está en el App Store. Misiva, en Google Play. El resto sigue con descarga directa o TestFlight.</p>
+      <section id="apps" class="scroll-mt-28" aria-labelledby="apps-title">
+        <p class="text-sm font-semibold text-accent" data-i18n="catalogKicker">Catálogo</p>
+        <h2 id="apps-title" class="mt-2 font-display text-3xl tracking-tight" data-i18n="appsTitle">Apps</h2>
+
+        <div class="mt-8">
+          <p id="filter-label" class="text-sm font-medium text-muted" data-i18n="filterLabel">Filtrar apps por plataforma</p>
+          <div class="mt-2 inline-flex max-w-full flex-wrap gap-1 rounded-xl bg-slate-200/70 p-1" role="group" aria-labelledby="filter-label">
+            <button type="button" class="chip" data-filter="all" aria-pressed="true" data-i18n="filterAll">Todas</button>
+            <button type="button" class="chip" data-filter="ios" aria-pressed="false" data-i18n="filterIos">iPhone / iOS</button>
+            <button type="button" class="chip" data-filter="android" aria-pressed="false" data-i18n="filterAndroid">Android</button>
+            <button type="button" class="chip" data-filter="business" aria-pressed="false" data-i18n="filterBusiness">Para Negocios</button>
+          </div>
+          <p id="filter-status" class="sr-only" aria-live="polite"></p>
+          <span class="sr-only" data-i18n="filterCount">apps visibles</span>
+        </div>
+
+        <div id="catalog-grid" class="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <article class="card" data-app="lunera" data-platforms="ios android" aria-labelledby="lunera-title">
+            <div class="flex items-start gap-3">
+              <img class="size-14 shrink-0 rounded-2xl object-cover" src="./assets/lunera-icon.png?v=1" width="56" height="56" alt="" decoding="async" />
+              <div>
+                <h3 id="lunera-title" class="font-display text-xl tracking-tight">Lunera</h3>
+                <p class="mt-0.5 text-sm text-muted" data-i18n="luneraEyebrow">Salud menstrual · FemTech</p>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-1.5">
+              <span class="badge badge-muted" data-i18n="badgePlay">Próximamente en Google Play</span>
+              <span class="badge badge-test" data-i18n="badgeTestFlight">TestFlight iOS</span>
+              <span class="badge badge-test" data-i18n="badgeApk">APK de prueba</span>
+              <span class="badge badge-muted">v1.1.12</span>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-ink-soft" data-i18n="luneraLead">Predicción de ciclo, registro diario, calendario, etapas de vida y IA educativa. Tus datos de salud se quedan en el dispositivo.</p>
+            <ul class="benefits mt-3">
+              <li><span data-i18n="luneraB1">Anillo de ciclo + fases</span></li>
+              <li><span data-i18n="luneraB2">Registro diario offline</span></li>
+              <li><span data-i18n="luneraB3">Backup JSON cifrado</span></li>
+              <li><span data-i18n="luneraB4">Modo invitado sin cuenta</span></li>
+            </ul>
+            <div class="flex items-end border-t border-line pt-4">
+              <a class="btn-primary w-full" href="./descargar-lunera.html" data-i18n="ctaAndroid">Android — APK de prueba</a>
+            </div>
+            <div class="flex flex-col items-start">
+              <a class="btn-link" href="./lunera/" data-i18n="ctaPwa">iPhone — Abrir PWA</a>
+              <a class="btn-link" href="./descargar-lunera-ios.html" data-i18n="ctaIosMore">Más opciones iOS</a>
+              <a class="btn-link" id="privacy-lunera" href="/policies/lunera-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
+            </div>
+          </article>
+
+          <article class="card" data-app="mypass" data-platforms="ios android" aria-labelledby="mypass-title">
+            <div class="flex items-start gap-3">
+              <img class="size-14 shrink-0 rounded-2xl object-cover" src="./assets/mypass-icon.png?v=mp5" width="56" height="56" alt="" decoding="async" />
+              <div>
+                <h3 id="mypass-title" class="font-display text-xl tracking-tight">MyPass</h3>
+                <p class="mt-0.5 text-sm text-muted" data-i18n="mypassEyebrow">Bóveda de contraseñas</p>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-1.5" data-i18n-aria="mypassStatus">
+              <span class="badge badge-muted" data-i18n="badgePlay">Próximamente en Google Play</span>
+              <span class="badge badge-test" data-i18n="badgeTestFlight">TestFlight iOS</span>
+              <span class="badge badge-test" data-i18n="badgeApk">APK de prueba</span>
+              <span class="badge badge-muted">v1.1.8</span>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-ink-soft" data-i18n="mypassLead">Bóveda cifrada en el dispositivo, Recovery Key, backup, Autofill y sync. Ahora todo incluido, sin paywall.</p>
+            <ul class="benefits mt-3">
+              <li><span data-i18n="mypassB1">Contraseña maestra solo en tu móvil</span></li>
+              <li><span data-i18n="mypassB2">Recovery Key + backup cifrado</span></li>
+              <li><span data-i18n="mypassB3">Autofill Android y TOTP</span></li>
+              <li><span data-i18n="mypassB4">Sync en la nube incluido (gratis)</span></li>
+            </ul>
+            <div class="flex items-end border-t border-line pt-4">
+              <a class="btn-primary w-full" href="./descargar-mypass.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
+            </div>
+            <div class="flex flex-col items-start">
+              <a class="btn-link" id="privacy-mypass" href="/policies/mypass-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
+              <p class="note mt-2" data-i18n="mypassNote">También en TestFlight (iOS) y llegará a Google Play. Activa orígenes desconocidos solo para esta app.</p>
+            </div>
+          </article>
+
+          <article class="card" data-app="reformapro" data-platforms="ios android" data-business="true" aria-labelledby="reformapro-title">
+            <div class="flex items-start gap-3">
+              <img class="size-14 shrink-0 rounded-2xl object-cover" src="./assets/reformapro-icon.png?v=49" width="56" height="56" alt="" decoding="async" />
+              <div>
+                <h3 id="reformapro-title" class="font-display text-xl tracking-tight">ReformaPRO</h3>
+                <p class="mt-0.5 text-sm text-muted" data-i18n="reformaproEyebrow">Presupuestos para reformas</p>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-1.5" data-i18n-aria="reformaproStatus">
+              <span class="badge badge-muted" data-i18n="badgePlay">Próximamente en Google Play</span>
+              <span class="badge badge-test" data-i18n="reformaproIosBadge">PWA iOS</span>
+              <span class="badge badge-test" data-i18n="badgeApk">APK de prueba</span>
+              <span class="badge badge-muted" data-i18n="reformaproVersion">v0.2.0 · build 6</span>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-ink-soft" data-i18n="reformaproLead">Presupuestos móviles con catálogo, márgenes, impuestos, PDF y envío al cliente desde obra o visita.</p>
+            <ul class="benefits mt-3">
+              <li><span data-i18n="reformaproB1">Catálogo de materiales y servicios</span></li>
+              <li><span data-i18n="reformaproB2">Presupuestos con IVA, IRPF y margen visible</span></li>
+              <li><span data-i18n="reformaproB3">PDF, impresión y envío al cliente</span></li>
+              <li><span data-i18n="reformaproB4">Android APK + PWA iOS (Safari)</span></li>
+            </ul>
+            <div class="flex items-end border-t border-line pt-4">
+              <a class="btn-primary w-full" href="https://reformapro-web-seven.vercel.app" target="_blank" rel="noopener noreferrer" data-i18n="ctaTryWeb">Probar ahora (web / PWA)</a>
+            </div>
+            <div class="flex flex-col items-start">
+              <a class="btn-link" href="./descargar-reformapro.html" data-i18n="ctaDownloadApk">Descargar APK (Android)</a>
+              <a class="btn-link" href="./descargar-reformapro-ios.html" data-i18n="reformaproCtaIos">iPhone — instalar PWA</a>
+              <a class="btn-link" id="privacy-reformapro" href="/policies/reformapro-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
+              <p class="note mt-2" data-i18n="reformaproNote">iOS: Safari → Compartir → Añadir a pantalla de inicio (reformapro-web-seven.vercel.app). Android: APK build 6.</p>
+            </div>
+          </article>
+
+          <article class="card" data-app="monexa" data-platforms="ios android" aria-labelledby="monexa-title">
+            <div class="flex items-start gap-3">
+              <img class="size-14 shrink-0 rounded-2xl object-cover" src="./assets/monexa-icon.png?v=d5" width="56" height="56" alt="" decoding="async" />
+              <div>
+                <h3 id="monexa-title" class="font-display text-xl tracking-tight">Monexa</h3>
+                <p class="mt-0.5 text-sm text-muted" data-i18n="monexaEyebrow">Gastos e ingresos compartidos</p>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-1.5" data-i18n-aria="monexaStatus">
+              <span class="badge badge-store" data-i18n="badgeAppStore">App Store</span>
+              <span class="badge badge-test" data-i18n="badgeAndroidWeb">Android en la web</span>
+              <span class="badge badge-muted">v1.0.13</span>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-ink-soft" data-i18n="monexaLead">Controla gastos e ingresos en grupo: categorías, presupuestos, suscripciones y metas. Sincronización en la nube con tu cuenta.</p>
+            <ul class="benefits mt-3">
+              <li><span data-i18n="monexaB1">Movimientos y categorías en grupo</span></li>
+              <li><span data-i18n="monexaB2">Presupuestos, suscripciones y metas</span></li>
+              <li><span data-i18n="monexaB3">Gasto rápido y análisis mensual</span></li>
+              <li><span data-i18n="monexaB4">Sin anuncios invasivos</span></li>
+            </ul>
+            <div class="flex items-end border-t border-line pt-4">
+              <a class="btn-primary w-full" href="https://apps.apple.com/app/monexa/id6808671510" target="_blank" rel="noopener noreferrer" data-i18n="ctaMonexaIos">iPhone — App Store</a>
+            </div>
+            <div class="flex flex-col items-start">
+              <a class="btn-link" href="./descargar-monexa.html" data-i18n="ctaMonexaAndroid">Android — descargar</a>
+              <a class="btn-link" id="privacy-monexa" href="/policies/monexa-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
+              <p class="note mt-2" data-i18n="monexaNote">iPhone en el App Store. Android se descarga en esta página, no en Google Play.</p>
+            </div>
+          </article>
+
+          <article class="card" data-app="misiva" data-platforms="android" aria-labelledby="misiva-title">
+            <div class="flex items-start gap-3">
+              <img class="size-14 shrink-0 rounded-2xl object-cover" src="./assets/misiva-icon.webp" width="56" height="56" alt="" />
+              <div>
+                <h3 id="misiva-title" class="font-display text-xl tracking-tight">Misiva</h3>
+                <p class="mt-0.5 text-sm text-muted">WhatsApp + Gemini</p>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-1.5" data-i18n-aria="misivaStatus">
+              <span class="badge badge-store" data-i18n="badgePlayLive">Google Play</span>
+              <span class="badge badge-muted" data-i18n="badgeAndroidOnly">Solo Android</span>
+              <span class="badge badge-muted">v2.0.94</span>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-ink-soft" data-i18n="misivaLead">Programa mensajes a WhatsApp y genera el texto con IA (tu propia API key de Gemini). Todo corre en tu móvil.</p>
+            <ul class="benefits mt-3">
+              <li><span data-i18n="misivaB1">Programaciones diarias y recurrentes</span></li>
+              <li><span data-i18n="misivaB2">Respuestas asistidas con Gemini</span></li>
+              <li><span data-i18n="misivaB3">Envío automatizado en el dispositivo</span></li>
+              <li><span data-i18n="misivaB4">Sin subir tus mensajes a nuestros servidores</span></li>
+            </ul>
+            <div class="flex items-end border-t border-line pt-4">
+              <a class="btn-primary w-full" href="https://play.google.com/store/apps/details?id=com.personal.mensajetexto" target="_blank" rel="noopener noreferrer" data-i18n="ctaMisivaPlay">Google Play</a>
+            </div>
+            <div class="flex flex-col items-start">
+              <a class="btn-link" href="./descargar-misiva.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
+              <a class="btn-link" id="privacy-misiva" href="/policies/mensajetexto.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
+              <p class="note mt-2" data-i18n="misivaNote">En Google Play. Sin versión para iPhone. El APK sigue aquí por si la tienda no abre.</p>
+            </div>
+          </article>
+
+          <article class="card" data-app="miravista" data-platforms="android" aria-labelledby="miravista-title">
+            <div class="flex items-start gap-3">
+              <img class="size-14 shrink-0 rounded-2xl object-cover" src="./assets/miravista-icon.svg" width="56" height="56" alt="" decoding="async" />
+              <div>
+                <h3 id="miravista-title" class="font-display text-xl tracking-tight">Miravista</h3>
+                <p class="mt-0.5 text-sm text-muted" data-i18n="smEyebrow">Espejo Wi-Fi (navegador)</p>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-1.5" data-i18n-aria="smStatus">
+              <span class="badge badge-test" data-i18n="badgeApk">APK de prueba</span>
+              <span class="badge badge-muted" data-i18n="badgeAndroidOnly">Solo Android</span>
+              <span class="badge badge-muted">v1.1.2</span>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-ink-soft" data-i18n="smLead">Transmite la pantalla del móvil a cualquier Smart TV por Wi-Fi local. QR + PIN. Sin nube y sin anuncios.</p>
+            <ul class="benefits mt-3">
+              <li><span data-i18n="smB1">MJPEG local con PIN de sesión</span></li>
+              <li><span data-i18n="smB2">QR para abrir en el navegador de la TV</span></li>
+              <li><span data-i18n="smB3">Calidad 480p / 720p / 1080p</span></li>
+              <li><span data-i18n="smB4">Sin cuenta ni servidores cloud</span></li>
+            </ul>
+            <div class="flex items-end border-t border-line pt-4">
+              <a class="btn-primary w-full" href="./descargar-miravista.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
+            </div>
+            <div class="flex flex-col items-start">
+              <a class="btn-link" id="privacy-miravista" href="/policies/miravista-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
+              <p class="note mt-2" data-i18n="smNote">Solo Android (sin iOS). Misma Wi-Fi en móvil y TV. Activa orígenes desconocidos solo para esta app.</p>
+            </div>
+          </article>
+        </div>
+        <p id="catalog-empty" class="mt-5 hidden rounded-2xl border border-dashed border-line px-4 py-10 text-center text-ink-soft" hidden data-i18n="catalogEmpty">Ninguna app coincide con este filtro.</p>
+      </section>
+    </div>
+
+    <section id="transparencia" class="scroll-mt-28 bg-band" aria-labelledby="transparencia-title">
+      <div class="editorial mx-auto max-w-2xl px-4 py-14 md:py-16">
+        <p class="text-sm font-semibold text-accent" data-i18n="trustKicker">Confianza</p>
+        <h2 id="transparencia-title" class="mt-2 font-display text-3xl tracking-tight" data-i18n="trustTitle">Transparencia</h2>
+        <div class="mt-6 space-y-4 text-base leading-relaxed text-ink-soft">
+          <p data-i18n-html="trustP1"><strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.</p>
+          <p data-i18n-html="trustP2"><strong>Monexa</strong> ya está en el App Store. <strong>Misiva</strong> está en Google Play y no tiene versión para iPhone. <strong>Miravista</strong> sigue solo en Android. <strong>Lunera</strong>, <strong>MyPass</strong> y <strong>ReformaPRO</strong> siguen en TestFlight.</p>
+          <p data-i18n-html="trustP3">Sin tienda falsa ni publicidad oculta. Contacto: <a class="font-semibold text-accent underline decoration-accent/40 underline-offset-4" href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>.</p>
+          <p data-i18n="trustP4">Las políticas de privacidad de cada app están en el botón de cada tarjeta (y en el pie de página).</p>
+        </div>
       </div>
-
-      <div class="apps">
-        <article class="app-card lunera-card reveal" style="--d:140ms" aria-labelledby="lunera-title">
-          <div class="app-visual lunera" aria-hidden="true">
-            <div class="visual-stack">
-              <img class="app-mark" src="./assets/lunera-icon.png?v=1" width="112" height="112" alt="" decoding="async" />
-              <p class="wordmark">Lunera</p>
-            </div>
-          </div>
-          <div class="app-body">
-            <h3 id="lunera-title" class="app-title">Lunera</h3>
-            <p class="app-eyebrow" data-i18n="luneraEyebrow">Salud menstrual · FemTech</p>
-            <p class="lead" data-i18n="luneraLead">
-              Predicción de ciclo, registro diario, calendario, etapas de vida y IA educativa. Tus datos de salud se quedan en el dispositivo.
-            </p>
-            <div class="badge-row">
-              <span class="badge play" data-i18n="badgePlay">Próximamente en Google Play</span>
-              <span class="badge ios" data-i18n="badgeTestFlight">TestFlight iOS</span>
-              <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
-              <span class="badge">v1.1.12</span>
-            </div>
-            <ul class="benefits">
-              <li data-i18n="luneraB1">Anillo de ciclo + fases</li>
-              <li data-i18n="luneraB2">Registro diario offline</li>
-              <li data-i18n="luneraB3">Backup JSON cifrado</li>
-              <li data-i18n="luneraB4">Modo invitado sin cuenta</li>
-            </ul>
-            <div class="cta-stack">
-              <a class="cta lunera" href="./descargar-lunera.html" data-i18n="ctaAndroid">Android — APK de prueba</a>
-              <a class="cta secondary lunera-ios" href="./lunera/" data-i18n="ctaPwa">iPhone — Abrir PWA</a>
-              <a class="cta secondary" href="./descargar-lunera-ios.html" data-i18n="ctaIosMore">Más opciones iOS</a>
-              <a class="cta secondary" id="privacy-lunera" href="/policies/lunera-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
-            </div>
-          </div>
-        </article>
-        <article class="app-card mypass-card reveal" style="--d:220ms" aria-labelledby="mypass-title">
-          <div class="app-visual mypass" aria-hidden="true">
-            <div class="visual-stack">
-              <img class="app-mark" src="./assets/mypass-icon.png?v=mp5" width="112" height="112" alt="" decoding="async" />
-              <p class="wordmark">MyPass</p>
-            </div>
-          </div>
-          <div class="app-body">
-            <h3 id="mypass-title" class="app-title">MyPass</h3>
-            <p class="app-eyebrow" data-i18n="mypassEyebrow">Bóveda de contraseñas</p>
-            <p class="lead" data-i18n="mypassLead">
-              Bóveda cifrada en el dispositivo, Recovery Key, backup, Autofill y sync.
-              Ahora todo incluido, sin paywall.
-            </p>
-            <div class="badge-row" data-i18n-aria="mypassStatus">
-              <span class="badge play" data-i18n="badgePlay">Próximamente en Google Play</span>
-              <span class="badge ios" data-i18n="badgeTestFlight">TestFlight iOS</span>
-              <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
-              <span class="badge">v1.1.8</span>
-            </div>
-            <ul class="benefits">
-              <li data-i18n="mypassB1">Contraseña maestra solo en tu móvil</li>
-              <li data-i18n="mypassB2">Recovery Key + backup cifrado</li>
-              <li data-i18n="mypassB3">Autofill Android y TOTP</li>
-              <li data-i18n="mypassB4">Sync en la nube incluido (gratis)</li>
-            </ul>
-            <div class="cta-stack">
-              <a class="cta mypass" href="./descargar-mypass.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
-              <a class="cta secondary" id="privacy-mypass" href="/policies/mypass-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
-              <p class="cta-note" data-i18n="mypassNote">También llegará a Google Play. Activa orígenes desconocidos solo para esta app.</p>
-            </div>
-          </div>
-        </article>
-        <article class="app-card reformapro-card reveal" style="--d:260ms" aria-labelledby="reformapro-title">
-          <div class="app-visual reformapro" aria-hidden="true">
-            <div class="visual-stack">
-              <img class="app-mark reformapro-mark" src="./assets/reformapro-icon.png?v=49" width="112" height="112" alt="ReformaPRO" decoding="async" />
-              <p class="wordmark">ReformaPRO</p>
-            </div>
-          </div>
-          <div class="app-body">
-            <h3 id="reformapro-title" class="app-title">ReformaPRO</h3>
-            <p class="app-eyebrow" data-i18n="reformaproEyebrow">Presupuestos para reformas</p>
-            <p class="lead" data-i18n="reformaproLead">
-              Presupuestos móviles con catálogo, márgenes, impuestos, PDF y envío al cliente desde obra o visita.
-            </p>
-            <div class="badge-row" data-i18n-aria="reformaproStatus">
-              <span class="badge play" data-i18n="badgePlay">Próximamente en Google Play</span>
-              <span class="badge ios" data-i18n="reformaproIosBadge">PWA iOS</span>
-              <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
-              <span class="badge" data-i18n="reformaproVersion">v0.2.0 · build 6</span>
-            </div>
-            <ul class="benefits">
-              <li data-i18n="reformaproB1">Catálogo de materiales y servicios</li>
-              <li data-i18n="reformaproB2">Presupuestos con IVA, IRPF y margen visible</li>
-              <li data-i18n="reformaproB3">PDF, impresión y envío al cliente</li>
-              <li data-i18n="reformaproB4">Android APK + PWA iOS (Safari)</li>
-            </ul>
-            <div class="cta-stack">
-              <a class="cta reformapro" href="https://reformapro-web-seven.vercel.app" target="_blank" rel="noopener noreferrer" data-i18n="ctaTryWeb">Probar ahora (web / PWA)</a>
-              <a class="cta secondary" href="./descargar-reformapro.html" data-i18n="ctaDownloadApk">Descargar APK (Android)</a>
-              <a class="cta secondary" href="./descargar-reformapro-ios.html" data-i18n="reformaproCtaIos">iPhone — instalar PWA</a>
-              <a class="cta secondary" id="privacy-reformapro" href="/policies/reformapro-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
-              <p class="cta-note" data-i18n="reformaproNote">iOS: Safari → Compartir → Añadir a pantalla de inicio. Android: APK build 6.</p>
-            </div>
-          </div>
-        </article>
-        <article class="app-card monexa-card reveal" style="--d:300ms" aria-labelledby="monexa-title">
-          <div class="app-visual monexa" aria-hidden="true">
-            <div class="visual-stack">
-              <img class="app-mark" src="./assets/monexa-icon.png?v=d5" width="112" height="112" alt="" decoding="async" />
-              <p class="wordmark">Monexa</p>
-            </div>
-          </div>
-          <div class="app-body">
-            <h3 id="monexa-title" class="app-title">Monexa</h3>
-            <p class="app-eyebrow" data-i18n="monexaEyebrow">Gastos e ingresos compartidos</p>
-            <p class="lead" data-i18n="monexaLead">
-              Controla gastos e ingresos en grupo: categorías, presupuestos, suscripciones y metas.
-              Sincronización en la nube con tu cuenta.
-            </p>
-            <div class="badge-row" data-i18n-aria="monexaStatus">
-              <span class="badge ios" data-i18n="badgeAppStore">App Store</span>
-              <span class="badge apk" data-i18n="badgeAndroidWeb">Android en la web</span>
-              <span class="badge">v1.0.13</span>
-            </div>
-            <ul class="benefits">
-              <li data-i18n="monexaB1">Movimientos y categorías en grupo</li>
-              <li data-i18n="monexaB2">Presupuestos, suscripciones y metas</li>
-              <li data-i18n="monexaB3">Gasto rápido y análisis mensual</li>
-              <li data-i18n="monexaB4">Sin anuncios invasivos</li>
-            </ul>
-            <div class="cta-stack">
-              <a class="cta monexa" href="https://apps.apple.com/app/monexa/id6808671510" target="_blank" rel="noopener noreferrer" data-i18n="ctaMonexaIos">iPhone — App Store</a>
-              <a class="cta secondary" href="./descargar-monexa.html" data-i18n="ctaMonexaAndroid">Android — descargar</a>
-              <a class="cta secondary" id="privacy-monexa" href="/policies/monexa-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
-              <p class="cta-note" data-i18n="monexaNote">iPhone en el App Store. Android se descarga en esta página, no en Google Play.</p>
-            </div>
-          </div>
-        </article>
-        <article class="app-card reveal" style="--d:380ms" aria-labelledby="misiva-title">
-          <div class="app-visual misiva" aria-hidden="true">
-            <div class="visual-stack">
-              <img src="./assets/misiva-icon.webp" width="112" height="112" alt="" />
-              <p class="wordmark">Misiva</p>
-            </div>
-          </div>
-          <div class="app-body">
-            <h3 id="misiva-title" class="app-title">Misiva</h3>
-            <p class="app-eyebrow">WhatsApp + Gemini</p>
-            <p class="lead" data-i18n="misivaLead">
-              Programa mensajes a WhatsApp y genera el texto con IA (tu propia API key de Gemini).
-              Todo corre en tu móvil.
-            </p>
-            <div class="badge-row" data-i18n-aria="misivaStatus">
-              <span class="badge play" data-i18n="badgePlayLive">Google Play</span>
-              <span class="badge android-only" data-i18n="badgeAndroidOnly">Solo Android</span>
-              <span class="badge">v2.0.94</span>
-            </div>
-            <ul class="benefits">
-              <li data-i18n="misivaB1">Programaciones diarias y recurrentes</li>
-              <li data-i18n="misivaB2">Respuestas asistidas con Gemini</li>
-              <li data-i18n="misivaB3">Envío automatizado en el dispositivo</li>
-              <li data-i18n="misivaB4">Sin subir tus mensajes a nuestros servidores</li>
-            </ul>
-            <div class="cta-stack">
-              <a class="cta" href="https://play.google.com/store/apps/details?id=com.personal.mensajetexto" target="_blank" rel="noopener noreferrer" data-i18n="ctaMisivaPlay">Google Play</a>
-              <a class="cta secondary" href="./descargar-misiva.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
-              <a class="cta secondary" id="privacy-misiva" href="/policies/mensajetexto.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
-              <p class="cta-note" data-i18n="misivaNote">En Google Play. Sin versión para iPhone. El APK sigue aquí por si la tienda no abre.</p>
-            </div>
-          </div>
-        </article>
-        <article class="app-card miravista-card reveal" style="--d:460ms" aria-labelledby="miravista-title">
-          <div class="app-visual miravista" aria-hidden="true">
-            <div class="visual-stack">
-              <img class="app-mark" src="./assets/miravista-icon.svg" width="112" height="112" alt="" decoding="async" />
-              <p class="wordmark">Miravista</p>
-            </div>
-          </div>
-          <div class="app-body">
-            <h3 id="miravista-title" class="app-title">Miravista</h3>
-            <p class="app-eyebrow" data-i18n="smEyebrow">Espejo Wi-Fi (navegador)</p>
-            <p class="lead" data-i18n="smLead">
-              Transmite la pantalla del móvil a cualquier Smart TV por Wi-Fi local.
-              QR + PIN. Sin nube y sin anuncios.
-            </p>
-            <div class="badge-row" data-i18n-aria="smStatus">
-              <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
-              <span class="badge android-only" data-i18n="badgeAndroidOnly">Solo Android</span>
-              <span class="badge">v1.1.2</span>
-            </div>
-            <ul class="benefits">
-              <li data-i18n="smB1">MJPEG local con PIN de sesión</li>
-              <li data-i18n="smB2">QR para abrir en el navegador de la TV</li>
-              <li data-i18n="smB3">Calidad 480p / 720p / 1080p</li>
-              <li data-i18n="smB4">Sin cuenta ni servidores cloud</li>
-            </ul>
-            <div class="cta-stack">
-              <a class="cta miravista" href="./descargar-miravista.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
-              <a class="cta secondary" id="privacy-miravista" href="/policies/miravista-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
-              <p class="cta-note" data-i18n="smNote">Misma Wi-Fi en móvil y TV. Activa orígenes desconocidos solo para esta app.</p>
-            </div>
-          </div>
-        </article>
-      </div>
     </section>
 
-    <section id="transparencia" class="block section reveal" style="--d:60ms" aria-labelledby="transparencia-title">
-      <span class="section-kicker" data-i18n="trustKicker">Confianza</span>
-      <h2 id="transparencia-title" data-i18n="trustTitle">Transparencia</h2>
-      <p data-i18n-html="trustP1"><strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.</p>
-      <p data-i18n-html="trustP2"><strong>Monexa</strong> ya está en el App Store. <strong>Misiva</strong> está en Google Play y no tiene versión para iPhone. <strong>Miravista</strong> sigue solo en Android. <strong>Lunera</strong>, <strong>MyPass</strong> y <strong>ReformaPRO</strong> siguen en TestFlight.</p>
-      <p data-i18n-html="trustP3">Sin tienda falsa ni publicidad oculta. Contacto: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>.</p>
-      <p style="margin-top:0.85rem;font-size:0.92rem;" data-i18n="trustP4">
-        Las políticas de privacidad de cada app están en el botón de cada tarjeta (y en el pie de página).
-      </p>
-    </section>
-
-    <section id="apoyo" class="block support section reveal" style="--d:100ms" aria-labelledby="apoyo-title">
-      <span class="section-kicker" data-i18n="supportKicker">Apoyar</span>
-      <h2 id="apoyo-title" data-i18n="supportTitle">Invítame un helado y sigue el desarrollo</h2>
-      <p data-i18n="supportBody">
-        Las apps son gratuitas y sin anuncios. Una propina voluntaria ayuda a mejorar la IA,
-        el Autofill y las próximas herramientas.
-      </p>
-      <div class="support-actions">
-        <a class="cta kofi" href="https://ko-fi.com/cristianodeveloper" rel="noopener noreferrer" target="_blank" data-i18n="ctaKofi">
-          Ko-fi · Invítame un helado
-        </a>
-        <a class="cta paypal" href="https://paypal.me/cristianodeveloper" rel="noopener noreferrer" target="_blank">
-          PayPal
-        </a>
+    <section id="apoyo" class="scroll-mt-28 mx-auto mt-12 max-w-6xl px-4" aria-labelledby="apoyo-title">
+      <div class="rounded-3xl border border-amber-200 bg-warm-bg px-6 py-8 md:px-10 md:py-10">
+        <p class="text-sm font-semibold text-warm" data-i18n="supportKicker">Apoyar</p>
+        <h2 id="apoyo-title" class="mt-2 max-w-xl font-display text-3xl tracking-tight text-balance" data-i18n="supportTitle">Invítame un helado y sigue el desarrollo</h2>
+        <p class="mt-3 max-w-xl leading-relaxed text-ink-soft" data-i18n="supportBody">Las apps son gratuitas y sin anuncios. Una propina voluntaria ayuda a mejorar la IA, el Autofill y las próximas herramientas.</p>
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a class="btn-warm sm:min-w-64" href="https://ko-fi.com/cristianodeveloper" rel="noopener noreferrer" target="_blank" data-i18n="ctaKofi">Ko-fi · Invítame un helado</a>
+          <a class="btn-secondary sm:min-w-40" href="https://paypal.me/cristianodeveloper" rel="noopener noreferrer" target="_blank">PayPal</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="wrap">
-    <div class="links">
-      <a id="footer-privacy-lunera" href="/policies/lunera-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerLunera">Privacidad Lunera</a>
-      <a id="footer-privacy-mypass" href="/policies/mypass-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMypass">Privacidad MyPass</a>
-      <a id="footer-privacy-reformapro" href="/policies/reformapro-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerReformapro">Privacidad ReformaPRO</a>
-      <a id="footer-privacy-monexa" href="/policies/monexa-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMonexa">Privacidad Monexa</a>
-      <a id="footer-privacy-misiva" href="/policies/mensajetexto.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMisiva">Privacidad Misiva</a>
-      <a id="footer-privacy-miravista" href="/policies/miravista-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMiravista">Privacidad Miravista</a>
-      <a href="./servicios-tiendas.html" data-i18n="footerStores">Webs para tiendas</a>
-      <a href="mailto:soporte.flowhomeapps@gmail.com" data-i18n="footerSupport">Soporte</a>
-      <a href="https://ko-fi.com/cristianodeveloper" rel="noopener noreferrer" target="_blank">Ko-fi</a>
+  <footer class="mt-12 border-t border-line">
+    <div class="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-2 lg:grid-cols-3">
+      <div>
+        <h2 class="text-sm font-semibold text-ink" data-i18n="footerColPrivacy">Privacidad</h2>
+        <ul class="mt-2">
+          <li><a class="inline-flex min-h-11 items-center text-sm text-ink-soft hover:text-ink hover:underline" id="footer-privacy-lunera" href="/policies/lunera-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerLunera">Privacidad Lunera</a></li>
+          <li><a class="inline-flex min-h-11 items-center text-sm text-ink-soft hover:text-ink hover:underline" id="footer-privacy-mypass" href="/policies/mypass-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMypass">Privacidad MyPass</a></li>
+          <li><a class="inline-flex min-h-11 items-center text-sm text-ink-soft hover:text-ink hover:underline" id="footer-privacy-reformapro" href="/policies/reformapro-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerReformapro">Privacidad ReformaPRO</a></li>
+          <li><a class="inline-flex min-h-11 items-center text-sm text-ink-soft hover:text-ink hover:underline" id="footer-privacy-monexa" href="/policies/monexa-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMonexa">Privacidad Monexa</a></li>
+          <li><a class="inline-flex min-h-11 items-center text-sm text-ink-soft hover:text-ink hover:underline" id="footer-privacy-misiva" href="/policies/mensajetexto.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMisiva">Privacidad Misiva</a></li>
+          <li><a class="inline-flex min-h-11 items-center text-sm text-ink-soft hover:text-ink hover:underline" id="footer-privacy-miravista" href="/policies/miravista-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMiravista">Privacidad Miravista</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-sm font-semibold text-ink" data-i18n="footerColSite">Sitio</h2>
+        <ul class="mt-2">
+          <li><a class="inline-flex min-h-11 items-center text-sm text-ink-soft hover:text-ink hover:underline" href="./servicios-tiendas.html" data-i18n="footerStores">Webs para tiendas</a></li>
+          <li><a class="inline-flex min-h-11 items-center text-sm text-ink-soft hover:text-ink hover:underline" href="mailto:soporte.flowhomeapps@gmail.com" data-i18n="footerSupport">Soporte</a></li>
+          <li><a class="inline-flex min-h-11 items-center text-sm text-ink-soft hover:text-ink hover:underline" href="https://ko-fi.com/cristianodeveloper" rel="noopener noreferrer" target="_blank">Ko-fi</a></li>
+        </ul>
+      </div>
+      <p class="text-sm leading-relaxed text-muted sm:col-span-2 lg:col-span-1 lg:self-end" data-i18n-html="footerCopy">© 2026 Flow Home Apps · Hecho con calma, sin prisa de plataforma.</p>
     </div>
-    <p data-i18n-html="footerCopy">© <span id="y"></span> Flow Home Apps · Hecho con calma, sin prisa de plataforma.</p>
   </footer>
 
-  <script>
-    document.getElementById("y") && (document.getElementById("y").textContent = new Date().getFullYear());
-
-    (function () {
-      var year = new Date().getFullYear();
-      var privacy = {
-        es: { misiva: "/policies/mensajetexto.html", mypass: "/policies/mypass-es.html", reformapro: "/policies/reformapro-es.html", miravista: "/policies/miravista-es.html", monexa: "/policies/monexa-es.html", lunera: "/policies/lunera-es.html" },
-        en: { misiva: "/policies/misiva.html", mypass: "/policies/mypass.html", reformapro: "/policies/reformapro.html", miravista: "/policies/miravista.html", monexa: "/policies/monexa.html", lunera: "/policies/lunera.html" },
-        pt: { misiva: "/policies/misiva-pt.html", mypass: "/policies/mypass-pt.html", reformapro: "/policies/reformapro-pt.html", miravista: "/policies/miravista-pt.html", monexa: "/policies/monexa-pt.html", lunera: "/policies/lunera-pt.html" }
-      };
-      var I18N = {
-        es: {
-          skip: "Saltar al catálogo de apps",
-          brandName: "Cristiano · desarrollador independiente",
-          navSections: "Secciones",
-          navApps: "Apps",
-          navServices: "Servicios",
-          navIos: "iOS",
-          navStores: "Tiendas",
-          navTrust: "Transparencia",
-          navSupport: "Apoyar",
-          heroTitle: "Herramientas inteligentes para automatizar tu día a día",
-          heroBody: "Apps para el día a día, y también sistemas y páginas web para negocios.",
-          servicesKicker: "Para negocios",
-          servicesTitle: "Sistemas y páginas web",
-          servicesBody: "Hago páginas web para tiendas y sistemas a medida: el proceso, los datos y la herramienta que el negocio necesita.",
-          ctaWeb: "Ver páginas para tiendas",
-          ctaSystems: "Cuéntame el sistema",
-          iosKicker: "App Store",
-          iosTitle: "Monexa ya está en el iPhone",
-          iosBody: "Monexa se descarga en el App Store. Lunera, MyPass y ReformaPRO siguen en TestFlight.",
-          iosExclude: "Misiva está en Google Play. Miravista sigue solo en Android.",
-          catalogKicker: "Catálogo",
-          appsTitle: "Apps",
-          appsIntro: "Monexa está en el App Store. Misiva, en Google Play. El resto sigue con descarga directa o TestFlight.",
-          badgeAppStore: "App Store",
-          badgeAndroidWeb: "Android en la web",
-          iosMonexaLink: "Abrir Monexa en el App Store",
-          ctaMonexaIos: "iPhone — App Store",
-          ctaMonexaAndroid: "Android — descargar",
-          badgePlayLive: "Google Play",
-          ctaMisivaPlay: "Google Play",
-          badgeTestFlight: "TestFlight iOS",
-          badgeAndroidOnly: "Solo Android",
-          misivaLead: "Programa mensajes a WhatsApp y genera el texto con IA (tu propia API key de Gemini). Todo corre en tu móvil.",
-          misivaStatus: "Estado Misiva",
-          badgeApk: "APK de prueba",
-          misivaB1: "Programaciones diarias y recurrentes",
-          misivaB2: "Respuestas asistidas con Gemini",
-          misivaB3: "Envío automatizado en el dispositivo",
-          misivaB4: "Sin subir tus mensajes a nuestros servidores",
-          ctaDownload: "Descargar versión de pruebas (.APK)",
-          ctaPrivacy: "Ver política de privacidad",
-          misivaNote: "En Google Play. Sin versión para iPhone. El APK sigue aquí por si la tienda no abre.",
-          mypassEyebrow: "Bóveda de contraseñas",
-          mypassLead: "Bóveda cifrada en el dispositivo, Recovery Key, backup, Autofill y sync. Ahora todo incluido, sin paywall.",
-          mypassStatus: "Estado MyPass",
-          badgePlay: "Próximamente en Google Play",
-          mypassB1: "Contraseña maestra solo en tu móvil",
-          mypassB2: "Recovery Key + backup cifrado",
-          mypassB3: "Autofill Android y TOTP",
-          mypassB4: "Sync en la nube incluido (gratis)",
-          mypassNote: "También en TestFlight (iOS) y llegará a Google Play. Activa orígenes desconocidos solo para esta app.",
-          reformaproEyebrow: "Presupuestos para reformas",
-          reformaproLead: "Presupuestos móviles con catálogo, márgenes, impuestos, PDF y envío al cliente desde obra o visita.",
-          reformaproStatus: "Estado ReformaPRO",
-          reformaproB1: "Catálogo de materiales y servicios",
-          reformaproB2: "Presupuestos con IVA, IRPF y margen visible",
-          reformaproB3: "PDF, impresión y envío al cliente",
-          reformaproB4: "Android APK + PWA iOS (Safari)",
-          ctaTryWeb: "Probar ahora (web / PWA)",
-          ctaDownloadApk: "Descargar APK (Android)",
-          reformaproCtaIos: "iPhone — instalar PWA",
-          reformaproIosBadge: "PWA iOS",
-          reformaproNote: "iOS: Safari → Compartir → Añadir a pantalla de inicio (reformapro-web-seven.vercel.app). Android: APK build 6.",
-          reformaproVersion: "v0.2.0 · build 6",
-          trustKicker: "Confianza",
-          trustTitle: "Transparencia",
-          trustP1: "<strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.",
-          trustP2: "<strong>Monexa</strong> ya está en el App Store. <strong>Misiva</strong> está en Google Play y no tiene versión para iPhone. <strong>Miravista</strong> sigue solo en Android. <strong>Lunera</strong>, <strong>MyPass</strong> y <strong>ReformaPRO</strong> siguen en TestFlight.",
-          trustP3: "Sin tienda falsa ni publicidad oculta. Contacto: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
-          trustP4: "Las políticas de privacidad de cada app están en el botón de cada tarjeta (y en el pie de página).",
-          supportKicker: "Apoyar",
-          supportTitle: "Invítame un helado y sigue el desarrollo",
-          supportBody: "Las apps son gratuitas y sin anuncios. Una propina voluntaria ayuda a mejorar la IA, el Autofill y las próximas herramientas.",
-          ctaKofi: "Ko-fi · Invítame un helado",
-                    smEyebrow: "Espejo Wi-Fi (navegador)",
-          smLead: "Transmite la pantalla del móvil a cualquier Smart TV por Wi-Fi local. QR + PIN. Sin nube y sin anuncios.",
-          smStatus: "Estado Miravista",
-          smB1: "MJPEG local con PIN de sesión",
-          smB2: "QR para abrir en el navegador de la TV",
-          smB3: "Calidad 480p / 720p / 1080p",
-          smB4: "Sin cuenta ni servidores cloud",
-          smNote: "Solo Android (sin iOS). Misma Wi-Fi en móvil y TV. Activa orígenes desconocidos solo para esta app.",
-          monexaEyebrow: "Gastos e ingresos compartidos",
-          monexaLead: "Controla gastos e ingresos en grupo: categorías, presupuestos, suscripciones y metas. Sincronización en la nube con tu cuenta.",
-          monexaStatus: "Estado Monexa",
-          monexaB1: "Movimientos y categorías en grupo",
-          monexaB2: "Presupuestos, suscripciones y metas",
-          monexaB3: "Gasto rápido y análisis mensual",
-          monexaB4: "Sin anuncios invasivos",
-          monexaNote: "iPhone en el App Store. Android se descarga en esta página, no en Google Play.",
-          luneraEyebrow: "Salud menstrual · FemTech",
-          luneraLead: "Predicción de ciclo, registro diario, calendario, etapas de vida y IA educativa. Tus datos de salud se quedan en el dispositivo.",
-          luneraB1: "Anillo de ciclo + fases",
-          luneraB2: "Registro diario offline",
-          luneraB3: "Backup JSON cifrado",
-          luneraB4: "Modo invitado sin cuenta",
-          ctaAndroid: "Android — APK de prueba",
-          ctaPwa: "iPhone — Abrir PWA",
-          ctaIosMore: "Más opciones iOS",
-          footerLunera: "Privacidad Lunera",
-          footerMiravista: "Privacidad Miravista",
-          footerMonexa: "Privacidad Monexa",
-footerMisiva: "Privacidad Misiva",
-          footerMypass: "Privacidad MyPass",
-          footerReformapro: "Privacidad ReformaPRO",
-          footerStores: "Webs para tiendas",
-          footerSupport: "Soporte",
-          footerCopy: "© " + year + " Flow Home Apps · Hecho con calma, sin prisa de plataforma."
-        },
-        en: {
-          skip: "Skip to app catalog",
-          brandName: "Cristiano · indie developer",
-          navSections: "Sections",
-          navApps: "Apps",
-          navServices: "Services",
-          navIos: "iOS",
-          navStores: "Stores",
-          navTrust: "Trust",
-          navSupport: "Support",
-          heroTitle: "Smart tools to automate your day",
-          heroBody: "Everyday apps, plus custom systems and websites for businesses.",
-          servicesKicker: "For businesses",
-          servicesTitle: "Systems and websites",
-          servicesBody: "I build shop websites and custom systems: the process, the data and the tool the business needs.",
-          ctaWeb: "See shop websites",
-          ctaSystems: "Tell me about the system",
-          iosKicker: "App Store",
-          iosTitle: "Monexa is on iPhone",
-          iosBody: "Monexa is on the App Store. Lunera, MyPass and ReformaPRO are still on TestFlight.",
-          iosExclude: "Misiva is on Google Play. Miravista stays Android-only.",
-          catalogKicker: "Catalog",
-          appsTitle: "Apps",
-          appsIntro: "Monexa is on the App Store. Misiva is on Google Play. The rest still use a direct download or TestFlight.",
-          badgeAppStore: "App Store",
-          badgeAndroidWeb: "Android on the web",
-          iosMonexaLink: "Open Monexa on the App Store",
-          ctaMonexaIos: "iPhone — App Store",
-          ctaMonexaAndroid: "Android — download",
-          badgePlayLive: "Google Play",
-          ctaMisivaPlay: "Google Play",
-          badgeTestFlight: "TestFlight iOS",
-          badgeAndroidOnly: "Android only",
-          misivaLead: "Schedule WhatsApp messages and generate text with AI (your own Gemini API key). Everything runs on your phone.",
-          misivaStatus: "Misiva status",
-          badgeApk: "Test APK",
-          misivaB1: "Daily and recurring schedules",
-          misivaB2: "Gemini-assisted replies",
-          misivaB3: "Automated sending on-device",
-          misivaB4: "We don’t upload your messages to our servers",
-          ctaDownload: "Download test build (.APK)",
-          ctaPrivacy: "View privacy policy",
-          misivaNote: "On Google Play. No iPhone version. The APK stays here if the store does not open.",
-          mypassEyebrow: "Password vault",
-          mypassLead: "On-device encrypted vault, Recovery Key, backup, Autofill and sync. Everything included, no paywall.",
-          mypassStatus: "MyPass status",
-          badgePlay: "Coming soon to Google Play",
-          mypassB1: "Master password stays on your phone",
-          mypassB2: "Recovery Key + encrypted backup",
-          mypassB3: "Android Autofill and TOTP",
-          mypassB4: "Cloud sync included (free)",
-          mypassNote: "Also on TestFlight (iOS) and coming to Google Play. Enable unknown sources only for this app.",
-          reformaproEyebrow: "Quoting for renovation jobs",
-          reformaproLead: "Mobile-first quotes with catalog, margins, taxes, PDF and client sending from site or visit.",
-          reformaproStatus: "ReformaPRO status",
-          reformaproB1: "Materials and services catalog",
-          reformaproB2: "Quotes with VAT, withholding and visible margin",
-          reformaproB3: "PDF, print and client delivery",
-          reformaproB4: "Android APK + iOS PWA (Safari)",
-          ctaTryWeb: "Try now (web / PWA)",
-          ctaDownloadApk: "Download APK (Android)",
-          reformaproCtaIos: "iPhone — install PWA",
-          reformaproIosBadge: "iOS PWA",
-          reformaproNote: "iOS: Safari → Share → Add to Home Screen (reformapro-web-seven.vercel.app). Android: APK build 6.",
-          reformaproVersion: "v0.2.0 · build 6",
-          trustKicker: "Trust",
-          trustTitle: "Transparency",
-          trustP1: "<strong>Why direct downloads?</strong> I’m an indie developer. Publishing on Google Play takes review time. Meanwhile I offer signed APKs from this page, no middlemen.",
-          trustP2: "<strong>Monexa</strong> is on the App Store. <strong>Misiva</strong> is on Google Play and has no iPhone version. <strong>Miravista</strong> stays Android-only. <strong>Lunera</strong>, <strong>MyPass</strong> and <strong>ReformaPRO</strong> are still on TestFlight.",
-          trustP3: "No fake store, no hidden ads. Contact: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
-          trustP4: "Each app’s privacy policy is on the card button (and in the footer).",
-          supportKicker: "Support",
-          supportTitle: "Buy me an ice cream and keep development going",
-          supportBody: "The apps are free and ad-free. A voluntary tip helps improve AI, Autofill and upcoming tools.",
-          ctaKofi: "Ko-fi · Buy me an ice cream",
-                    smEyebrow: "Wi-Fi mirror (browser)",
-          smLead: "Mirror your phone screen to any Smart TV on local Wi-Fi. QR + PIN. No cloud, no ads.",
-          smStatus: "Miravista status",
-          smB1: "Local MJPEG with session PIN",
-          smB2: "QR to open in the TV browser",
-          smB3: "Quality 480p / 720p / 1080p",
-          smB4: "No account, no cloud servers",
-          smNote: "Android only (no iOS). Same Wi-Fi on phone and TV. Enable unknown sources only for this app.",
-          monexaEyebrow: "Shared expenses & income",
-          monexaLead: "Track group expenses and income: categories, budgets, subscriptions and goals. Cloud sync with your account.",
-          monexaStatus: "Monexa status",
-          monexaB1: "Shared movements and categories",
-          monexaB2: "Budgets, subscriptions and goals",
-          monexaB3: "Quick expense and monthly insights",
-          monexaB4: "No invasive ads",
-          monexaNote: "iPhone on the App Store. Android downloads from this page, not Google Play.",
-          luneraEyebrow: "Menstrual health · FemTech",
-          luneraLead: "Cycle prediction, daily logging, calendar, life stages and educational AI. Your health data stays on the device.",
-          luneraB1: "Cycle ring + phases",
-          luneraB2: "Offline daily log",
-          luneraB3: "Encrypted JSON backup",
-          luneraB4: "Guest mode, no account",
-          ctaAndroid: "Android — test APK",
-          ctaPwa: "iPhone — Open PWA",
-          ctaIosMore: "More iOS options",
-          footerLunera: "Lunera privacy",
-          footerMiravista: "Miravista privacy",
-          footerMonexa: "Monexa privacy",
-footerMisiva: "Misiva privacy",
-          footerMypass: "MyPass privacy",
-          footerReformapro: "ReformaPRO privacy",
-          footerStores: "Store websites",
-          footerSupport: "Support",
-          footerCopy: "© " + year + " Flow Home Apps · Built calmly, without platform rush."
-        },
-        pt: {
-          skip: "Ir para o catálogo de apps",
-          brandName: "Cristiano · desenvolvedor independente",
-          navSections: "Seções",
-          navApps: "Apps",
-          navServices: "Serviços",
-          navIos: "iOS",
-          navStores: "Lojas",
-          navTrust: "Transparência",
-          navSupport: "Apoiar",
-          heroTitle: "Ferramentas inteligentes para automatizar o seu dia a dia",
-          heroBody: "Apps para o dia a dia, e também sistemas e páginas web para negócios.",
-          servicesKicker: "Para negócios",
-          servicesTitle: "Sistemas e páginas web",
-          servicesBody: "Faço páginas para lojas e sistemas sob medida: o processo, os dados e a ferramenta de que o negócio precisa.",
-          ctaWeb: "Ver páginas para lojas",
-          ctaSystems: "Conta-me o sistema",
-          iosKicker: "App Store",
-          iosTitle: "A Monexa já está no iPhone",
-          iosBody: "A Monexa descarrega-se na App Store. Lunera, MyPass e ReformaPRO continuam no TestFlight.",
-          iosExclude: "A Misiva está na Google Play. A Miravista continua só no Android.",
-          catalogKicker: "Catálogo",
-          appsTitle: "Apps",
-          appsIntro: "A Monexa está na App Store. A Misiva, na Google Play. O resto segue com download direto ou TestFlight.",
-          badgeAppStore: "App Store",
-          badgeAndroidWeb: "Android na web",
-          iosMonexaLink: "Abrir a Monexa na App Store",
-          ctaMonexaIos: "iPhone — App Store",
-          ctaMonexaAndroid: "Android — baixar",
-          badgePlayLive: "Google Play",
-          ctaMisivaPlay: "Google Play",
-          badgeTestFlight: "TestFlight iOS",
-          badgeAndroidOnly: "Só Android",
-          misivaLead: "Agende mensagens no WhatsApp e gere texto com IA (sua própria API key do Gemini). Tudo roda no seu celular.",
-          misivaStatus: "Status Misiva",
-          badgeApk: "APK de teste",
-          misivaB1: "Agendamentos diários e recorrentes",
-          misivaB2: "Respostas assistidas com Gemini",
-          misivaB3: "Envio automatizado no dispositivo",
-          misivaB4: "Não enviamos suas mensagens aos nossos servidores",
-          ctaDownload: "Baixar versão de testes (.APK)",
-          ctaPrivacy: "Ver política de privacidade",
-          misivaNote: "Na Google Play. Sem versão para iPhone. O APK continua aqui se a loja não abrir.",
-          mypassEyebrow: "Cofre de senhas",
-          mypassLead: "Cofre criptografado no dispositivo, Recovery Key, backup, Autofill e sync. Tudo incluído, sem paywall.",
-          mypassStatus: "Status MyPass",
-          badgePlay: "Em breve na Google Play",
-          mypassB1: "Senha mestra só no seu celular",
-          mypassB2: "Recovery Key + backup criptografado",
-          mypassB3: "Autofill Android e TOTP",
-          mypassB4: "Sync na nuvem incluído (grátis)",
-          mypassNote: "Também no TestFlight (iOS) e chegará à Google Play. Ative origens desconhecidas só para este app.",
-          reformaproEyebrow: "Orçamentos para obras e reformas",
-          reformaproLead: "Orçamentos mobile com catálogo, margens, impostos, PDF e envio ao cliente no local da obra ou visita.",
-          reformaproStatus: "Estado ReformaPRO",
-          reformaproB1: "Catálogo de materiais e serviços",
-          reformaproB2: "Orçamentos com IVA, retenção e margem visível",
-          reformaproB3: "PDF, impressão e envio ao cliente",
-          reformaproB4: "Android APK + PWA iOS (Safari)",
-          ctaTryWeb: "Experimentar agora (web / PWA)",
-          ctaDownloadApk: "Baixar APK (Android)",
-          reformaproCtaIos: "iPhone — instalar PWA",
-          reformaproIosBadge: "PWA iOS",
-          reformaproNote: "iOS: Safari → Partilhar → Adicionar ao ecrã principal (reformapro-web-seven.vercel.app). Android: APK build 6.",
-          reformaproVersion: "v0.2.0 · build 6",
-          trustKicker: "Confiança",
-          trustTitle: "Transparência",
-          trustP1: "<strong>Por que downloads diretos?</strong> Sou um desenvolvedor independente. Publicar na Google Play leva tempo de revisão. Enquanto isso ofereço APKs assinados nesta página, sem intermediários.",
-          trustP2: "<strong>Monexa</strong> já está na App Store. <strong>Misiva</strong> está na Google Play e não tem versão para iPhone. <strong>Miravista</strong> continua só no Android. <strong>Lunera</strong>, <strong>MyPass</strong> e <strong>ReformaPRO</strong> continuam no TestFlight.",
-          trustP3: "Sem loja falsa nem publicidade oculta. Contato: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
-          trustP4: "As políticas de privacidade de cada app estão no botão de cada cartão (e no rodapé).",
-          supportKicker: "Apoiar",
-          supportTitle: "Me pague um sorvete e continue o desenvolvimento",
-          supportBody: "Os apps são gratuitos e sem anúncios. Uma gorjeta voluntária ajuda a melhorar a IA, o Autofill e as próximas ferramentas.",
-          ctaKofi: "Ko-fi · Me pague um sorvete",
-                    smEyebrow: "Espelho Wi-Fi (navegador)",
-          smLead: "Espelhe a tela do telemóvel em qualquer Smart TV na Wi-Fi local. QR + PIN. Sem nuvem e sem anúncios.",
-          smStatus: "Estado Miravista",
-          smB1: "MJPEG local com PIN de sessão",
-          smB2: "QR para abrir no navegador da TV",
-          smB3: "Qualidade 480p / 720p / 1080p",
-          smB4: "Sem conta nem servidores cloud",
-          smNote: "Só Android (sem iOS). Mesma Wi-Fi no telemóvel e na TV. Ative origens desconhecidas só para este app.",
-          monexaEyebrow: "Despesas e receitas partilhadas",
-          monexaLead: "Controle despesas e receitas em grupo: categorias, orçamentos, subscrições e metas. Sincronização na nuvem com a sua conta.",
-          monexaStatus: "Estado Monexa",
-          monexaB1: "Movimentos e categorias em grupo",
-          monexaB2: "Orçamentos, subscrições e metas",
-          monexaB3: "Despesa rápida e análise mensal",
-          monexaB4: "Sem anúncios invasivos",
-          monexaNote: "iPhone na App Store. O Android descarrega-se nesta página, não na Google Play.",
-          luneraEyebrow: "Saúde menstrual · FemTech",
-          luneraLead: "Previsão do ciclo, registo diário, calendário, etapas de vida e IA educativa. Os seus dados de saúde ficam no dispositivo.",
-          luneraB1: "Anel do ciclo + fases",
-          luneraB2: "Registo diário offline",
-          luneraB3: "Backup JSON cifrado",
-          luneraB4: "Modo convidado sem conta",
-          ctaAndroid: "Android — APK de teste",
-          ctaPwa: "iPhone — Abrir PWA",
-          ctaIosMore: "Mais opções iOS",
-          footerLunera: "Privacidade Lunera",
-          footerMiravista: "Privacidade Miravista",
-          footerMonexa: "Privacidade Monexa",
-footerMisiva: "Privacidade Misiva",
-          footerMypass: "Privacidade MyPass",
-          footerReformapro: "Privacidade ReformaPRO",
-          footerStores: "Sites para lojas",
-          footerSupport: "Suporte",
-          footerCopy: "© " + year + " Flow Home Apps · Feito com calma, sem pressa de plataforma."
-        }
-      };
-
-      function detectLang() {
-        var q = new URLSearchParams(location.search).get("lang");
-        if (q && I18N[q]) return q;
-        var saved = localStorage.getItem("fha_lang");
-        if (saved && I18N[saved]) return saved;
-        var nav = (navigator.language || "es").toLowerCase();
-        if (nav.indexOf("pt") === 0) return "pt";
-        if (nav.indexOf("en") === 0) return "en";
-        return "es";
-      }
-
-      function applyLang(lang) {
-        var t = I18N[lang] || I18N.es;
-        document.documentElement.lang = lang === "pt" ? "pt-BR" : lang;
-        document.title = "Flow Home Apps — " + t.heroTitle;
-        var desc = document.querySelector('meta[name="description"]');
-        if (desc) desc.setAttribute("content", t.heroBody);
-
-        document.querySelectorAll("[data-i18n]").forEach(function (el) {
-          var key = el.getAttribute("data-i18n");
-          if (t[key] != null) el.textContent = t[key];
-        });
-        document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
-          var key = el.getAttribute("data-i18n-html");
-          if (t[key] != null) el.innerHTML = t[key];
-        });
-        document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
-          var key = el.getAttribute("data-i18n-aria");
-          if (t[key] != null) el.setAttribute("aria-label", t[key]);
-        });
-
-        var p = privacy[lang] || privacy.es;
-        var misiva = document.getElementById("privacy-misiva");
-        var mypass = document.getElementById("privacy-mypass");
-        var reformapro = document.getElementById("privacy-reformapro");
-        var fMisiva = document.getElementById("footer-privacy-misiva");
-        var fMypass = document.getElementById("footer-privacy-mypass");
-        var fReformapro = document.getElementById("footer-privacy-reformapro");
-        var sm = document.getElementById("privacy-miravista");
-        var fSm = document.getElementById("footer-privacy-miravista");
-        var monexa = document.getElementById("privacy-monexa");
-        var fMonexa = document.getElementById("footer-privacy-monexa");
-        var lunera = document.getElementById("privacy-lunera");
-        var fLunera = document.getElementById("footer-privacy-lunera");
-        if (misiva) misiva.href = p.misiva;
-        if (mypass) mypass.href = p.mypass;
-        if (reformapro) reformapro.href = p.reformapro;
-        if (sm) sm.href = p.miravista;
-        if (fMisiva) fMisiva.href = p.misiva;
-        if (fMypass) fMypass.href = p.mypass;
-        if (fReformapro) fReformapro.href = p.reformapro;
-        if (fSm) fSm.href = p.miravista;
-        if (monexa) monexa.href = p.monexa;
-        if (fMonexa) fMonexa.href = p.monexa;
-        if (lunera) lunera.href = p.lunera;
-        if (fLunera) fLunera.href = p.lunera;
-
-        document.querySelectorAll(".lang-switch button").forEach(function (btn) {
-          btn.setAttribute("aria-pressed", btn.getAttribute("data-lang") === lang ? "true" : "false");
-        });
-        localStorage.setItem("fha_lang", lang);
-        var url = new URL(location.href);
-        url.searchParams.set("lang", lang);
-        history.replaceState(null, "", url);
-      }
-
-      var lang = detectLang();
-      applyLang(lang);
-      document.querySelectorAll(".lang-switch button").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          applyLang(btn.getAttribute("data-lang"));
-        });
-      });
-    })();
-
-    (function () {
-      var nodes = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
-      var appsSection = document.getElementById("apps");
-      var isMobile = window.matchMedia("(max-width: 720px)").matches;
-
-      function revealAppsCatalog() {
-        if (!appsSection) return;
-        appsSection.classList.add("is-in");
-        appsSection.querySelectorAll(".reveal").forEach(function (el) {
-          el.classList.add("is-in");
-        });
-      }
-
-      if (isMobile) revealAppsCatalog();
-
-      if (!("IntersectionObserver" in window)) {
-        nodes.forEach(function (el) { el.classList.add("is-in"); });
-        return;
-      }
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        nodes.forEach(function (el) { el.classList.add("is-in"); });
-        return;
-      }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-in");
-          io.unobserve(entry.target);
-        });
-      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
-      nodes.forEach(function (el) { io.observe(el); });
-    })();
-  </script>
+  <script type="module" src="./src/landing.js"></script>
 </body>
 </html>

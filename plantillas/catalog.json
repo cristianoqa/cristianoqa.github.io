@@ -1,0 +1,92 @@
+[
+  {
+    "id": "granada-dia",
+    "name": "Granada día",
+    "vibe": "Bar de barrio a pleno sol",
+    "for": "Bares y cervecerías"
+  },
+  {
+    "id": "lezzet-mesa",
+    "name": "Lezzet mesa",
+    "vibe": "Mesa larga y carta serif",
+    "for": "Restaurantes"
+  },
+  {
+    "id": "mare-azul",
+    "name": "Mar azul",
+    "vibe": "Franja marina y precios mono",
+    "for": "Pescadería / marisquería"
+  },
+  {
+    "id": "hornada",
+    "name": "Hornada",
+    "vibe": "Harina, cacao y mañana",
+    "for": "Panadería / pastelería"
+  },
+  {
+    "id": "corte-rojo",
+    "name": "Corte rojo",
+    "vibe": "Sello de carnicería brutal",
+    "for": "Carnicería / charcutería"
+  },
+  {
+    "id": "filo-negro",
+    "name": "Filo negro",
+    "vibe": "Contraste y tipografía vertical",
+    "for": "Barbería / salón"
+  },
+  {
+    "id": "ramo-verde",
+    "name": "Ramo verde",
+    "vibe": "Fotos solapadas y aire",
+    "for": "Floristería"
+  },
+  {
+    "id": "pista-negra",
+    "name": "Pista negra",
+    "vibe": "Diagonales y energía",
+    "for": "Gimnasio / deporte"
+  },
+  {
+    "id": "tomo-papel",
+    "name": "Tomo papel",
+    "vibe": "Revista moderna, no periódico",
+    "for": "Librería / café lectura"
+  },
+  {
+    "id": "noche-lima",
+    "name": "Noche lima",
+    "vibe": "Oscuro, un solo acento",
+    "for": "Cócteles / local nocturno"
+  },
+  {
+    "id": "plaza-viva",
+    "name": "Plaza viva",
+    "vibe": "Baldosas y ofertas",
+    "for": "Mercado / frutería"
+  },
+  {
+    "id": "calma-azul",
+    "name": "Calma azul",
+    "vibe": "Clínica limpia y clara",
+    "for": "Clínica / farmacia"
+  },
+  {
+    "id": "fuego-cartel",
+    "name": "Fuego cartel",
+    "vibe": "Cartel grueso de calle",
+    "for": "Pizza / comida rápida"
+  },
+  {
+    "id": "cueva-oro",
+    "name": "Cueva oro",
+    "vibe": "Ceremonia centrada",
+    "for": "Vinoteca / gourmet"
+  },
+  {
+    "id": "taller-plano",
+    "name": "Taller plano",
+    "vibe": "Cuadrícula de plano técnico",
+    "for": "Taller / reparaciones"
+  }
+]
