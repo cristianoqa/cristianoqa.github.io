@@ -5,28 +5,285 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex,nofollow" />
   <title>Plantillas de webs para tiendas — Flow Home Apps</title>
-  <meta name="description" content="15 plantillas distintas para webs de tienda. Mismo contenido de panel, aspecto diferente." />
+  <meta name="description" content="15 aspectos distintos para la web de tu tienda. Elige el estilo; el contenido lo gestiona el panel." />
   <link rel="icon" href="../assets/flow-home-mark.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/landing.css?v=20261030c" />
+  <link rel="stylesheet" href="../assets/landing.css?v=20261104a" />
   <style>
-    .tpl-grid { display: grid; gap: 1rem; }
-    @media (min-width: 720px) { .tpl-grid { grid-template-columns: 1fr 1fr; } }
-    @media (min-width: 1100px) { .tpl-grid { grid-template-columns: 1fr 1fr 1fr; } }
-    .tpl-card {
-      display: flex; flex-direction: column; gap: 0.35rem;
-      border: 1px solid var(--color-line); background: #fff; border-radius: 1rem; padding: 1.1rem 1.2rem;
-      text-decoration: none; color: inherit; min-height: 100%;
-      transition: transform 160ms ease, border-color 160ms ease;
+    .gallery-hero {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--color-line);
+      background:
+        radial-gradient(520px 280px at 12% 0%, #d7ece6 0%, transparent 60%),
+        radial-gradient(480px 240px at 100% 10%, #d9e7f4 0%, transparent 55%),
+        #f7faf8;
     }
-    .tpl-card:hover { transform: translateY(-2px); border-color: #0f6b5c; }
-    .tpl-card .id { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #0f6b5c; }
-    .tpl-card h2 { margin: 0; font-family: Fraunces, Georgia, serif; font-size: 1.35rem; }
-    .tpl-card p { margin: 0; font-size: 0.92rem; color: #2a4058; }
-    .ref-list { display: grid; gap: 0.75rem; }
-    @media (min-width: 720px) { .ref-list { grid-template-columns: 1fr 1fr; } }
+    .gallery-hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.75rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+    }
+    .filter-bar button {
+      min-height: 44px;
+      border: 1px solid var(--color-line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 0.45rem 0.95rem;
+      font: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-ink-soft);
+      cursor: pointer;
+    }
+    .filter-bar button[aria-pressed="true"] {
+      background: #071422;
+      border-color: #071422;
+      color: #fff;
+    }
+    .tpl-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+    @media (min-width: 720px) {
+      .tpl-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1100px) {
+      .tpl-grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .tpl-card {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      background: #fff;
+      border: 1px solid var(--color-line);
+      border-radius: 1.15rem;
+      overflow: hidden;
+      min-height: 100%;
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+    }
+    .tpl-card:hover {
+      transform: translateY(-3px);
+      border-color: #0f6b5c;
+      box-shadow: 0 16px 40px -28px rgba(7, 20, 34, 0.55);
+    }
+    .tpl-card:focus-visible {
+      outline: 3px solid var(--color-accent-2);
+      outline-offset: 3px;
+    }
+    .preview {
+      position: relative;
+      aspect-ratio: 16 / 11;
+      background: var(--bg, #111);
+      color: var(--ink, #fff);
+      overflow: hidden;
+    }
+    .preview__chrome {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      height: 1.7rem;
+      padding: 0 0.7rem;
+      background: color-mix(in srgb, #000 28%, transparent);
+    }
+    .preview__chrome i {
+      width: 0.42rem;
+      height: 0.42rem;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--ink, #fff) 45%, transparent);
+    }
+    .preview__stage {
+      display: grid;
+      align-content: end;
+      height: calc(100% - 1.7rem);
+      padding: 1rem 1.05rem 1.15rem;
+      background:
+        linear-gradient(180deg, transparent 20%, color-mix(in srgb, #000 45%, transparent) 100%),
+        radial-gradient(circle at 80% 20%, color-mix(in srgb, var(--accent) 55%, transparent), transparent 42%);
+    }
+    .preview[data-style="soft"] .preview__stage,
+    .preview[data-style="clinic"] .preview__stage,
+    .preview[data-style="air"] .preview__stage,
+    .preview[data-style="editorial"] .preview__stage,
+    .preview[data-style="market"] .preview__stage,
+    .preview[data-style="blueprint"] .preview__stage {
+      background:
+        linear-gradient(180deg, transparent 35%, color-mix(in srgb, var(--ink) 8%, transparent) 100%),
+        radial-gradient(circle at 78% 18%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 40%);
+    }
+    .preview[data-style="sport"] .preview__stage,
+    .preview[data-style="night"] .preview__stage {
+      background:
+        repeating-linear-gradient(-28deg, transparent 0 18px, color-mix(in srgb, var(--accent) 14%, transparent) 18px 19px),
+        linear-gradient(180deg, transparent, color-mix(in srgb, #000 55%, transparent));
+    }
+    .preview[data-style="poster"] .preview__stage {
+      background: radial-gradient(circle at 30% 20%, color-mix(in srgb, #fff 18%, transparent), transparent 40%);
+    }
+    .preview[data-style="blueprint"] .preview__stage {
+      background:
+        linear-gradient(color-mix(in srgb, var(--accent) 18%, transparent) 1px, transparent 1px) 0 0 / 18px 18px,
+        linear-gradient(90deg, color-mix(in srgb, var(--accent) 18%, transparent) 1px, transparent 1px) 0 0 / 18px 18px;
+    }
+    .preview__eyebrow {
+      margin: 0;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.78;
+      color: var(--accent);
+    }
+    .preview__title {
+      margin: 0.35rem 0 0;
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.55rem, 3.5vw, 1.9rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      max-width: 11ch;
+    }
+    .preview[data-style="bold"] .preview__title,
+    .preview[data-style="brutal"] .preview__title,
+    .preview[data-style="poster"] .preview__title,
+    .preview[data-style="sport"] .preview__title {
+      font-family: Outfit, system-ui, sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+    .preview[data-style="serif"] .preview__title,
+    .preview[data-style="ceremony"] .preview__title,
+    .preview[data-style="editorial"] .preview__title {
+      font-style: italic;
+    }
+    .preview__chip {
+      display: inline-flex;
+      margin-top: 0.75rem;
+      min-height: 1.7rem;
+      align-items: center;
+      padding: 0 0.65rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #071422;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+    .preview[data-style="night"] .preview__chip,
+    .preview[data-style="sport"] .preview__chip,
+    .preview[data-style="ceremony"] .preview__chip,
+    .preview[data-style="bold"] .preview__chip {
+      color: #071422;
+    }
+    .preview[data-style="poster"] .preview__chip {
+      background: var(--ink);
+      color: var(--bg);
+    }
+    .tpl-body {
+      display: grid;
+      gap: 0.35rem;
+      padding: 1rem 1.1rem 1.15rem;
+    }
+    .tpl-body .for {
+      margin: 0;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0f6b5c;
+    }
+    .tpl-body h2 {
+      margin: 0;
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+    }
+    .tpl-body p {
+      margin: 0;
+      color: #2a4058;
+      font-size: 0.92rem;
+      line-height: 1.4;
+    }
+    .tpl-cta {
+      margin-top: 0.45rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #0f6b5c;
+    }
+    .feat-grid {
+      display: grid;
+      gap: 1rem;
+    }
+    @media (min-width: 860px) {
+      .feat-grid { grid-template-columns: 1.15fr 0.85fr; }
+    }
+    .feat-card {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      border-radius: 1.25rem;
+      border: 1px solid var(--color-line);
+      background: #071422;
+      color: #fff;
+      text-decoration: none;
+      min-height: 16rem;
+    }
+    .feat-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.72;
+      transition: transform 220ms ease;
+    }
+    .feat-card:hover img { transform: scale(1.03); }
+    .feat-card__copy {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 1.25rem 1.3rem 1.4rem;
+      background: linear-gradient(180deg, transparent, rgba(7, 20, 34, 0.92) 55%);
+    }
+    .feat-card__copy .tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #9ae8df;
+    }
+    .feat-card__copy h3 {
+      margin: 0.35rem 0 0;
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.7rem;
+      letter-spacing: -0.02em;
+    }
+    .feat-card--text {
+      display: grid;
+      align-content: end;
+      padding: 1.4rem;
+      background:
+        radial-gradient(420px 220px at 80% 0%, #2ad4c447, transparent 60%),
+        #071422;
+    }
+    .empty {
+      grid-column: 1 / -1;
+      padding: 2rem;
+      text-align: center;
+      color: var(--color-muted);
+      border: 1px dashed var(--color-line);
+      border-radius: 1rem;
+      background: #fff;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .tpl-card, .feat-card img { transition: none; }
+      .tpl-card:hover, .feat-card:hover img { transform: none; }
+    }
   </style>
 </head>
 <body class="font-sans text-ink antialiased">
@@ -45,45 +302,138 @@
     </div>
   </header>
 
-  <main class="mx-auto max-w-6xl px-4 py-10 md:py-14">
-    <p class="text-sm font-semibold text-accent">15 plantillas</p>
-    <h1 class="mt-2 max-w-2xl font-display text-4xl tracking-tight text-balance">Mismo panel. Aspecto distinto.</h1>
-    <p class="mt-3 max-w-2xl text-ink-soft">Todas usan el mismo contenido. Cambia la plantilla en la <a class="font-semibold text-accent underline-offset-4 hover:underline" href="./panel/">demo del panel</a> y verás el mismo horario y productos con otra piel. Abajo, dos propuestas reales ya hechas para clientes.</p>
+  <section class="gallery-hero">
+    <div class="mx-auto max-w-6xl px-4 py-10 md:py-14">
+      <p class="text-sm font-semibold text-accent">15 estilos · mismo contenido</p>
+      <h1 class="mt-2 max-w-3xl font-display tracking-tight text-balance">Elige el aspecto. El panel no cambia.</h1>
+      <p class="mt-3 max-w-2xl text-ink-soft">
+        Cada plantilla es una piel distinta para la misma tienda de ejemplo.
+        Entra, compara y decide el tono de tu negocio. Luego puedes editar textos en la
+        <a class="font-semibold text-accent underline-offset-4 hover:underline" href="./panel/">demo del panel</a>.
+      </p>
+      <div class="filter-bar" id="filters" role="group" aria-label="Filtrar plantillas por tipo"></div>
+    </div>
+  </section>
 
-    <section class="mt-10" aria-labelledby="reales">
-      <h2 id="reales" class="font-display text-2xl tracking-tight">Ejemplos reales</h2>
-      <div class="ref-list mt-4">
-        <a class="tpl-card" href="../cerveceria-granada/">
-          <span class="id">Cliente</span>
-          <h2>Cervecería Granada</h2>
-          <p>Bar de barrio a pleno sol. Propuesta completa, no es el sitio oficial.</p>
+  <main class="mx-auto max-w-6xl px-4 py-10 md:py-12">
+    <section aria-labelledby="reales">
+      <h2 id="reales" class="font-display text-2xl tracking-tight md:text-3xl">Propuestas ya montadas</h2>
+      <p class="mt-2 max-w-xl text-ink-soft">Sitios de ejemplo con diseño completo. No son el sitio oficial del negocio.</p>
+      <div class="feat-grid mt-6">
+        <a class="feat-card" href="../cerveceria-granada/">
+          <img src="../assets/ejemplo-cerveceria.jpg" width="960" height="600" alt="Propuesta visual de Cervecería Granada" />
+          <div class="feat-card__copy">
+            <p class="tag">Ejemplo cliente</p>
+            <h3>Cervecería Granada</h3>
+            <p class="mt-1 text-sm text-white/80">Bar de barrio a pleno sol · ver propuesta</p>
+          </div>
         </a>
-        <a class="tpl-card" href="../lezzet/">
-          <span class="id">Cliente</span>
-          <h2>LEZZET</h2>
-          <p>Restaurante turco: mesa, carta y reserva por WhatsApp.</p>
+        <a class="feat-card feat-card--text" href="../lezzet/">
+          <p class="tag" style="color:#9ae8df;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase">Ejemplo cliente</p>
+          <h3 class="font-display text-3xl tracking-tight">LEZZET</h3>
+          <p class="mt-2 text-sm text-white/75">Restaurante turco: mesa, carta y reserva por WhatsApp.</p>
+          <p class="mt-4 text-sm font-bold text-[#9ae8df]">Abrir ejemplo →</p>
         </a>
       </div>
     </section>
 
-    <section class="mt-12" id="lista" aria-labelledby="plantillas-title">
-      <h2 id="plantillas-title" class="font-display text-2xl tracking-tight">Catálogo de plantillas</h2>
-      <p class="mt-2 text-ink-soft">Quince direcciones visuales distintas. Pincha y compara con el mismo texto.</p>
+    <section class="mt-14" id="lista" aria-labelledby="plantillas-title">
+      <div class="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h2 id="plantillas-title" class="font-display text-2xl tracking-tight md:text-3xl">Catálogo visual</h2>
+          <p class="mt-2 text-ink-soft">Quince direcciones distintas. Pincha una y verás la página completa.</p>
+        </div>
+        <p class="text-sm text-muted" id="count" aria-live="polite"></p>
+      </div>
       <div id="grid" class="tpl-grid mt-6"></div>
     </section>
   </main>
 
+  <footer class="border-t border-line">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-8 text-sm text-muted">
+      <a class="font-semibold text-ink-soft hover:text-ink hover:underline" href="../servicios-tiendas.html">Webs para tiendas</a>
+      <p>Demo de estilos · Flow Home Apps</p>
+    </div>
+  </footer>
+
   <script type="module">
     const grid = document.getElementById("grid");
-    const res = await fetch("./catalog.json");
-    const catalog = await res.json();
-    grid.innerHTML = catalog.map((item) => `
-      <a class="tpl-card" href="./${item.id}/">
-        <span class="id">${item.id}</span>
-        <h2>${item.name}</h2>
-        <p><strong>${item.for}</strong> · ${item.vibe}</p>
-      </a>
-    `).join("");
+    const filters = document.getElementById("filters");
+    const count = document.getElementById("count");
+
+    const escapeHtml = (value) =>
+      String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;");
+
+    let catalog = [];
+    let active = "Todas";
+
+    function groups(items) {
+      const set = new Set(items.map((item) => item.for));
+      return ["Todas", ...[...set].sort((a, b) => a.localeCompare(b, "es"))];
+    }
+
+    function renderFilters() {
+      filters.innerHTML = groups(catalog)
+        .map(
+          (label) => `
+        <button type="button" aria-pressed="${label === active ? "true" : "false"}" data-filter="${escapeHtml(label)}">
+          ${escapeHtml(label)}
+        </button>`
+        )
+        .join("");
+    }
+
+    function card(item) {
+      return `
+      <a class="tpl-card" href="./${escapeHtml(item.id)}/" aria-label="Ver plantilla ${escapeHtml(item.name)}">
+        <div class="preview" data-style="${escapeHtml(item.style || "bold")}" style="--bg:${escapeHtml(item.bg)};--accent:${escapeHtml(item.accent)};--ink:${escapeHtml(item.ink)}">
+          <div class="preview__chrome" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="preview__stage">
+            <p class="preview__eyebrow">${escapeHtml(item.for)}</p>
+            <p class="preview__title">${escapeHtml(item.name)}</p>
+            <span class="preview__chip">Ver plantilla</span>
+          </div>
+        </div>
+        <div class="tpl-body">
+          <p class="for">${escapeHtml(item.for)}</p>
+          <h2>${escapeHtml(item.name)}</h2>
+          <p>${escapeHtml(item.vibe)}</p>
+          <p class="tpl-cta">Abrir vista completa →</p>
+        </div>
+      </a>`;
+    }
+
+    function renderGrid() {
+      const visible =
+        active === "Todas" ? catalog : catalog.filter((item) => item.for === active);
+      count.textContent = `${visible.length} de ${catalog.length}`;
+      grid.innerHTML = visible.length
+        ? visible.map(card).join("")
+        : `<p class="empty">No hay plantillas en este filtro.</p>`;
+    }
+
+    filters.addEventListener("click", (event) => {
+      const btn = event.target.closest("[data-filter]");
+      if (!btn) return;
+      active = btn.getAttribute("data-filter") || "Todas";
+      renderFilters();
+      renderGrid();
+    });
+
+    try {
+      const res = await fetch("./catalog.json", { cache: "no-store" });
+      if (!res.ok) throw new Error("catalog");
+      catalog = await res.json();
+      renderFilters();
+      renderGrid();
+    } catch (error) {
+      console.error(error);
+      grid.innerHTML = `<p class="empty">No se pudo cargar el catálogo. Recarga la página.</p>`;
+    }
   </script>
 </body>
 </html>

@@ -3,90 +3,150 @@
     "id": "granada-dia",
     "name": "Granada día",
     "vibe": "Bar de barrio a pleno sol",
-    "for": "Bares y cervecerías"
+    "for": "Bares y cervecerías",
+    "bg": "#0f1410",
+    "accent": "#d4a017",
+    "ink": "#f7f4ea",
+    "style": "bold"
   },
   {
     "id": "lezzet-mesa",
     "name": "Lezzet mesa",
     "vibe": "Mesa larga y carta serif",
-    "for": "Restaurantes"
+    "for": "Restaurantes",
+    "bg": "#1a120c",
+    "accent": "#c45c26",
+    "ink": "#f6efe6",
+    "style": "serif"
   },
   {
     "id": "mare-azul",
     "name": "Mar azul",
     "vibe": "Franja marina y precios mono",
-    "for": "Pescadería / marisquería"
+    "for": "Pescadería / marisquería",
+    "bg": "#0a3d5c",
+    "accent": "#7ec8e3",
+    "ink": "#ffffff",
+    "style": "mono"
   },
   {
     "id": "hornada",
     "name": "Hornada",
     "vibe": "Harina, cacao y mañana",
-    "for": "Panadería / pastelería"
+    "for": "Panadería / pastelería",
+    "bg": "#f3e6d4",
+    "accent": "#8b3a2a",
+    "ink": "#3b2418",
+    "style": "soft"
   },
   {
     "id": "corte-rojo",
     "name": "Corte rojo",
     "vibe": "Sello de carnicería brutal",
-    "for": "Carnicería / charcutería"
+    "for": "Carnicería / charcutería",
+    "bg": "#f2efe8",
+    "accent": "#b01020",
+    "ink": "#111111",
+    "style": "brutal"
   },
   {
     "id": "filo-negro",
     "name": "Filo negro",
     "vibe": "Contraste y tipografía vertical",
-    "for": "Barbería / salón"
+    "for": "Barbería / salón",
+    "bg": "#0a0a0a",
+    "accent": "#c0c0c0",
+    "ink": "#ffffff",
+    "style": "sharp"
   },
   {
     "id": "ramo-verde",
     "name": "Ramo verde",
     "vibe": "Fotos solapadas y aire",
-    "for": "Floristería"
+    "for": "Floristería",
+    "bg": "#eef5ea",
+    "accent": "#2f6b3a",
+    "ink": "#1c2e1a",
+    "style": "air"
   },
   {
     "id": "pista-negra",
     "name": "Pista negra",
     "vibe": "Diagonales y energía",
-    "for": "Gimnasio / deporte"
+    "for": "Gimnasio / deporte",
+    "bg": "#111111",
+    "accent": "#c8ff00",
+    "ink": "#ffffff",
+    "style": "sport"
   },
   {
     "id": "tomo-papel",
     "name": "Tomo papel",
     "vibe": "Revista moderna, no periódico",
-    "for": "Librería / café lectura"
+    "for": "Librería / café lectura",
+    "bg": "#f4f0e6",
+    "accent": "#1a1a1a",
+    "ink": "#1a1a1a",
+    "style": "editorial"
   },
   {
     "id": "noche-lima",
     "name": "Noche lima",
     "vibe": "Oscuro, un solo acento",
-    "for": "Cócteles / local nocturno"
+    "for": "Cócteles / local nocturno",
+    "bg": "#070707",
+    "accent": "#c6ff4a",
+    "ink": "#f2f2f2",
+    "style": "night"
   },
   {
     "id": "plaza-viva",
     "name": "Plaza viva",
     "vibe": "Baldosas y ofertas",
-    "for": "Mercado / frutería"
+    "for": "Mercado / frutería",
+    "bg": "#fff8e8",
+    "accent": "#e4572e",
+    "ink": "#1c1c1c",
+    "style": "market"
   },
   {
     "id": "calma-azul",
     "name": "Calma azul",
     "vibe": "Clínica limpia y clara",
-    "for": "Clínica / farmacia"
+    "for": "Clínica / farmacia",
+    "bg": "#f5f9fc",
+    "accent": "#2a6f97",
+    "ink": "#1b2a36",
+    "style": "clinic"
   },
   {
     "id": "fuego-cartel",
     "name": "Fuego cartel",
     "vibe": "Cartel grueso de calle",
-    "for": "Pizza / comida rápida"
+    "for": "Pizza / comida rápida",
+    "bg": "#c1121f",
+    "accent": "#f7f3e8",
+    "ink": "#f7f3e8",
+    "style": "poster"
   },
   {
     "id": "cueva-oro",
     "name": "Cueva oro",
     "vibe": "Ceremonia centrada",
-    "for": "Vinoteca / gourmet"
+    "for": "Vinoteca / gourmet",
+    "bg": "#140f0a",
+    "accent": "#c9a227",
+    "ink": "#f5ecd7",
+    "style": "ceremony"
   },
   {
     "id": "taller-plano",
     "name": "Taller plano",
     "vibe": "Cuadrícula de plano técnico",
-    "for": "Taller / reparaciones"
+    "for": "Taller / reparaciones",
+    "bg": "#eceff1",
+    "accent": "#1565c0",
+    "ink": "#102027",
+    "style": "blueprint"
   }
 ]
