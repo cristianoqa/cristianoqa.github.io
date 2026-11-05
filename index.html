@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./assets/landing.css?v=20261030a" />
+  <link rel="stylesheet" href="./assets/landing.css?v=20261104c" />
 </head>
 <body class="font-sans text-ink antialiased">
   <a class="skip-link" href="#apps" data-i18n="skip">Saltar al catálogo de apps</a>
@@ -55,24 +55,48 @@
 
   <main>
     <section id="inicio" class="hero-stage" aria-labelledby="hero-title">
+      <div class="hero-stage__media" aria-hidden="true">
+        <img src="./assets/hero-tech-atmosphere.jpg" width="1920" height="1080" alt="" decoding="async" fetchpriority="high" />
+      </div>
+      <span class="hero-orb hero-orb--a" aria-hidden="true"></span>
+      <span class="hero-orb hero-orb--b" aria-hidden="true"></span>
+      <span class="hero-orb hero-orb--c" aria-hidden="true"></span>
       <div class="hero-radar" aria-hidden="true">
         <svg viewBox="0 0 760 680" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="390" cy="340" r="90" stroke="#2ad4c4" stroke-opacity="0.45" />
-          <circle cx="390" cy="340" r="160" stroke="#2ad4c4" stroke-opacity="0.32" />
-          <circle cx="390" cy="340" r="230" stroke="#7ee8dc" stroke-opacity="0.22" />
-          <circle cx="390" cy="340" r="300" stroke="#2ad4c4" stroke-opacity="0.16" />
-          <path d="M390 340 L650 180 A300 300 0 0 1 680 420 Z" fill="#2ad4c4" fill-opacity="0.08" />
-          <path d="M120 470 C220 430 300 450 390 340" stroke="#9ae8df" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="6 8" />
-          <path d="M210 180 C300 220 340 280 390 340" stroke="#9ae8df" stroke-opacity="0.28" stroke-width="2" />
-          <circle cx="390" cy="340" r="8" fill="#2ad4c4" />
-          <circle cx="250" cy="210" r="5" fill="#ff8a7a" />
-          <circle cx="560" cy="250" r="5" fill="#ff8a7a" />
-          <circle cx="600" cy="430" r="5" fill="#ff8a7a" />
-          <circle cx="300" cy="500" r="5" fill="#ff8a7a" />
+          <defs>
+            <radialGradient id="radarGlowHome" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#2ad4c4" stop-opacity="0.35" />
+              <stop offset="55%" stop-color="#2ad4c4" stop-opacity="0.08" />
+              <stop offset="100%" stop-color="#2ad4c4" stop-opacity="0" />
+            </radialGradient>
+            <linearGradient id="sweepGradHome" x1="390" y1="340" x2="680" y2="180" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#7CFF6B" stop-opacity="0.55" />
+              <stop offset="100%" stop-color="#2ad4c4" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <circle cx="390" cy="340" r="310" fill="url(#radarGlowHome)" />
+          <circle class="hero-radar__ring" cx="390" cy="340" r="90" stroke="#2ad4c4" stroke-opacity="0.55" />
+          <circle class="hero-radar__ring" cx="390" cy="340" r="160" stroke="#2ad4c4" stroke-opacity="0.38" />
+          <circle class="hero-radar__ring" cx="390" cy="340" r="230" stroke="#7ee8dc" stroke-opacity="0.28" />
+          <circle class="hero-radar__ring" cx="390" cy="340" r="300" stroke="#2ad4c4" stroke-opacity="0.2" />
+          <g class="hero-radar__sweep">
+            <animateTransform attributeName="transform" type="rotate" from="0 390 340" to="360 390 340" dur="6.5s" repeatCount="indefinite" />
+            <path d="M390 340 L650 140 A300 300 0 0 1 690 420 Z" fill="url(#sweepGradHome)" />
+            <line x1="390" y1="340" x2="680" y2="220" stroke="#9dff8a" stroke-opacity="0.85" stroke-width="2" />
+          </g>
+          <path d="M120 470 C220 430 300 450 390 340" stroke="#9ae8df" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="5 9" />
+          <path d="M210 180 C300 220 340 280 390 340" stroke="#9ae8df" stroke-opacity="0.32" stroke-width="1.5" />
+          <circle cx="390" cy="340" r="9" fill="#2ad4c4" />
+          <circle cx="390" cy="340" r="18" stroke="#7CFF6B" stroke-opacity="0.45" />
+          <g class="hero-radar__blip"><circle cx="250" cy="210" r="5" fill="#ff8a7a" /><circle cx="250" cy="210" r="10" stroke="#ff8a7a" stroke-opacity="0.35" /></g>
+          <g class="hero-radar__blip"><circle cx="560" cy="250" r="5" fill="#ff8a7a" /><circle cx="560" cy="250" r="10" stroke="#ff8a7a" stroke-opacity="0.35" /></g>
+          <g class="hero-radar__blip"><circle cx="600" cy="430" r="5" fill="#ff8a7a" /><circle cx="600" cy="430" r="10" stroke="#ff8a7a" stroke-opacity="0.35" /></g>
+          <g class="hero-radar__blip"><circle cx="300" cy="500" r="5" fill="#ff8a7a" /><circle cx="300" cy="500" r="10" stroke="#ff8a7a" stroke-opacity="0.35" /></g>
+          <g class="hero-radar__blip"><circle cx="480" cy="160" r="4" fill="#7CFF6B" /></g>
         </svg>
       </div>
-      <div class="relative mx-auto flex min-h-[34rem] max-w-6xl flex-col justify-center px-4 py-14 md:min-h-[38rem] md:py-20">
-        <p class="w-fit rounded-full border border-white/25 px-3 py-1 text-sm text-white/90" data-i18n="heroChip">Apps y sistemas</p>
+      <div class="relative z-[1] mx-auto flex max-w-6xl flex-col justify-center px-4 py-16 md:py-24">
+        <p class="w-fit rounded-full border border-white/25 bg-black/20 px-3 py-1 text-sm text-white/90 backdrop-blur-sm" data-i18n="heroChip">Apps y sistemas</p>
         <h1 id="hero-title" class="mt-5 max-w-[14ch] font-sans text-4xl font-bold leading-[1.05] tracking-tight text-balance text-white sm:text-5xl lg:text-6xl" data-i18n="heroTitle">Herramientas inteligentes para automatizar tu día a día.</h1>
         <p class="mt-5 max-w-md text-base leading-relaxed text-white/80 sm:text-lg" data-i18n="heroBody">Apps para el día a día, y también webs para tiendas. Hechas con calma por un desarrollador independiente.</p>
         <div class="mt-8 flex flex-row flex-wrap gap-3">
@@ -113,7 +137,7 @@
               <span class="badge badge-muted" data-i18n="badgePlay">Próximamente en Google Play</span>
               <span class="badge badge-test" data-i18n="badgeTestFlight">TestFlight iOS</span>
               <span class="badge badge-test" data-i18n="badgeApk">APK de prueba</span>
-              <span class="badge badge-muted">v1.1.12</span>
+              <span class="badge badge-muted">v1.1.13</span>
             </div>
             <p class="mt-3 text-sm leading-relaxed text-ink-soft" data-i18n="luneraLead">Predicción de ciclo, registro diario, calendario, etapas de vida y IA educativa. Tus datos de salud se quedan en el dispositivo.</p>
             <ul class="benefits mt-3">
@@ -144,7 +168,7 @@
               <span class="badge badge-muted" data-i18n="badgePlay">Próximamente en Google Play</span>
               <span class="badge badge-test" data-i18n="badgeTestFlight">TestFlight iOS</span>
               <span class="badge badge-test" data-i18n="badgeApk">APK de prueba</span>
-              <span class="badge badge-muted">v1.1.8</span>
+              <span class="badge badge-muted">v1.1.9</span>
             </div>
             <p class="mt-3 text-sm leading-relaxed text-ink-soft" data-i18n="mypassLead">Bóveda cifrada en el dispositivo, Recovery Key, backup, Autofill y sync. Ahora todo incluido, sin paywall.</p>
             <ul class="benefits mt-3">
@@ -174,7 +198,7 @@
               <span class="badge badge-muted" data-i18n="badgePlay">Próximamente en Google Play</span>
               <span class="badge badge-test" data-i18n="reformaproIosBadge">PWA iOS</span>
               <span class="badge badge-test" data-i18n="badgeApk">APK de prueba</span>
-              <span class="badge badge-muted" data-i18n="reformaproVersion">v0.2.0 · build 6</span>
+              <span class="badge badge-muted" data-i18n="reformaproVersion">v0.2.1 · build 7</span>
             </div>
             <p class="mt-3 text-sm leading-relaxed text-ink-soft" data-i18n="reformaproLead">Presupuestos móviles con catálogo, márgenes, impuestos, PDF y envío al cliente desde obra o visita.</p>
             <ul class="benefits mt-3">
@@ -205,7 +229,7 @@
             <div class="mt-4 flex flex-wrap gap-1.5" data-i18n-aria="monexaStatus">
               <span class="badge badge-store" data-i18n="badgeAppStore">App Store</span>
               <span class="badge badge-test" data-i18n="badgeAndroidWeb">Android en la web</span>
-              <span class="badge badge-muted">v1.0.13</span>
+              <span class="badge badge-muted">v1.0.15</span>
             </div>
             <p class="mt-3 text-sm leading-relaxed text-ink-soft" data-i18n="monexaLead">Controla gastos e ingresos en grupo: categorías, presupuestos, suscripciones y metas. Sincronización en la nube con tu cuenta.</p>
             <ul class="benefits mt-3">
@@ -235,7 +259,7 @@
             <div class="mt-4 flex flex-wrap gap-1.5" data-i18n-aria="misivaStatus">
               <span class="badge badge-store" data-i18n="badgePlayLive">Google Play</span>
               <span class="badge badge-muted" data-i18n="badgeAndroidOnly">Solo Android</span>
-              <span class="badge badge-muted">v2.0.94</span>
+              <span class="badge badge-muted">v2.0.95</span>
             </div>
             <p class="mt-3 text-sm leading-relaxed text-ink-soft" data-i18n="misivaLead">Programa mensajes a WhatsApp y genera el texto con IA (tu propia API key de Gemini). Todo corre en tu móvil.</p>
             <ul class="benefits mt-3">
@@ -265,7 +289,7 @@
             <div class="mt-4 flex flex-wrap gap-1.5" data-i18n-aria="smStatus">
               <span class="badge badge-test" data-i18n="badgeApk">APK de prueba</span>
               <span class="badge badge-muted" data-i18n="badgeAndroidOnly">Solo Android</span>
-              <span class="badge badge-muted">v1.1.2</span>
+              <span class="badge badge-muted">v1.1.3</span>
             </div>
             <p class="mt-3 text-sm leading-relaxed text-ink-soft" data-i18n="smLead">Transmite la pantalla del móvil a cualquier Smart TV por Wi-Fi local. QR + PIN. Sin nube y sin anuncios.</p>
             <ul class="benefits mt-3">

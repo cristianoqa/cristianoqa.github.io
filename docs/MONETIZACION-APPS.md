@@ -1,34 +1,69 @@
 # Flow Home Apps — monetización + IDs de producto (Play / App Store)
 
-Última actualización: 28 sep 2026  
-**Memio: discontinuada** (fuera del catálogo; no crear productos).
-
-Regla global: **funciones digitales = Play Billing / Apple IAP**. **Ko-fi / PayPal = solo propina** (nunca desbloquean Pro).
+Última actualización: 5 nov 2026  
+**Memio: discontinuada** (fuera del catálogo).
 
 ---
 
-## Resumen
+## Fase 1 (vigente hasta que Cristiano diga «ya»)
 
-| App | Modelo | Play | App Store |
-|-----|--------|------|-----------|
+- Apps **100 % gratis**. Sin IAP Apple, sin Play Billing, sin ads, sin paywall que desbloqueé features.
+- **Ko-fi / PayPal = solo propina** (nunca desbloquean Pro).
+- Play Console: **no comerciante** mientras no haya cobros; pasar a comerciante **antes** del primer cobro.
+- Soft-ask Plan **B**: como mucho cada **30 días** tras “Ahora no”; opción **“No volver a mostrar”**.
+
+### Patrón UX obligatorio (todas las apps del alcance)
+
+| Elemento | Estándar |
+|----------|----------|
+| **Entrada fija** | Siempre bajo **Ajustes** (o «Más» si no hay Ajustes) → fila **Apoyar** |
+| **Label ES** | `Apoyar` |
+| **Label EN** | `Support` |
+| **Label PT** | `Apoiar` |
+| **Subtítulo** | Invítame un helado · Ko-fi / PayPal |
+| **Pantalla** | Tip dedicada (Ko-fi primario + PayPal). No mezclar con «soporte técnico / email». |
+| **Disclaimer** | Propina voluntaria; no desbloquea funciones de pago. |
+| **URLs** | `https://ko-fi.com/cristianodeveloper` · `https://paypal.me/cristianodeveloper` |
+| **Soft-ask** | Tras N éxitos de uso; cooldown 30d; neverAgain |
+
+**Alcance Fase 1 tip/soft-ask:** Misiva, Lunera, MyPass, Monexa, ReformaPRO, Miravista, Tareas Family.  
+**Landing** (`cristianoqa.github.io` `#apoyo`): mantener sección estática; sin soft-ask web.  
+**Fuera:** Flow Desk, Memio.
+
+---
+
+## Fase 2 (solo cuando Cristiano lo ordene, mismo tramo)
+
+1. Alta autónomo / gestoría.  
+2. Play comerciante + datos públicos + Términos.  
+3. Apple IAP + Google Play Billing.  
+4. Activar Pro/pago.  
+
+Regla: **funciones digitales = Play Billing / Apple IAP**. Tip Ko-fi/PayPal sigue siendo solo propina.
+
+---
+
+## Resumen productos (preparados; no activos en Fase 1)
+
+| App | Modelo futuro | Play | App Store |
+|-----|---------------|------|-----------|
 | MyPass | Local gratis + Sync de pago + tip | Sí | Sí |
 | Lunera | Freemium Pro | Sí | Sí |
 | ReformaPRO | Freemium B2B | Sí | Sí |
 | Monexa | Freemium Pro | Sí | Sí |
 | Misiva | Tip primero; Pro opcional fase 2 | Sí | No |
 | Miravista | Tip / unlock opcional | Sí | No |
+| Tareas Family | Tip Fase 1; Pro TBD | Sí | TBD |
 
 ---
 
-## Cómo pegar en Play Console
+## Cómo pegar en Play Console (Fase 2)
 
 1. App → **Monetizar** → **Productos** → Suscripciones / Compras in-app.  
 2. **ID del producto** = columna **Play product ID** (exacto, minúsculas, `_`).  
 3. Nombre visible = columna **Nombre en tienda**.  
-4. Precio base orientativo en EUR (ajusta después por país).  
-5. En el código usa el mismo ID (BillingClient / RevenueCat / etc.).
-
-**Apple App Store Connect:** mismo significado; Product ID sugerido en columna **Apple Product ID** (reverse-DNS).
+4. Precio base orientativo en EUR.  
+5. En el código usa el mismo ID.
 
 ---
 
@@ -40,24 +75,17 @@ Regla global: **funciones digitales = Play Billing / Apple IAP**. **Ko-fi / PayP
 | Suscripción | `lunera_pro_yearly` | `apps.flowhome.lunera.pro.yearly` | Lunera Pro (anual) | 19,99 € / año |
 | Compra única (opcional) | `lunera_pro_lifetime` | `apps.flowhome.lunera.pro.lifetime` | Lunera Pro (para siempre) | 39,99 € |
 
-**Gratis:** ciclo básico, invitado, Aprende, 1–2 recordatorios.  
-**Pro:** PDF/export, IA ampliada, sync, temas, recordatorios/widgets ilimitados, etapas avanzadas.
-
-Grupo de suscripción Play (sugerido): `lunera_pro` (monthly + yearly como base plans del mismo grupo).
+Grupo Play: `lunera_pro`.
 
 ---
 
-## 2. MyPass — Sync+ (núcleo local gratis)
+## 2. MyPass — Sync+
 
 | Tipo | Play product ID | Apple Product ID | Nombre en tienda | Precio base orient. |
 |------|-----------------|------------------|------------------|---------------------|
 | Suscripción | `mypass_sync_monthly` | `apps.flowhome.mypass.sync.monthly` | MyPass Sync (mensual) | 1,49 € / mes |
 | Suscripción | `mypass_sync_yearly` | `apps.flowhome.mypass.sync.yearly` | MyPass Sync (anual) | 12,99 € / año |
 | Compra única (opcional) | `mypass_sync_lifetime` | `apps.flowhome.mypass.sync.lifetime` | MyPass Sync (para siempre) | 24,99 € |
-
-**Gratis:** bóveda, Recovery Key, backup local, Autofill, TOTP, biometría.  
-**De pago:** sync multi-dispositivo + historial de revisiones.  
-**Tip:** Ko-fi (sin unlock).
 
 Grupo Play: `mypass_sync`.
 
@@ -67,15 +95,10 @@ Grupo Play: `mypass_sync`.
 
 | Tipo | Play product ID | Apple Product ID | Nombre en tienda | Precio base orient. |
 |------|-----------------|------------------|------------------|---------------------|
-| Suscripción | `reformapro_pro_monthly` | `apps.flowhome.reformapro.pro.monthly` | ReformaPRO Pro (mensual) | **3,99 € / mes** (lanzamiento) |
-| Suscripción | `reformapro_pro_yearly` | `apps.flowhome.reformapro.pro.yearly` | ReformaPRO Pro (anual) | **29,99 € / año** (lanzamiento) |
+| Suscripción | `reformapro_pro_monthly` | `apps.flowhome.reformapro.pro.monthly` | ReformaPRO Pro (mensual) | 3,99 € / mes |
+| Suscripción | `reformapro_pro_yearly` | `apps.flowhome.reformapro.pro.yearly` | ReformaPRO Pro (anual) | 29,99 € / año |
 
-**Gratis:** catálogo básico, **hasta 5 presupuestos activos**, PDF con marca.  
-**Pro:** ilimitados, firma, equipo, obra/calendario, sin marca, plantillas/voz.
-
-Grupo Play: `reformapro_pro`.  
-**Precios de lanzamiento** (subir cuando haya tracción): 3,99 €/mes · 29,99 €/año.  
-*(Web/PWA: mismo entitlement vía backend; cobro web aparte si aplica — no mezclar con IAP móvil.)*
+Grupo Play: `reformapro_pro`.
 
 ---
 
@@ -86,9 +109,6 @@ Grupo Play: `reformapro_pro`.
 | Suscripción | `monexa_pro_monthly` | `apps.flowhome.monexa.pro.monthly` | Monexa Pro (mensual) | 2,99 € / mes |
 | Suscripción | `monexa_pro_yearly` | `apps.flowhome.monexa.pro.yearly` | Monexa Pro (anual) | 19,99 € / año |
 
-**Gratis:** 1 grupo, movimientos, categorías, presupuestos básicos.  
-**Pro:** más grupos, OCR, voz, insights / cierre de mes, import CSV.
-
 Grupo Play: `monexa_pro`.
 
 ---
@@ -97,11 +117,7 @@ Grupo Play: `monexa_pro`.
 
 | Tipo | Play product ID | Apple Product ID | Nombre en tienda | Precio base orient. |
 |------|-----------------|------------------|------------------|---------------------|
-| Compra única | `misiva_pro_unlock` | — (no iOS) | Misiva Pro | 3,99 € una vez |
-
-**Fase 1 (lanzamiento):** solo Ko-fi / PayPal, sin IAP.  
-**Fase 2:** crear `misiva_pro_unlock` → plantillas / anti-repetición avanzada.  
-Gemini = API key del usuario (él paga a Google).
+| Compra única | `misiva_pro_unlock` | — | Misiva Pro | 3,99 € una vez |
 
 ---
 
@@ -109,11 +125,7 @@ Gemini = API key del usuario (él paga a Google).
 
 | Tipo | Play product ID | Apple Product ID | Nombre en tienda | Precio base orient. |
 |------|-----------------|------------------|------------------|---------------------|
-| Compra única | `miravista_pro_unlock` | — (no iOS) | Miravista Pro | 2,49 € una vez |
-
-**Gratis:** 480p/720p, 1 visor, QR+PIN.  
-**Pro:** 1080p + 2 visores.  
-**Fase 1:** tip; crear IAP cuando haya usuarios.
+| Compra única | `miravista_pro_unlock` | — | Miravista Pro | 2,49 € una vez |
 
 ---
 
@@ -151,23 +163,25 @@ apps.flowhome.monexa.pro.yearly
 
 ---
 
-## Checklist por app (Play / Apple)
+## Checklist Fase 1 (tip) — hecho 2026-11
 
-- [ ] Productos creados con los IDs de arriba (no renombrar después).
-- [ ] Grupo de suscripción configurado (Lunera / MyPass / ReformaPRO / Monexa).
-- [ ] Texto ficha: qué es gratis / qué es Pro.
-- [ ] Botón **Restaurar compras** en Ajustes.
+| App | Ajustes→Apoyar | Soft-ask 30d+never | Tip Ko-fi/PayPal |
+|-----|----------------|--------------------|------------------|
+| Misiva | ✅ | ✅ | ✅ |
+| ReformaPRO | ✅ Preferencias | ✅ cada 5 presupuestos | ✅ |
+| Tareas Family | ✅ Registros | ✅ cada 10 tareas | ✅ |
+| Lunera | ✅ | ✅ cada 10 logs | ✅ DonationScreen |
+| Monexa | ✅ | ✅ cada 10 gastos | ✅ vía About |
+| MyPass | ✅ | ✅ cada 10 unlocks | ✅ |
+| Miravista | ✅ | ✅ cada 10 sesiones | ✅ |
+| Landing `#apoyo` | n/a (nav) | no (estático) | ✅ |
+| Memio / Flow Desk | fuera de alcance | — | — |
+
+## Checklist Fase 2 (IAP)
+
+- [ ] Productos creados con los IDs de arriba.
+- [ ] Restaurar compras en Ajustes.
 - [ ] Data safety = política publicada.
-- [ ] Ko-fi sin “desbloquea Pro”.
-- [ ] Misiva / Miravista: IAP solo en fase 2.
+- [ ] Comerciante Play + ToS.
 
----
-
-## Orden de implementación
-
-1. Lunera (`lunera_pro_*`) + ReformaPRO (`reformapro_pro_*`)  
-2. Monexa (`monexa_pro_*`)  
-3. MyPass (`mypass_sync_*`)  
-4. Misiva / Miravista IAP solo con tracción  
-
-Tip global: https://ko-fi.com/cristianodeveloper
+Tip global: https://ko-fi.com/cristianodeveloper · https://paypal.me/cristianodeveloper
